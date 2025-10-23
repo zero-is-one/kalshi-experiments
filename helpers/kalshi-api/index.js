@@ -29,66 +29,58 @@ function createSignature(privateKeyPem, timestamp, method, path) {
 }
 
 async function request(method, path, body = null, baseUrl = BASE_URL) {
-  return new Promise(async (resolve) => {
-    try {
-      const apiKeyId = API_KEY_ID;
-      const timestamp = Date.now().toString(); // milliseconds
-      const signature = createSignature(
-        PRIVATE_KEY_PEM,
-        timestamp,
-        method,
-        path
-      );
+  try {
+    const apiKeyId = API_KEY_ID;
+    const timestamp = Date.now().toString(); // milliseconds
+    const signature = createSignature(PRIVATE_KEY_PEM, timestamp, method, path);
 
-      const headers = {
-        "KALSHI-ACCESS-KEY": apiKeyId,
-        "KALSHI-ACCESS-SIGNATURE": signature,
-        "KALSHI-ACCESS-TIMESTAMP": timestamp,
-        Accept: "application/json",
-      };
+    const headers = {
+      "KALSHI-ACCESS-KEY": apiKeyId,
+      "KALSHI-ACCESS-SIGNATURE": signature,
+      "KALSHI-ACCESS-TIMESTAMP": timestamp,
+      Accept: "application/json",
+    };
 
-      // Add Content-Type header for POST requests
-      if (method === "POST" && body) {
-        headers["Content-Type"] = "application/json";
-      }
-
-      // Use global fetch (Node 18+). If using older Node, install node-fetch and uncomment:
-      // const fetch = require('node-fetch');
-      const url = baseUrl + path;
-
-      const options = { method, headers };
-      if (body) {
-        options.body = JSON.stringify(body);
-      }
-
-      const res = await fetch(url, options);
-
-      const contentType = res.headers.get("content-type") || "";
-      let responseBody;
-      if (contentType.includes("application/json")) {
-        responseBody = await res.json();
-      } else {
-        responseBody = await res.text();
-      }
-
-      if (!res.ok) {
-        const msg =
-          typeof responseBody === "string"
-            ? responseBody
-            : JSON.stringify(responseBody);
-
-        resolve({
-          error: `Request failed: ${res.status} ${res.statusText} - ${msg}`,
-        });
-
-        return;
-      }
-
-      resolve(responseBody);
-    } catch (error) {
-      resolve({ error: error.message });
+    // Add Content-Type header for POST requests
+    if (method === "POST" && body) {
+      headers["Content-Type"] = "application/json";
     }
-  });
+
+    // Use global fetch (Node 18+). If using older Node, install node-fetch and uncomment:
+    // const fetch = require('node-fetch');
+    const url = baseUrl + path;
+
+    const options = { method, headers };
+    if (body) {
+      options.body = JSON.stringify(body);
+    }
+
+    const res = await fetch(url, options);
+
+    const contentType = res.headers.get("content-type") || "";
+    let responseBody;
+    if (contentType.includes("application/json")) {
+      responseBody = await res.json();
+    } else {
+      responseBody = await res.text();
+    }
+
+    if (!res.ok) {
+      const msg =
+        typeof responseBody === "string"
+          ? responseBody
+          : JSON.stringify(responseBody);
+
+      return [
+        null,
+        new Error(`Request failed: ${res.status} ${res.statusText} - ${msg}`),
+      ];
+    }
+
+    return [responseBody, null];
+  } catch (error) {
+    return [null, error];
+  }
 }
 
 export async function getAccountBalance() {

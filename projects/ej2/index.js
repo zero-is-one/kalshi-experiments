@@ -1,23 +1,16 @@
-import fs from "fs";
 import puppeteer from "puppeteer-core";
-import { logger, useLogger } from "../../helpers/log.js";
+import { createLogServer, logger } from "../../helpers/logger/index.js";
 import { getMetricsFromPage } from "./src/metrics.js";
-import express from "express";
+import { getEvent } from "../../helpers/kalshi-api/index.js";
 
-const app = express();
-const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
-
-useLogger(app);
+createLogServer();
 
 let browser = null;
 
 async function main() {
+  console.log("Get EJ positions from Kalshi...");
   if (!browser) {
-    console.log("Launching browser...");
+    console.log("* Launching browser...");
     browser = await puppeteer.launch({
       executablePath:
         "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
@@ -31,12 +24,15 @@ async function main() {
   // goto page
   const page = await browser.newPage();
 
-  console.log("Waiting for page to load...");
+  console.log("* Waiting for page to load...");
   await page.goto("https://kalshi.com/ideas/profiles/EJG7", {
     waitUntil: "networkidle2",
   });
 
-  console.log("Clicking 'Positions' tab...");
+  console.log("* Getting Metrics...");
+  const metrics = await getMetricsFromPage(page);
+
+  console.log("* Clicking 'Positions' tab...");
   const spans = await page.$$("span");
   const spanTexts = await Promise.all(
     spans.map((span) => span.evaluate((el) => el.textContent.trim()))
@@ -47,9 +43,6 @@ async function main() {
   if (positionsSpanIndex !== -1) {
     await spans[positionsSpanIndex].click();
   }
-
-  const metrics = await getMetricsFromPage(page);
-  logger("metrics", metrics);
 
   // in the div with class infinite-scroll-component,
   // get the text context of all divs that start with class interactive-
@@ -64,14 +57,12 @@ async function main() {
       containerDiv.querySelectorAll("div")
     ).filter((div) => div.className.startsWith("interactive-"));
 
-    return positionDivs.map((div) => ({
-      rawText: div.innerText,
-    }));
+    return positionDivs.map((div) => div.innerText);
   });
 
   // Process the raw text data
-  const events = eventsRawText.map((item) => {
-    const rows = item.rawText.split("\n");
+  const eventPositions = eventsRawText.map((rawText) => {
+    const rows = rawText.split("\n");
     //remove the first item and return the rest as title
     const title = rows.shift();
     const positions = [];
@@ -91,70 +82,89 @@ async function main() {
     }
 
     return {
-      rawText: item.rawText,
+      rawText,
       title,
       positions,
     };
   });
-  console.log(`Found ${events.length} events with positions.`);
+
+  console.log(`Found ${eventPositions.length} raw events with positions.`);
+  console.log("Navigating to each event page to get urls and tickers...");
 
   // each event use the title to click a span with that text to go to the event page
   // save the url of that page to the event object
-  for (const event of events) {
+
+  for (const eventPosition of eventPositions) {
     const spans = await page.$$("span");
     for (const span of spans) {
       const text = await span.evaluate((el) => el.textContent.trim());
 
-      if (text !== event.title) {
+      if (text !== eventPosition.title) {
         continue;
       }
       // click parent
       await span.evaluate((el) => el.parentElement.click());
       await page.waitForNavigation({ waitUntil: "networkidle2" });
       await delay(1000); //wait a second for url to update
-      event.url = page.url();
-      console.log(event.title, `-> Navigated to event page: ${event.url}`);
+      eventPosition.url = page.url();
+
+      if (eventPosition.url.includes("/markets/")) {
+        eventPosition.ticker = eventPosition.url.split("/").pop().toUpperCase();
+      }
+
+      console.log("*", eventPosition.title);
+      console.log("└─ `", eventPosition.url);
+
       await page.goBack({ waitUntil: "networkidle2" });
       break;
     }
   }
 
-  for (const event of events) {
-    event.ticker = event.url.split("/").pop().toUpperCase();
-  }
+  logger("history", { eventPositions, metrics });
 
-  for (const event of events) {
-    const response = await fetch(
-      `https://api.elections.kalshi.com/trade-api/v2/events/${event.ticker}`,
-      { method: "GET", body: undefined }
-    );
-    const data = await response.json();
-    event.eventData = data;
-    console.log(data);
-    delay(2500); // half second delay between requests
-  }
+  console.log("Fetching event details from Kalshi API and placing orders...");
 
-  for (const event of events) {
-    for (const position of event.positions) {
-      const market = event.eventData.markets.find(
+  for (const eventPosition of eventPositions) {
+    if (!eventPosition.url) continue;
+    if (!eventPosition.ticker) continue;
+    const [eventResponse, error] = await getEvent(eventPosition.ticker);
+
+    logger("api-events", {
+      ticker: eventPosition.ticker,
+      eventResponse,
+      error,
+    });
+
+    if (error) {
+      console.log(
+        `Error fetching event data for ticker ${eventPosition.ticker}:`,
+        error
+      );
+
+      logger("errors", error);
+
+      continue;
+    }
+
+    for (const position of eventPosition.positions) {
+      const market = eventResponse.markets.find(
         (m) =>
           m.no_sub_title === position.outcome ||
           m.yes_sub_title === position.outcome
       );
 
       if (!market) continue;
-      console.log("Found market", market);
+
+      console.log(
+        `* Found market: ${market.title} for outcome ${position.outcome}.`
+      );
+      console.log(
+        `└─ Liquidity: ${market.liquidity}, Closes at: ${market.close_time}`
+      );
     }
+
+    await delay(200);
   }
-
-  const result = {
-    metrics,
-    events,
-    timeStamp: new Date().toISOString(),
-  };
-
-  //save positions to file
-  fs.writeFileSync("logs/ej2_positions.json", JSON.stringify(result, null, 2));
 
   console.log("All done!");
   await page.close();

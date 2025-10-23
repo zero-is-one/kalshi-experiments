@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import express from "express";
 
 export const logger = (fileName = "output", jsonData) => {
   const allData = {
@@ -44,9 +45,46 @@ export function useLogger(app) {
         <style>
                 body { font-family: Arial, sans-serif; margin: 20px; }
                 .filter { margin-bottom: 20px; }
-                .log-file { margin-bottom: 30px; border: 1px solid #ccc; padding: 15px; }
-                .log-entry { background: #f5f5f5; margin: 5px 0; padding: 10px; border-radius: 4px; }
+                .log-file { margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; }
+                .file-header { 
+                        background: #e9e9e9; 
+                        padding: 15px; 
+                        cursor: pointer; 
+                        border-radius: 4px 4px 0 0;
+                        user-select: none;
+                }
+                .file-header:hover { background: #ddd; }
+                .file-content { 
+                        padding: 10px; 
+                        border-top: 1px solid #ccc;
+                        display: none;
+                }
+                .file-content.expanded { display: block; }
+                .log-entry { margin: 5px 0; border: 1px solid #ddd; border-radius: 4px; }
+                .entry-header { 
+                        background: #f5f5f5; 
+                        padding: 10px; 
+                        cursor: pointer; 
+                        font-family: monospace;
+                        user-select: none;
+                        border-radius: 4px 4px 0 0;
+                        height: 24px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+
+                        
+                }
+                .entry-header:hover { background: #eee; }
+                .entry-content { 
+                        padding: 10px; 
+                        border-top: 1px solid #ddd;
+                        background: white;
+                        display: none;
+                }
+                .entry-content.expanded { display: block; }
                 .hidden { display: none; }
+                .accordion-icon { float: right; }
         </style>
 </head>
 <body>
@@ -59,22 +97,37 @@ export function useLogger(app) {
                   .map(
                     (log) => `
                         <div class="log-file" data-filename="${log.filename}">
-                                <h3>${log.filename}</h3>
-                                ${log.entries
-                                  .map(
-                                    (entry) => `
-                                        <div class="log-entry" data-content="${JSON.stringify(
-                                          entry
-                                        ).toLowerCase()}">
-                                                <pre>${JSON.stringify(
-                                                  entry,
-                                                  null,
-                                                  2
-                                                )}</pre>
-                                        </div>
-                                `
-                                  )
-                                  .join("")}
+                                <div class="file-header" onclick="toggleFile(this)">
+                                        <strong>${log.filename}</strong> (${
+                      log.entries.length
+                    } entries)
+                                        <span class="accordion-icon">▶</span>
+                                </div>
+                                <div class="file-content">
+                                        ${log.entries
+                                          .map(
+                                            (entry) => `
+                                                <div class="log-entry" data-content="${JSON.stringify(
+                                                  entry
+                                                ).toLowerCase()}">
+                                                        <div class="entry-header" onclick="toggleEntry(this)">
+                                                                ${JSON.stringify(
+                                                                  entry
+                                                                )}
+                                                                <span class="accordion-icon">▶</span>
+                                                        </div>
+                                                        <div class="entry-content">
+                                                                <pre>${JSON.stringify(
+                                                                  entry,
+                                                                  null,
+                                                                  2
+                                                                )}</pre>
+                                                        </div>
+                                                </div>
+                                        `
+                                          )
+                                          .join("")}
+                                </div>
                         </div>
                 `
                   )
@@ -82,6 +135,32 @@ export function useLogger(app) {
         </div>
         
         <script>
+                function toggleFile(header) {
+                        const content = header.nextElementSibling;
+                        const icon = header.querySelector('.accordion-icon');
+                        
+                        if (content.classList.contains('expanded')) {
+                                content.classList.remove('expanded');
+                                icon.textContent = '▶';
+                        } else {
+                                content.classList.add('expanded');
+                                icon.textContent = '▼';
+                        }
+                }
+                
+                function toggleEntry(header) {
+                        const content = header.nextElementSibling;
+                        const icon = header.querySelector('.accordion-icon');
+                        
+                        if (content.classList.contains('expanded')) {
+                                content.classList.remove('expanded');
+                                icon.textContent = '▶';
+                        } else {
+                                content.classList.add('expanded');
+                                icon.textContent = '▼';
+                        }
+                }
+        
                 function filterLogs() {
                         const searchTerm = document.getElementById('searchInput').value.toLowerCase();
                         const logFiles = document.querySelectorAll('.log-file');
@@ -117,3 +196,16 @@ export function useLogger(app) {
     }
   });
 }
+
+export const createLogServer = async () => {
+  const app = express();
+  const PORT = process.env.PORT || 3000;
+
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}/logs`);
+  });
+
+  useLogger(app);
+
+  return app;
+};

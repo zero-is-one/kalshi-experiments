@@ -2,9 +2,13 @@ import puppeteer from "puppeteer-core";
 import fs from "fs";
 import { getEvent, order } from "../../helpers/kalshi-api/index.js";
 import { logger } from "../../helpers/logger/index.js";
+import { delay } from "../../helpers/delay.js";
 
 let betsMade = [];
 let browser = null;
+
+const contractCount = 1;
+const checkIntervalMinutes = 10;
 
 async function main() {
   if (!browser) {
@@ -19,13 +23,13 @@ async function main() {
     });
   }
 
-  console.log("Loading Tennis matches from live page...");
+  console.log("Loading tennis matches from live page...");
   const page = await browser.newPage();
   await page.goto("https://kalshi.com/calendar", {
     waitUntil: "networkidle2",
   });
+  console.log(" └─ Page loaded");
 
-  console.log(" └─ Page Loaded");
   await delay(1000); // wait for 5 seconds
 
   // click a button with a span that has text 'Tennis', using a CSS selector
@@ -94,7 +98,7 @@ async function main() {
   await page.close();
 
   console.log(
-    "Found match links:",
+    "Upcoming matches that are close:",
     validMatches.map(
       (m) =>
         `${m.niceName} (${m.eventTicker}) - ${m.players[0].name}: ${m.players[0].percentChanceWin}% / ${m.players[1].name}: ${m.players[1].percentChanceWin}%`
@@ -116,38 +120,38 @@ async function main() {
         : match.players[1];
 
     console.log(
-      `Checking Match: ${match.players[0].name} vs ${match.players[1].name}`
+      `Checking match: ${match.players[0].name} vs ${match.players[1].name}`
     );
     console.log(
       ` └─ Underdog: ${matchPlayerUnderdog.name} (${matchPlayerUnderdog.percentChanceWin}%)`
     );
     console.log(` └─ Fetching event data for ${match.eventTicker}...`);
 
-    const eventResponseData = await getEvent(match.eventTicker);
+    const [eventData, eventError] = await getEvent(match.eventTicker);
 
-    if (eventResponseData.error) {
+    if (eventError) {
       console.log(
-        `Error fetching event ${match.eventTicker}: ${eventResponseData.error}`
+        `Error fetching event ${match.eventTicker}: ${eventError.message}`
       );
       continue;
     }
 
-    if (!eventResponseData?.markets?.[0]?.rules_primary.includes("tennis")) {
+    if (!eventData?.markets?.[0]?.rules_primary.includes("tennis")) {
       console.log(`Skipping ${match.eventTicker}, not a tennis match.`);
       logger(`errors`, { eventTicker: match.eventTicker, label: "not tennis" });
       continue;
     }
 
-    if (eventResponseData?.markets?.length !== 2) {
+    if (eventData?.markets?.length !== 2) {
       logger("errors", {
         eventTicker: match.eventTicker,
-        marketLength: eventResponseData?.markets?.length,
-        message: `Unexpected market length for ${match.eventTicker}: ${eventResponseData?.markets?.length}`,
+        marketLength: eventData?.markets?.length,
+        message: `Unexpected market length for ${match.eventTicker}: ${eventData?.markets?.length}`,
       });
       continue;
     }
 
-    const market = eventResponseData.markets.find((mkt) =>
+    const market = eventData.markets.find((mkt) =>
       mkt.yes_sub_title.includes(matchPlayerUnderdog.name)
     );
 
@@ -167,13 +171,12 @@ async function main() {
       continue;
     }
 
-    const contractCount = 1;
-
     // first buy a contract at max 51 cents
     console.log(
-      ` └─ Placing order to buy 1 contract for ${eventResponseData.event.title}(${market.ticker})...`
+      ` └─ Placing order to buy 1 contract for ${eventData.event.title}(${market.ticker})...`
     );
-    const buyData = await order({
+
+    const [buyData, buyError] = await order({
       ticker: market.ticker,
       type: "market",
       action: "buy",
@@ -182,24 +185,24 @@ async function main() {
       yes_price: 50, // max price in cents
     });
 
-    console.log(" └─ Placed buy order:", buyData);
+    console.log(" └─ Placed buy order:", buyData, buyError);
 
     logger("orders", {
       type: "buy",
-      eventTitle: eventResponseData.event.title,
+      eventTitle: eventData.event.title,
       market: market.ticker,
       buyData,
     });
 
-    delay(2000); // wait for 2 seconds
+    await delay(2000); // wait for 2 seconds
 
-    if (!(buyData?.order?.fill_count > 0) || buyData.error) {
+    if (buyError) {
       console.log("ERROR: Order was not filled, skipping further actions.");
-      return;
+      continue;
     }
 
     // Now place a sell limit order at 58 cents
-    const sellData = await order({
+    const [sellData, sellError] = await order({
       ticker: market.ticker,
       type: "limit",
       action: "sell",
@@ -212,25 +215,26 @@ async function main() {
 
     logger("orders", {
       type: "sell",
-      eventTitle: eventResponseData.event.title,
+      eventTitle: eventData.event.title,
       market: market.ticker,
       sellData,
     });
 
-    // if fill count is 0, log to errors.log
-    if (sellData.error) {
-      console.log("Sell order was not filled.");
+    console.log(" └─  Placed sell order:", sellData, sellError);
+
+    if (sellError) {
+      console.log(" └─  Sell order was not filled.");
     }
 
-    console.log(" └─  Placed sell order:", sellData);
     betsMade.push({
       eventTicker: match.eventTicker,
       marketTicker: market.ticker,
-      eventTitle: eventResponseData.event.title,
+      eventTitle: eventData.event.title,
     });
 
     break; //RUN ONE MATCH - LOOP will handle the rest in next cycle
   }
+
   console.log("");
 
   console.log(
@@ -242,16 +246,13 @@ async function main() {
   console.log("----------------------------------------");
 }
 
-let cycleCount = 0;
-console.log("Starting swing bot...");
 setInterval(() => {
-  console.log("Bet count so far:", betCount);
-  console.log(`Starting new cycle (${++cycleCount})...`);
+  console.log(
+    `Current time (EST): ${new Date().toLocaleString("en-US", {
+      timeZone: "America/New_York",
+    })}`
+  );
   main();
-}, 10 * 60 * 1000); // every 10 minutes
+}, checkIntervalMinutes * 60 * 1000);
 
 main();
-
-// Helper functions
-
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
