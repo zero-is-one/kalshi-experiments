@@ -183,6 +183,7 @@ async function main() {
       side: "yes",
       count: contractCount,
       yes_price: 50, // max price in cents
+      client_order_id: "swing-buy",
     });
 
     console.log(" └─ Placed buy order:", buyData, buyError);
@@ -211,6 +212,7 @@ async function main() {
       yes_price: 58,
       sell_position_capped: true,
       post_only: true,
+      client_order_id: "swing-sell",
     });
 
     logger("orders", {

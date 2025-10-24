@@ -1,10 +1,17 @@
 import puppeteer from "puppeteer-core";
-import { createLogServer, logger } from "../../helpers/logger/index.js";
+import {
+  createLogServer,
+  getLogAsString,
+  logger,
+} from "../../helpers/logger/index.js";
 import { getMetricsFromPage } from "./src/metrics.js";
-import { getEvent } from "../../helpers/kalshi-api/index.js";
+import { getEvent, order } from "../../helpers/kalshi-api/index.js";
+import { delay } from "../../helpers/delay.js";
+
+const checkIntervalMinutes = 10;
+const betsMade = [];
 
 createLogServer();
-
 let browser = null;
 
 async function main() {
@@ -72,7 +79,7 @@ async function main() {
       const contracts = details.split(" · ")[1].replace(" contracts", "");
 
       const position = {
-        side: rows[i],
+        side: rows[i].toLowerCase(),
         outcome: rows[i + 1],
         contracts: Number(contracts.replace(/,/g, "")),
         details: rows[i + 2],
@@ -82,9 +89,9 @@ async function main() {
     }
 
     return {
-      rawText,
       title,
       positions,
+      rawText,
     };
   });
 
@@ -124,9 +131,21 @@ async function main() {
 
   console.log("Fetching event details from Kalshi API and placing orders...");
 
+  const eventsLog = getLogAsString("api-events") || "";
+
   for (const eventPosition of eventPositions) {
     if (!eventPosition.url) continue;
     if (!eventPosition.ticker) continue;
+
+    console.log(`Fetching data for event: ${eventPosition.title}`);
+
+    if (eventsLog.includes(eventPosition.ticker)) {
+      console.log(
+        `└─  Skipping ${eventPosition.ticker}, already fetched in logs.`
+      );
+      continue;
+    }
+
     const [eventResponse, error] = await getEvent(eventPosition.ticker);
 
     logger("api-events", {
@@ -137,7 +156,7 @@ async function main() {
 
     if (error) {
       console.log(
-        `Error fetching event data for ticker ${eventPosition.ticker}:`,
+        `(!) Error fetching event data for ticker ${eventPosition.ticker}:`,
         error
       );
 
@@ -147,6 +166,8 @@ async function main() {
     }
 
     for (const position of eventPosition.positions) {
+      console.log(`└─ Processing position for outcome: ${position.outcome}`);
+
       const market = eventResponse.markets.find(
         (m) =>
           m.no_sub_title === position.outcome ||
@@ -156,20 +177,62 @@ async function main() {
       if (!market) continue;
 
       console.log(
-        `* Found market: ${market.title} for outcome ${position.outcome}.`
+        `└─ Found market: ${market.title} for outcome ${position.outcome}.`
       );
+
+      const contractCount = 1;
+
       console.log(
-        `└─ Liquidity: ${market.liquidity}, Closes at: ${market.close_time}`
+        `└─ Placing order for ${contractCount} contracts on '${position.side}' side.`
       );
+
+      // Place order logic would go here
+      const orderResult = await order({
+        ticker: market.ticker,
+        type: "market",
+        action: "buy",
+        side: position.side,
+        count: contractCount,
+        [`${position.side}_price`]: 90, // max price in cents
+        client_order_id: `ejg7`,
+      });
+
+      logger("orders", {
+        ticker: market.ticker,
+        side: position.side,
+        contracts: contractCount,
+        orderResult,
+      });
+
+      betsMade.push({
+        ticker: market.ticker,
+        side: position.side,
+        contracts: contractCount,
+        orderResult,
+      });
+
+      console.log(`└─ Order result:`, orderResult);
     }
 
-    await delay(200);
+    await delay(20000);
   }
 
-  console.log("All done!");
+  console.log("Check Complete.");
+  console.log(
+    "Bets Made This Session:",
+    betsMade.map((b) => ` ${b.ticker} - ${b.side} - ${b.contracts} contracts`)
+  );
   await page.close();
+  console.log("---------------------");
 }
 
-main();
+setInterval(() => {
+  console.log(
+    `Current time (EST): ${new Date().toLocaleString("en-US", {
+      timeZone: "America/New_York",
+    })}`
+  );
+  main();
+}, checkIntervalMinutes * 60 * 1000);
 
-const delay = (ms) => new Promise((res) => setTimeout(res, ms));
+main();

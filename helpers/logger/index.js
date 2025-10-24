@@ -109,7 +109,9 @@ export function useLogger(app) {
                                             (entry) => `
                                                 <div class="log-entry" data-content="${JSON.stringify(
                                                   entry
-                                                ).toLowerCase()}">
+                                                )
+                                                  .toLowerCase()
+                                                  .replace(/"/g, "&quot;")}">
                                                         <div class="entry-header" onclick="toggleEntry(this)">
                                                                 ${JSON.stringify(
                                                                   entry
@@ -208,4 +210,18 @@ export const createLogServer = async () => {
   useLogger(app);
 
   return app;
+};
+
+export const getLogAsString = (fileName) => {
+  try {
+    const filePath = path.join(process.cwd(), "logs", `${fileName}.log`);
+    if (fs.existsSync(filePath)) {
+      return fs.readFileSync(filePath, "utf8");
+    } else {
+      return null;
+    }
+  } catch (error) {
+    console.error("Error reading log file:", error);
+    return null;
+  }
 };
