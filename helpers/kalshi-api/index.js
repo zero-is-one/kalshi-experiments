@@ -1,7 +1,7 @@
 import fs from "fs";
 import crypto from "crypto";
 
-const API_KEY_ID = "a4217df6-4725-4135-b3ad-85b8b212f4c1";
+const API_KEY_ID = "0b38fa30-cd4a-4fde-abc4-7f9967bcfa02";
 const BASE_URL = "https://api.elections.kalshi.com"; // or https://api.kalshi.com
 const PRIVATE_KEY_PEM = (() => {
   try {
@@ -34,25 +34,12 @@ async function request(method, path, body = null, baseUrl = BASE_URL) {
     const timestamp = Date.now().toString(); // milliseconds
     const signature = createSignature(PRIVATE_KEY_PEM, timestamp, method, path);
 
-    //
-
     const headers = {
       "KALSHI-ACCESS-KEY": apiKeyId,
       "KALSHI-ACCESS-SIGNATURE": signature,
       "KALSHI-ACCESS-TIMESTAMP": timestamp,
       Accept: "application/json",
     };
-
-    console.log({
-      method,
-      path,
-      body,
-      headers,
-      //get timestammp in EST
-      timestamp: new Date(parseInt(timestamp)).toLocaleString("en-US", {
-        timeZone: "America/New_York",
-      }),
-    });
 
     // Add Content-Type header for POST requests
     if (method === "POST" && body) {
