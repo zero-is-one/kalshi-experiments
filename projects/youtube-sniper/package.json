@@ -1,6 +1,0 @@
-{
-  "type": "module",
-  "dependencies": {
-    "@danielxceron/youtube-transcript": "^1.2.3"
-  }
-}

@@ -1,17 +1,24 @@
-import { YoutubeTranscript } from "@danielxceron/youtube-transcript";
 import { writeFileSync } from "fs";
-
-const isTestMode = true;
+import { YoutubeTranscript } from "@danielxceron/youtube-transcript";
+import { delay } from "../../helpers/delay.js";
+import { getEvent, order } from "../../helpers/kalshi-api/index.js";
+import { logger } from "../../helpers/logger/index.js";
+const isTestMode = false;
 
 const YOUTUBE_API_KEY = "AIzaSyC93elLLaaVLiKlrx27SpgwEFneorRuEEU";
 const CHANNEL_ID = "UCX6OQ3DkcsbYNE6H8uQQuVA";
 const TARGET_HOUR = 12; // Hour in EST (24-hour format)
 const TARGET_MINUTE = 0; // Minute
 
+const eventTicker = "KXMRBEASTMENTION-25NOV16";
+
 // Configuration for fetching
 const BEFORE_TARGET_MS = 10; // Time before target time to start monitoring (in ms)
 const TOTAL_FETCHES = 10; // Number of times to check for new videos
 const MONITORING_PERIOD_MS = 3000; // Period in milliseconds (3 seconds)
+
+let ordersCount = 0;
+let maxOrders = 5;
 
 async function getLatestVideo(channelId) {
   try {
@@ -51,7 +58,7 @@ async function getLatestVideo(channelId) {
   }
 }
 
-async function fetchAndSaveTranscript(video) {
+async function fetchAndSaveTranscript(video, event) {
   try {
     const transcript = await YoutubeTranscript.fetchTranscript(video.id, {
       lang: "en",
@@ -87,14 +94,48 @@ async function fetchAndSaveTranscript(video) {
       .replace(/<br\s*\/?>/gi, "\n")
       .toLowerCase();
 
-    const lookForWords = ["subscribe", "like", "comment", "share"];
-    for (const word of lookForWords) {
+    let runs = 0;
+    for (const market of event.markets) {
+      const word = market.yes_sub_title.toLowerCase();
       const regex = new RegExp(`\\b${word}\\b`, "gi");
       const matches = transcriptText.match(regex);
       const count = matches ? matches.length : 0;
       console.log(
         `The word "${word}" appears ${count} time(s) in the transcript.`
       );
+
+      if (!isTestMode) {
+        if (ordersCount >= maxOrders) {
+          console.log(
+            `Max orders limit of ${maxOrders} reached. No more orders will be placed.`
+          );
+          break;
+        }
+        const [result, error] = order({
+          ticker: market.ticker,
+          type: "market",
+          action: "buy",
+          side: "yes",
+          count: 1,
+          yes_price: 90, // max price in cents
+          client_order_id: `yts-${Date.now()}`,
+        });
+
+        logger("orders", {
+          type: "youtube-transcript-buy",
+          event: event,
+          market: market,
+          word,
+          count,
+          result,
+          error: error?.message,
+        });
+        ordersCount++;
+        console.log(`Total orders placed so far: ${ordersCount}`);
+      }
+
+      runs++;
+      if (runs >= 2) break;
     }
 
     writeFileSync(`${video.id}.txt`, transcriptText);
@@ -155,6 +196,17 @@ function getTimeUntilTargetTime() {
 async function startWatching() {
   const timeUntilTarget = isTestMode ? 3000 : getTimeUntilTargetTime();
   const waitTime = timeUntilTarget - BEFORE_TARGET_MS;
+
+  const [event, eventError] = await getEvent(eventTicker);
+  console.log("Event:", event.event.title);
+
+  if (!event) {
+    console.error(
+      "Failed to fetch event details. Exiting.",
+      eventError?.message
+    );
+    return;
+  }
 
   // Get initial latest video
   const initialVideo = isTestMode
@@ -262,11 +314,9 @@ async function startWatching() {
         foundAt: new Date(),
       };
 
-      fetchAndSaveTranscript(detectedVideo);
+      fetchAndSaveTranscript(detectedVideo, event);
     }
   }, checkInterval);
 }
-
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 startWatching();

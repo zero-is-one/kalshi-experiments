@@ -34,12 +34,25 @@ async function request(method, path, body = null, baseUrl = BASE_URL) {
     const timestamp = Date.now().toString(); // milliseconds
     const signature = createSignature(PRIVATE_KEY_PEM, timestamp, method, path);
 
+    //
+
     const headers = {
       "KALSHI-ACCESS-KEY": apiKeyId,
       "KALSHI-ACCESS-SIGNATURE": signature,
       "KALSHI-ACCESS-TIMESTAMP": timestamp,
       Accept: "application/json",
     };
+
+    console.log({
+      method,
+      path,
+      body,
+      headers,
+      //get timestammp in EST
+      timestamp: new Date(parseInt(timestamp)).toLocaleString("en-US", {
+        timeZone: "America/New_York",
+      }),
+    });
 
     // Add Content-Type header for POST requests
     if (method === "POST" && body) {

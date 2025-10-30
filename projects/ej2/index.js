@@ -8,11 +8,12 @@ import { getMetricsFromPage } from "./src/metrics.js";
 import { getEvent, order } from "../../helpers/kalshi-api/index.js";
 import { delay } from "../../helpers/delay.js";
 
-const checkIntervalMinutes = 10;
-const betsMade = [];
+const checkIntervalMinutes = 2;
+const maxContractsPerOrder = 4;
 
 createLogServer();
 let browser = null;
+const betsMade = [];
 
 async function main() {
   console.log("Get EJ positions from Kalshi...");
@@ -131,7 +132,7 @@ async function main() {
 
   console.log("Fetching event details from Kalshi API and placing orders...");
 
-  const eventsLog = getLogAsString("api-events") || "";
+  const eventsLog = getLogAsString("orders") || "";
 
   for (const eventPosition of eventPositions) {
     if (!eventPosition.url) continue;
@@ -174,27 +175,42 @@ async function main() {
           m.yes_sub_title === position.outcome
       );
 
-      if (!market) continue;
+      if (!market) {
+        console.log(
+          `(!) Could not find market for outcome ${position.outcome} in event ${eventPosition.ticker}`
+        );
+        logger("errors", {
+          ticker: eventPosition.ticker,
+          position: position,
+          message: "Market not found for outcome",
+        });
+
+        continue;
+      }
 
       console.log(
         `└─ Found market: ${market.title} for outcome ${position.outcome}.`
       );
 
-      const contractCount = 1;
+      // Calculate contract count: 1/5000th of position size, capped between 1 and maxContractsPerOrder
+      const contractCount = Math.max(
+        1,
+        Math.min(Math.round(position.contracts / 5000), maxContractsPerOrder)
+      );
 
       console.log(
         `└─ Placing order for ${contractCount} contracts on '${position.side}' side.`
       );
 
       // Place order logic would go here
-      const orderResult = await order({
+      const [orderResult, orderError] = await order({
         ticker: market.ticker,
         type: "market",
         action: "buy",
         side: position.side,
         count: contractCount,
         [`${position.side}_price`]: 90, // max price in cents
-        client_order_id: `ejg7`,
+        client_order_id: `ejg7-${Date.now()}`,
       });
 
       logger("orders", {
@@ -202,6 +218,7 @@ async function main() {
         side: position.side,
         contracts: contractCount,
         orderResult,
+        orderError: orderError?.message,
       });
 
       betsMade.push({
@@ -209,6 +226,7 @@ async function main() {
         side: position.side,
         contracts: contractCount,
         orderResult,
+        orderError: orderError?.message,
       });
 
       console.log(`└─ Order result:`, orderResult);
@@ -226,13 +244,17 @@ async function main() {
   console.log("---------------------");
 }
 
-setInterval(() => {
+setInterval(async () => {
   console.log(
     `Current time (EST): ${new Date().toLocaleString("en-US", {
       timeZone: "America/New_York",
     })}`
   );
-  main();
+  try {
+    await main();
+  } catch (e) {
+    console.log("Error in main loop:", e);
+  }
 }, checkIntervalMinutes * 60 * 1000);
 
 main();

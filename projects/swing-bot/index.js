@@ -7,7 +7,7 @@ import { delay } from "../../helpers/delay.js";
 let betsMade = [];
 let browser = null;
 
-const contractCount = 1;
+const contractCount = 2;
 const checkIntervalMinutes = 10;
 
 async function main() {
@@ -25,24 +25,18 @@ async function main() {
 
   console.log("Loading tennis matches from live page...");
   const page = await browser.newPage();
-  await page.goto("https://kalshi.com/calendar", {
+  await page.goto("https://kalshi.com/sports/tennis", {
     waitUntil: "networkidle2",
   });
   console.log(" └─ Page loaded");
+  console.log(" └─ Scrolling to load matches...");
 
-  await delay(1000); // wait for 5 seconds
-
-  // click a button with a span that has text 'Tennis', using a CSS selector
-  const buttons = await page.$$("button span");
-  for (const button of buttons) {
-    const text = await button.evaluate((el) => el.textContent);
-    if (text.trim() === "Tennis") {
-      await button.click();
-      break;
-    }
+  // Scroll multiple times to load more matches
+  const scrollIterations = 5;
+  for (let i = 0; i < scrollIterations; i++) {
+    await delay(2000);
+    await page.evaluate(() => window.scrollTo(0, 999999));
   }
-
-  await delay(2000); // wait for 2 seconds
 
   // get all the a withs hrefs that include the word 'market/'
 
@@ -173,7 +167,7 @@ async function main() {
 
     // first buy a contract at max 51 cents
     console.log(
-      ` └─ Placing order to buy 1 contract for ${eventData.event.title}(${market.ticker})...`
+      ` └─ Placing order to buy ${contractCount} contract for ${eventData.event.title}(${market.ticker})...`
     );
 
     const [buyData, buyError] = await order({
@@ -182,8 +176,8 @@ async function main() {
       action: "buy",
       side: "yes",
       count: contractCount,
-      yes_price: 50, // max price in cents
-      client_order_id: "swing-buy",
+      yes_price: 54, // max price in cents
+      client_order_id: `swing-buy-${Date.now()}`,
     });
 
     console.log(" └─ Placed buy order:", buyData, buyError);
@@ -193,6 +187,7 @@ async function main() {
       eventTitle: eventData.event.title,
       market: market.ticker,
       buyData,
+      buyError: buyError?.message,
     });
 
     await delay(2000); // wait for 2 seconds
@@ -212,7 +207,7 @@ async function main() {
       yes_price: 58,
       sell_position_capped: true,
       post_only: true,
-      client_order_id: "swing-sell",
+      client_order_id: `swing-sell-${Date.now()}`,
     });
 
     logger("orders", {
@@ -220,6 +215,7 @@ async function main() {
       eventTitle: eventData.event.title,
       market: market.ticker,
       sellData,
+      sellError: sellError?.message,
     });
 
     console.log(" └─  Placed sell order:", sellData, sellError);
