@@ -1,5 +1,5 @@
 {
-  "createdAt": "2025-10-30T06:39:37.072Z",
+  "createdAt": "2025-10-31T01:15:41.971Z",
   "markets": [
     {
       "id": "d6001565-9ce7-4194-81a1-ab96e694491c-yes",
@@ -7,6 +7,7 @@
       "users": [
         "FreddySupples",
         "TheGrandeTop10",
+        "JDP44",
         "Hyphen",
         "YoDog",
         "eppixx",
@@ -20,7 +21,7 @@
         "market_id": "d6001565-9ce7-4194-81a1-ab96e694491c",
         "market_ticker": "KXMAYORNYCPARTY-25-D",
         "signed_open_position": 5000,
-        "pnl": -128000
+        "pnl": 1872000
       },
       "eventHolding": {
         "event_ticker": "KXMAYORNYCPARTY-25",
@@ -31,7 +32,7 @@
             "market_id": "d6001565-9ce7-4194-81a1-ab96e694491c",
             "market_ticker": "KXMAYORNYCPARTY-25-D",
             "signed_open_position": 5000,
-            "pnl": -128000
+            "pnl": 1872000
           },
           {
             "market_id": "ffdba09b-6f14-4f47-a21f-44c36ba95880",
@@ -43,260 +44,99 @@
       }
     },
     {
-      "id": "006cc24d-fe87-44ee-9875-5a98655d38d1-no",
-      "side": "no",
-      "users": [
-        "nonsenseking",
-        "genghis",
-        "Benj",
-        "BitcoinTradingChallenge",
-        "appatel4"
-      ],
-      "marketHolding": {
-        "market_id": "006cc24d-fe87-44ee-9875-5a98655d38d1",
-        "market_ticker": "KXMAYORNYCPARTY-25-AC",
-        "signed_open_position": -497779,
-        "pnl": 149789600
-      },
-      "eventHolding": {
-        "event_ticker": "KXMAYORNYCPARTY-25",
-        "series_ticker": "KXMAYORNYCPARTY",
-        "total_absolute_position": 2080590,
-        "market_holdings": [
-          {
-            "market_id": "006cc24d-fe87-44ee-9875-5a98655d38d1",
-            "market_ticker": "KXMAYORNYCPARTY-25-AC",
-            "signed_open_position": -497779,
-            "pnl": 149789600
-          },
-          {
-            "market_id": "d6001565-9ce7-4194-81a1-ab96e694491c",
-            "market_ticker": "KXMAYORNYCPARTY-25-D",
-            "signed_open_position": -497779,
-            "pnl": -189771000
-          },
-          {
-            "market_id": "37304114-f769-4a90-ad84-684f3f5b19b2",
-            "market_ticker": "KXMAYORNYCPARTY-25-R",
-            "signed_open_position": -487779,
-            "pnl": 64852600
-          },
-          {
-            "market_id": "ffdba09b-6f14-4f47-a21f-44c36ba95880",
-            "market_ticker": "KXMAYORNYCPARTY-25-EADA",
-            "signed_open_position": -416777,
-            "pnl": 291389600
-          },
-          {
-            "market_id": "3c75fd5b-6c22-4e38-bcb1-9c50f383e4a9",
-            "market_ticker": "KXMAYORNYCPARTY-25-JWAL",
-            "signed_open_position": -180476,
-            "pnl": 0
-          }
-        ]
-      }
-    },
-    {
-      "id": "2a8d10e0-ed92-4fc9-9e87-f0e05d7d0103-yes",
+      "id": "3f3aa5ad-c76d-44a1-b5a1-71a9cc1932fe-yes",
       "side": "yes",
       "users": [
-        "Toemas",
-        "chan252",
+        "Alex3",
+        "JDP44",
+        "eppixx",
+        "cchen0921",
         "flavus",
-        "oriki",
-        "Baka88"
+        "Foggypaws",
+        "RobotClover"
       ],
       "marketHolding": {
-        "market_id": "2a8d10e0-ed92-4fc9-9e87-f0e05d7d0103",
-        "market_ticker": "KXWTAMATCH-25OCT29PARJUV-PAR",
-        "signed_open_position": 2168,
-        "pnl": 320200
+        "market_id": "3f3aa5ad-c76d-44a1-b5a1-71a9cc1932fe",
+        "market_ticker": "KXNCAAFGAME-25OCT30TULNUTSA-TULN",
+        "signed_open_position": 1920,
+        "pnl": -11904000
       },
       "eventHolding": {
-        "event_ticker": "KXWTAMATCH-25OCT29PARJUV",
-        "series_ticker": "KXWTAMATCH",
-        "total_absolute_position": 2168,
+        "event_ticker": "KXNCAAFGAME-25OCT30TULNUTSA",
+        "series_ticker": "KXNCAAFGAME",
+        "total_absolute_position": 1920,
         "market_holdings": [
           {
-            "market_id": "2a8d10e0-ed92-4fc9-9e87-f0e05d7d0103",
-            "market_ticker": "KXWTAMATCH-25OCT29PARJUV-PAR",
-            "signed_open_position": 2168,
-            "pnl": 320200
+            "market_id": "3f3aa5ad-c76d-44a1-b5a1-71a9cc1932fe",
+            "market_ticker": "KXNCAAFGAME-25OCT30TULNUTSA-TULN",
+            "signed_open_position": 1920,
+            "pnl": -11904000
           }
         ]
       }
     },
     {
-      "id": "d6001565-9ce7-4194-81a1-ab96e694491c-no",
-      "side": "no",
+      "id": "6f62f8bb-18a1-4b61-91c5-bf7853ff591a-yes",
+      "side": "yes",
       "users": [
-        "nonsenseking",
-        "vernonb",
-        "KennySchmidt",
-        "spys"
+        "Hyphen",
+        "cchen0921",
+        "appatel4",
+        "spxce",
+        "CancelThat"
       ],
       "marketHolding": {
-        "market_id": "d6001565-9ce7-4194-81a1-ab96e694491c",
-        "market_ticker": "KXMAYORNYCPARTY-25-D",
-        "signed_open_position": -497779,
-        "pnl": -189771000
+        "market_id": "6f62f8bb-18a1-4b61-91c5-bf7853ff591a",
+        "market_ticker": "KXNBAGAME-25OCT30ORLCHA-ORL",
+        "signed_open_position": 18218,
+        "pnl": 18513300
       },
       "eventHolding": {
-        "event_ticker": "KXMAYORNYCPARTY-25",
-        "series_ticker": "KXMAYORNYCPARTY",
-        "total_absolute_position": 2080590,
+        "event_ticker": "KXNBAGAME-25OCT30ORLCHA",
+        "series_ticker": "KXNBAGAME",
+        "total_absolute_position": 24575,
         "market_holdings": [
           {
-            "market_id": "006cc24d-fe87-44ee-9875-5a98655d38d1",
-            "market_ticker": "KXMAYORNYCPARTY-25-AC",
-            "signed_open_position": -497779,
-            "pnl": 149789600
+            "market_id": "6f62f8bb-18a1-4b61-91c5-bf7853ff591a",
+            "market_ticker": "KXNBAGAME-25OCT30ORLCHA-ORL",
+            "signed_open_position": 18218,
+            "pnl": 18513300
           },
           {
-            "market_id": "d6001565-9ce7-4194-81a1-ab96e694491c",
-            "market_ticker": "KXMAYORNYCPARTY-25-D",
-            "signed_open_position": -497779,
-            "pnl": -189771000
-          },
-          {
-            "market_id": "37304114-f769-4a90-ad84-684f3f5b19b2",
-            "market_ticker": "KXMAYORNYCPARTY-25-R",
-            "signed_open_position": -487779,
-            "pnl": 64852600
-          },
-          {
-            "market_id": "ffdba09b-6f14-4f47-a21f-44c36ba95880",
-            "market_ticker": "KXMAYORNYCPARTY-25-EADA",
-            "signed_open_position": -416777,
-            "pnl": 291389600
-          },
-          {
-            "market_id": "3c75fd5b-6c22-4e38-bcb1-9c50f383e4a9",
-            "market_ticker": "KXMAYORNYCPARTY-25-JWAL",
-            "signed_open_position": -180476,
+            "market_id": "da80b945-689e-485e-8cd0-2310780f17a8",
+            "market_ticker": "KXNBAGAME-25OCT30ORLCHA-CHA",
+            "signed_open_position": -6357,
             "pnl": 0
           }
         ]
       }
     },
     {
-      "id": "08fcc68d-1816-4133-905d-3d9cd3c01530-yes",
+      "id": "3646c15d-207f-492e-a999-36e00a380866-yes",
       "side": "yes",
       "users": [
-        "nonsenseking",
-        "juuustin",
-        "johnconnor777",
-        "Foggypaws"
+        "Marv3lous718",
+        "yaba",
+        "RobotClover",
+        "Baka88",
+        "zyxwvu164"
       ],
       "marketHolding": {
-        "market_id": "08fcc68d-1816-4133-905d-3d9cd3c01530",
-        "market_ticker": "KXGOVSHUTLENGTH-26JAN01-30D",
-        "signed_open_position": 13172,
-        "pnl": 91080500
+        "market_id": "3646c15d-207f-492e-a999-36e00a380866",
+        "market_ticker": "KXNFLGAME-25OCT30BALMIA-MIA",
+        "signed_open_position": 20,
+        "pnl": -20000
       },
       "eventHolding": {
-        "event_ticker": "KXGOVSHUTLENGTH-26JAN01",
-        "series_ticker": "KXGOVSHUTLENGTH",
-        "total_absolute_position": 33946,
+        "event_ticker": "KXNFLGAME-25OCT30BALMIA",
+        "series_ticker": "KXNFLGAME",
+        "total_absolute_position": 20,
         "market_holdings": [
           {
-            "market_id": "d1fbb58c-dff0-43d4-a4ab-698a22373356",
-            "market_ticker": "KXGOVSHUTLENGTH-26JAN01-33D",
-            "signed_open_position": 20774,
-            "pnl": 8430600
-          },
-          {
-            "market_id": "08fcc68d-1816-4133-905d-3d9cd3c01530",
-            "market_ticker": "KXGOVSHUTLENGTH-26JAN01-30D",
-            "signed_open_position": 13172,
-            "pnl": 91080500
-          }
-        ]
-      }
-    },
-    {
-      "id": "7ae8d145-7345-4dc4-accc-58b09bb66333-no",
-      "side": "no",
-      "users": [
-        "Billybutsky",
-        "Hyphen",
-        "eppixx",
-        ".trippe."
-      ],
-      "marketHolding": {
-        "market_id": "7ae8d145-7345-4dc4-accc-58b09bb66333",
-        "market_ticker": "KXWLEADER-25-KJU",
-        "signed_open_position": -5215,
-        "pnl": 4226800
-      },
-      "eventHolding": {
-        "event_ticker": "KXWLEADER-25",
-        "series_ticker": "KXWLEADER",
-        "total_absolute_position": 5215,
-        "market_holdings": [
-          {
-            "market_id": "7ae8d145-7345-4dc4-accc-58b09bb66333",
-            "market_ticker": "KXWLEADER-25-KJU",
-            "signed_open_position": -5215,
-            "pnl": 4226800
-          }
-        ]
-      }
-    },
-    {
-      "id": "4d2c774a-48d4-405a-b1d7-a8d6b59853ab-yes",
-      "side": "yes",
-      "users": [
-        "Toemas",
-        "jwatts24",
-        "connerk",
-        "oriki"
-      ],
-      "marketHolding": {
-        "market_id": "4d2c774a-48d4-405a-b1d7-a8d6b59853ab",
-        "market_ticker": "KXWTAMATCH-25OCT30KALZHA-KAL",
-        "signed_open_position": 1213,
-        "pnl": 3357700
-      },
-      "eventHolding": {
-        "event_ticker": "KXWTAMATCH-25OCT30KALZHA",
-        "series_ticker": "KXWTAMATCH",
-        "total_absolute_position": 1213,
-        "market_holdings": [
-          {
-            "market_id": "4d2c774a-48d4-405a-b1d7-a8d6b59853ab",
-            "market_ticker": "KXWTAMATCH-25OCT30KALZHA-KAL",
-            "signed_open_position": 1213,
-            "pnl": 3357700
-          }
-        ]
-      }
-    },
-    {
-      "id": "8a4e4136-68a8-41f7-84bc-b2470772c789-yes",
-      "side": "yes",
-      "users": [
-        "eppixx",
-        "BirdGang",
-        "johnconnor777",
-        "GDuncanOnYou"
-      ],
-      "marketHolding": {
-        "market_id": "8a4e4136-68a8-41f7-84bc-b2470772c789",
-        "market_ticker": "KXMLB-25-LAD",
-        "signed_open_position": 1,
-        "pnl": -3600
-      },
-      "eventHolding": {
-        "event_ticker": "KXMLB-25",
-        "series_ticker": "KXMLB",
-        "total_absolute_position": 1,
-        "market_holdings": [
-          {
-            "market_id": "8a4e4136-68a8-41f7-84bc-b2470772c789",
-            "market_ticker": "KXMLB-25-LAD",
-            "signed_open_position": 1,
-            "pnl": -3600
+            "market_id": "3646c15d-207f-492e-a999-36e00a380866",
+            "market_ticker": "KXNFLGAME-25OCT30BALMIA-MIA",
+            "signed_open_position": 20,
+            "pnl": -20000
           }
         ]
       }
@@ -306,6 +146,7 @@
       "side": "yes",
       "users": [
         "mitch",
+        "flavus",
         "ataway23",
         "JDizzle",
         "Ross92"
@@ -331,6 +172,313 @@
       }
     },
     {
+      "id": "006cc24d-fe87-44ee-9875-5a98655d38d1-no",
+      "side": "no",
+      "users": [
+        "nonsenseking",
+        "genghis",
+        "BitcoinTradingChallenge",
+        "appatel4"
+      ],
+      "marketHolding": {
+        "market_id": "006cc24d-fe87-44ee-9875-5a98655d38d1",
+        "market_ticker": "KXMAYORNYCPARTY-25-AC",
+        "signed_open_position": -577779,
+        "pnl": 350901200
+      },
+      "eventHolding": {
+        "event_ticker": "KXMAYORNYCPARTY-25",
+        "series_ticker": "KXMAYORNYCPARTY",
+        "total_absolute_position": 2240590,
+        "market_holdings": [
+          {
+            "market_id": "006cc24d-fe87-44ee-9875-5a98655d38d1",
+            "market_ticker": "KXMAYORNYCPARTY-25-AC",
+            "signed_open_position": -577779,
+            "pnl": 350901200
+          },
+          {
+            "market_id": "d6001565-9ce7-4194-81a1-ab96e694491c",
+            "market_ticker": "KXMAYORNYCPARTY-25-D",
+            "signed_open_position": -577779,
+            "pnl": -372882600
+          },
+          {
+            "market_id": "37304114-f769-4a90-ad84-684f3f5b19b2",
+            "market_ticker": "KXMAYORNYCPARTY-25-R",
+            "signed_open_position": -487779,
+            "pnl": 64852600
+          },
+          {
+            "market_id": "ffdba09b-6f14-4f47-a21f-44c36ba95880",
+            "market_ticker": "KXMAYORNYCPARTY-25-EADA",
+            "signed_open_position": -416777,
+            "pnl": 291389600
+          },
+          {
+            "market_id": "3c75fd5b-6c22-4e38-bcb1-9c50f383e4a9",
+            "market_ticker": "KXMAYORNYCPARTY-25-JWAL",
+            "signed_open_position": -180476,
+            "pnl": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "7ae8d145-7345-4dc4-accc-58b09bb66333-no",
+      "side": "no",
+      "users": [
+        "Billybutsky",
+        "Hyphen",
+        "eppixx",
+        ".trippe."
+      ],
+      "marketHolding": {
+        "market_id": "7ae8d145-7345-4dc4-accc-58b09bb66333",
+        "market_ticker": "KXWLEADER-25-KJU",
+        "signed_open_position": -2215,
+        "pnl": 5269800
+      },
+      "eventHolding": {
+        "event_ticker": "KXWLEADER-25",
+        "series_ticker": "KXWLEADER",
+        "total_absolute_position": 2215,
+        "market_holdings": [
+          {
+            "market_id": "7ae8d145-7345-4dc4-accc-58b09bb66333",
+            "market_ticker": "KXWLEADER-25-KJU",
+            "signed_open_position": -2215,
+            "pnl": 5269800
+          }
+        ]
+      }
+    },
+    {
+      "id": "09761515-4ad0-468d-9073-5fb0d97b6a40-yes",
+      "side": "yes",
+      "users": [
+        "JDP44",
+        "eppixx",
+        "flavus",
+        "eppizle"
+      ],
+      "marketHolding": {
+        "market_id": "09761515-4ad0-468d-9073-5fb0d97b6a40",
+        "market_ticker": "KXNCAAFGAME-25OCT30MRSHCCAR-MRSH",
+        "signed_open_position": 1863,
+        "pnl": 428900
+      },
+      "eventHolding": {
+        "event_ticker": "KXNCAAFGAME-25OCT30MRSHCCAR",
+        "series_ticker": "KXNCAAFGAME",
+        "total_absolute_position": 1863,
+        "market_holdings": [
+          {
+            "market_id": "09761515-4ad0-468d-9073-5fb0d97b6a40",
+            "market_ticker": "KXNCAAFGAME-25OCT30MRSHCCAR-MRSH",
+            "signed_open_position": 1863,
+            "pnl": 428900
+          }
+        ]
+      }
+    },
+    {
+      "id": "0a2e70ed-b857-44ff-8784-8bcf5596fa76-yes",
+      "side": "yes",
+      "users": [
+        "JDP44",
+        "Baka88",
+        "spxce",
+        "CancelThat"
+      ],
+      "marketHolding": {
+        "market_id": "0a2e70ed-b857-44ff-8784-8bcf5596fa76",
+        "market_ticker": "KXNHLGAME-25OCT30NSHPHI-PHI",
+        "signed_open_position": 829,
+        "pnl": 3109100
+      },
+      "eventHolding": {
+        "event_ticker": "KXNHLGAME-25OCT30NSHPHI",
+        "series_ticker": "KXNHLGAME",
+        "total_absolute_position": 829,
+        "market_holdings": [
+          {
+            "market_id": "0a2e70ed-b857-44ff-8784-8bcf5596fa76",
+            "market_ticker": "KXNHLGAME-25OCT30NSHPHI-PHI",
+            "signed_open_position": 829,
+            "pnl": 3109100
+          }
+        ]
+      }
+    },
+    {
+      "id": "1338aaaa-657d-46dd-8b72-b9d6c17c4e9d-yes",
+      "side": "yes",
+      "users": [
+        "JDP44",
+        "eppixx",
+        "BirdGang",
+        "cchen0921"
+      ],
+      "marketHolding": {
+        "market_id": "1338aaaa-657d-46dd-8b72-b9d6c17c4e9d",
+        "market_ticker": "KXNFLGAME-25OCT30BALMIA-BAL",
+        "signed_open_position": 517,
+        "pnl": 568700
+      },
+      "eventHolding": {
+        "event_ticker": "KXNFLGAME-25OCT30BALMIA",
+        "series_ticker": "KXNFLGAME",
+        "total_absolute_position": 517,
+        "market_holdings": [
+          {
+            "market_id": "1338aaaa-657d-46dd-8b72-b9d6c17c4e9d",
+            "market_ticker": "KXNFLGAME-25OCT30BALMIA-BAL",
+            "signed_open_position": 517,
+            "pnl": 568700
+          }
+        ]
+      }
+    },
+    {
+      "id": "3880743a-c35e-419e-a7ba-f47b622aae9f-yes",
+      "side": "yes",
+      "users": [
+        "Toemas",
+        "cchen0921",
+        "Baka88",
+        "spxce"
+      ],
+      "marketHolding": {
+        "market_id": "3880743a-c35e-419e-a7ba-f47b622aae9f",
+        "market_ticker": "KXNBAGAME-25OCT30GSWMIL-GSW",
+        "signed_open_position": 7410,
+        "pnl": 6070000
+      },
+      "eventHolding": {
+        "event_ticker": "KXNBAGAME-25OCT30GSWMIL",
+        "series_ticker": "KXNBAGAME",
+        "total_absolute_position": 7410,
+        "market_holdings": [
+          {
+            "market_id": "3880743a-c35e-419e-a7ba-f47b622aae9f",
+            "market_ticker": "KXNBAGAME-25OCT30GSWMIL-GSW",
+            "signed_open_position": 7410,
+            "pnl": 6070000
+          }
+        ]
+      }
+    },
+    {
+      "id": "cfb18bfb-10d0-454c-bd77-0a63ef3f7047-yes",
+      "side": "yes",
+      "users": [
+        "juuustin",
+        "oriki",
+        "spxce",
+        "CancelThat"
+      ],
+      "marketHolding": {
+        "market_id": "cfb18bfb-10d0-454c-bd77-0a63ef3f7047",
+        "market_ticker": "KXNHLGAME-25OCT30BUFBOS-BUF",
+        "signed_open_position": 500,
+        "pnl": -50000
+      },
+      "eventHolding": {
+        "event_ticker": "KXNHLGAME-25OCT30BUFBOS",
+        "series_ticker": "KXNHLGAME",
+        "total_absolute_position": 500,
+        "market_holdings": [
+          {
+            "market_id": "cfb18bfb-10d0-454c-bd77-0a63ef3f7047",
+            "market_ticker": "KXNHLGAME-25OCT30BUFBOS-BUF",
+            "signed_open_position": 500,
+            "pnl": -50000
+          }
+        ]
+      }
+    },
+    {
+      "id": "d6001565-9ce7-4194-81a1-ab96e694491c-no",
+      "side": "no",
+      "users": [
+        "nonsenseking",
+        "KennySchmidt",
+        "spys"
+      ],
+      "marketHolding": {
+        "market_id": "d6001565-9ce7-4194-81a1-ab96e694491c",
+        "market_ticker": "KXMAYORNYCPARTY-25-D",
+        "signed_open_position": -577779,
+        "pnl": -372882600
+      },
+      "eventHolding": {
+        "event_ticker": "KXMAYORNYCPARTY-25",
+        "series_ticker": "KXMAYORNYCPARTY",
+        "total_absolute_position": 2240590,
+        "market_holdings": [
+          {
+            "market_id": "006cc24d-fe87-44ee-9875-5a98655d38d1",
+            "market_ticker": "KXMAYORNYCPARTY-25-AC",
+            "signed_open_position": -577779,
+            "pnl": 350901200
+          },
+          {
+            "market_id": "d6001565-9ce7-4194-81a1-ab96e694491c",
+            "market_ticker": "KXMAYORNYCPARTY-25-D",
+            "signed_open_position": -577779,
+            "pnl": -372882600
+          },
+          {
+            "market_id": "37304114-f769-4a90-ad84-684f3f5b19b2",
+            "market_ticker": "KXMAYORNYCPARTY-25-R",
+            "signed_open_position": -487779,
+            "pnl": 64852600
+          },
+          {
+            "market_id": "ffdba09b-6f14-4f47-a21f-44c36ba95880",
+            "market_ticker": "KXMAYORNYCPARTY-25-EADA",
+            "signed_open_position": -416777,
+            "pnl": 291389600
+          },
+          {
+            "market_id": "3c75fd5b-6c22-4e38-bcb1-9c50f383e4a9",
+            "market_ticker": "KXMAYORNYCPARTY-25-JWAL",
+            "signed_open_position": -180476,
+            "pnl": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "de7fc3bb-7315-488d-900e-57acf51107c9-yes",
+      "side": "yes",
+      "users": [
+        "EJG7",
+        "BitcoinTradingChallenge",
+        "moneyluver"
+      ],
+      "marketHolding": {
+        "market_id": "de7fc3bb-7315-488d-900e-57acf51107c9",
+        "market_ticker": "KXMLBGAME-25OCT31LADTOR-LAD",
+        "signed_open_position": 10518,
+        "pnl": 275000
+      },
+      "eventHolding": {
+        "event_ticker": "KXMLBGAME-25OCT31LADTOR",
+        "series_ticker": "KXMLBGAME",
+        "total_absolute_position": 10518,
+        "market_holdings": [
+          {
+            "market_id": "de7fc3bb-7315-488d-900e-57acf51107c9",
+            "market_ticker": "KXMLBGAME-25OCT31LADTOR-LAD",
+            "signed_open_position": 10518,
+            "pnl": 275000
+          }
+        ]
+      }
+    },
+    {
       "id": "aba8c845-59d2-432e-8bf9-673802d7f510-no",
       "side": "no",
       "users": [
@@ -342,7 +490,7 @@
         "market_id": "aba8c845-59d2-432e-8bf9-673802d7f510",
         "market_ticker": "LEAVEPOWELL-25-DEC31",
         "signed_open_position": -2512,
-        "pnl": 21993200
+        "pnl": 22244400
       },
       "eventHolding": {
         "event_ticker": "LEAVEPOWELL-25",
@@ -353,7 +501,7 @@
             "market_id": "aba8c845-59d2-432e-8bf9-673802d7f510",
             "market_ticker": "LEAVEPOWELL-25-DEC31",
             "signed_open_position": -2512,
-            "pnl": 21993200
+            "pnl": 22244400
           }
         ]
       }
@@ -387,29 +535,29 @@
       }
     },
     {
-      "id": "a3cc5a08-f5cc-4112-b72d-168780a7f04c-yes",
+      "id": "aca4c9d7-e7b0-4301-92b2-82415535c988-yes",
       "side": "yes",
       "users": [
         "JDP44",
-        "jwatts24",
-        "oriki"
+        "oriki",
+        "Baka88"
       ],
       "marketHolding": {
-        "market_id": "a3cc5a08-f5cc-4112-b72d-168780a7f04c",
-        "market_ticker": "KXWTAMATCH-25OCT30BENWAN-BEN",
-        "signed_open_position": 80,
-        "pnl": 8000
+        "market_id": "aca4c9d7-e7b0-4301-92b2-82415535c988",
+        "market_ticker": "KXNHLGAME-25OCT30NYICAR-CAR",
+        "signed_open_position": 364,
+        "pnl": 946400
       },
       "eventHolding": {
-        "event_ticker": "KXWTAMATCH-25OCT30BENWAN",
-        "series_ticker": "KXWTAMATCH",
-        "total_absolute_position": 80,
+        "event_ticker": "KXNHLGAME-25OCT30NYICAR",
+        "series_ticker": "KXNHLGAME",
+        "total_absolute_position": 364,
         "market_holdings": [
           {
-            "market_id": "a3cc5a08-f5cc-4112-b72d-168780a7f04c",
-            "market_ticker": "KXWTAMATCH-25OCT30BENWAN-BEN",
-            "signed_open_position": 80,
-            "pnl": 8000
+            "market_id": "aca4c9d7-e7b0-4301-92b2-82415535c988",
+            "market_ticker": "KXNHLGAME-25OCT30NYICAR-CAR",
+            "signed_open_position": 364,
+            "pnl": 946400
           }
         ]
       }
@@ -438,6 +586,1547 @@
             "market_ticker": "KXTRUMPOUT-26-TRUMP",
             "signed_open_position": -999,
             "pnl": 159840
+          }
+        ]
+      }
+    },
+    {
+      "id": "0b630f1c-e489-4a87-8f2b-f6ca80cfeac5-yes",
+      "side": "yes",
+      "users": [
+        "YoDog",
+        "cchen0921",
+        "slots.addict"
+      ],
+      "marketHolding": {
+        "market_id": "0b630f1c-e489-4a87-8f2b-f6ca80cfeac5",
+        "market_ticker": "GOVPARTYNJ-25-D",
+        "signed_open_position": 63,
+        "pnl": 26100
+      },
+      "eventHolding": {
+        "event_ticker": "GOVPARTYNJ-25",
+        "series_ticker": "GOVPARTYNJ",
+        "total_absolute_position": 63,
+        "market_holdings": [
+          {
+            "market_id": "0b630f1c-e489-4a87-8f2b-f6ca80cfeac5",
+            "market_ticker": "GOVPARTYNJ-25-D",
+            "signed_open_position": 63,
+            "pnl": 26100
+          }
+        ]
+      }
+    },
+    {
+      "id": "08fcc68d-1816-4133-905d-3d9cd3c01530-yes",
+      "side": "yes",
+      "users": [
+        "juuustin",
+        "johnconnor777",
+        "Foggypaws"
+      ],
+      "marketHolding": {
+        "market_id": "08fcc68d-1816-4133-905d-3d9cd3c01530",
+        "market_ticker": "KXGOVSHUTLENGTH-26JAN01-30D",
+        "signed_open_position": 379,
+        "pnl": 2485500
+      },
+      "eventHolding": {
+        "event_ticker": "KXGOVSHUTLENGTH-26JAN01",
+        "series_ticker": "KXGOVSHUTLENGTH",
+        "total_absolute_position": 379,
+        "market_holdings": [
+          {
+            "market_id": "08fcc68d-1816-4133-905d-3d9cd3c01530",
+            "market_ticker": "KXGOVSHUTLENGTH-26JAN01-30D",
+            "signed_open_position": 379,
+            "pnl": 2485500
+          }
+        ]
+      }
+    },
+    {
+      "id": "8a4e4136-68a8-41f7-84bc-b2470772c789-yes",
+      "side": "yes",
+      "users": [
+        "eppixx",
+        "johnconnor777",
+        "GDuncanOnYou"
+      ],
+      "marketHolding": {
+        "market_id": "8a4e4136-68a8-41f7-84bc-b2470772c789",
+        "market_ticker": "KXMLB-25-LAD",
+        "signed_open_position": 1,
+        "pnl": -3600
+      },
+      "eventHolding": {
+        "event_ticker": "KXMLB-25",
+        "series_ticker": "KXMLB",
+        "total_absolute_position": 1,
+        "market_holdings": [
+          {
+            "market_id": "8a4e4136-68a8-41f7-84bc-b2470772c789",
+            "market_ticker": "KXMLB-25-LAD",
+            "signed_open_position": 1,
+            "pnl": -3600
+          }
+        ]
+      }
+    },
+    {
+      "id": "6bfc303c-524d-4dba-920b-96a9cd9db645-yes",
+      "side": "yes",
+      "users": [
+        "connerk",
+        "oriki",
+        "CancelThat"
+      ],
+      "marketHolding": {
+        "market_id": "6bfc303c-524d-4dba-920b-96a9cd9db645",
+        "market_ticker": "KXNHLGAME-25OCT30DALTB-TB",
+        "signed_open_position": 51,
+        "pnl": 5100
+      },
+      "eventHolding": {
+        "event_ticker": "KXNHLGAME-25OCT30DALTB",
+        "series_ticker": "KXNHLGAME",
+        "total_absolute_position": 51,
+        "market_holdings": [
+          {
+            "market_id": "6bfc303c-524d-4dba-920b-96a9cd9db645",
+            "market_ticker": "KXNHLGAME-25OCT30DALTB-TB",
+            "signed_open_position": 51,
+            "pnl": 5100
+          }
+        ]
+      }
+    },
+    {
+      "id": "c3292f22-cda9-4f99-bc49-585029aa60aa-yes",
+      "side": "yes",
+      "users": [
+        "Baka88",
+        "spxce",
+        "CancelThat"
+      ],
+      "marketHolding": {
+        "market_id": "c3292f22-cda9-4f99-bc49-585029aa60aa",
+        "market_ticker": "KXNHLGAME-25OCT30CGYOTT-OTT",
+        "signed_open_position": 190,
+        "pnl": 143200
+      },
+      "eventHolding": {
+        "event_ticker": "KXNHLGAME-25OCT30CGYOTT",
+        "series_ticker": "KXNHLGAME",
+        "total_absolute_position": 190,
+        "market_holdings": [
+          {
+            "market_id": "c3292f22-cda9-4f99-bc49-585029aa60aa",
+            "market_ticker": "KXNHLGAME-25OCT30CGYOTT-OTT",
+            "signed_open_position": 190,
+            "pnl": 143200
+          }
+        ]
+      }
+    },
+    {
+      "id": "37304114-f769-4a90-ad84-684f3f5b19b2-no",
+      "side": "no",
+      "users": [
+        "nonsenseking",
+        "eppixx"
+      ],
+      "marketHolding": {
+        "market_id": "37304114-f769-4a90-ad84-684f3f5b19b2",
+        "market_ticker": "KXMAYORNYCPARTY-25-R",
+        "signed_open_position": -487779,
+        "pnl": 64852600
+      },
+      "eventHolding": {
+        "event_ticker": "KXMAYORNYCPARTY-25",
+        "series_ticker": "KXMAYORNYCPARTY",
+        "total_absolute_position": 2240590,
+        "market_holdings": [
+          {
+            "market_id": "006cc24d-fe87-44ee-9875-5a98655d38d1",
+            "market_ticker": "KXMAYORNYCPARTY-25-AC",
+            "signed_open_position": -577779,
+            "pnl": 350901200
+          },
+          {
+            "market_id": "d6001565-9ce7-4194-81a1-ab96e694491c",
+            "market_ticker": "KXMAYORNYCPARTY-25-D",
+            "signed_open_position": -577779,
+            "pnl": -372882600
+          },
+          {
+            "market_id": "37304114-f769-4a90-ad84-684f3f5b19b2",
+            "market_ticker": "KXMAYORNYCPARTY-25-R",
+            "signed_open_position": -487779,
+            "pnl": 64852600
+          },
+          {
+            "market_id": "ffdba09b-6f14-4f47-a21f-44c36ba95880",
+            "market_ticker": "KXMAYORNYCPARTY-25-EADA",
+            "signed_open_position": -416777,
+            "pnl": 291389600
+          },
+          {
+            "market_id": "3c75fd5b-6c22-4e38-bcb1-9c50f383e4a9",
+            "market_ticker": "KXMAYORNYCPARTY-25-JWAL",
+            "signed_open_position": -180476,
+            "pnl": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "f6de9e18-4f99-4b95-bc16-9a172b8df2fb-no",
+      "side": "no",
+      "users": [
+        "nonsenseking",
+        "genghis"
+      ],
+      "marketHolding": {
+        "market_id": "f6de9e18-4f99-4b95-bc16-9a172b8df2fb",
+        "market_ticker": "GOVPARTYNJ-25-R",
+        "signed_open_position": -25005,
+        "pnl": 17248500
+      },
+      "eventHolding": {
+        "event_ticker": "GOVPARTYNJ-25",
+        "series_ticker": "GOVPARTYNJ",
+        "total_absolute_position": 25005,
+        "market_holdings": [
+          {
+            "market_id": "f6de9e18-4f99-4b95-bc16-9a172b8df2fb",
+            "market_ticker": "GOVPARTYNJ-25-R",
+            "signed_open_position": -25005,
+            "pnl": 17248500
+          }
+        ]
+      }
+    },
+    {
+      "id": "206da26c-7270-49a7-ae94-64d266af0bfa-no",
+      "side": "no",
+      "users": [
+        "johng71",
+        "slots.addict"
+      ],
+      "marketHolding": {
+        "market_id": "206da26c-7270-49a7-ae94-64d266af0bfa",
+        "market_ticker": "KXCLEANCR-26",
+        "signed_open_position": -3000,
+        "pnl": 925100
+      },
+      "eventHolding": {
+        "event_ticker": "KXCLEANCR-26",
+        "series_ticker": "KXCLEANCR",
+        "total_absolute_position": 3000,
+        "market_holdings": [
+          {
+            "market_id": "206da26c-7270-49a7-ae94-64d266af0bfa",
+            "market_ticker": "KXCLEANCR-26",
+            "signed_open_position": -3000,
+            "pnl": 925100
+          }
+        ]
+      }
+    },
+    {
+      "id": "5636e659-b3e6-482b-8a00-a949eb99c4be-no",
+      "side": "no",
+      "users": [
+        "Billybutsky",
+        "juuustin"
+      ],
+      "marketHolding": {
+        "market_id": "5636e659-b3e6-482b-8a00-a949eb99c4be",
+        "market_ticker": "KXTRUMPSCOTUS-25NOV05",
+        "signed_open_position": -1305,
+        "pnl": 1305000
+      },
+      "eventHolding": {
+        "event_ticker": "KXTRUMPSCOTUS-25NOV05",
+        "series_ticker": "KXTRUMPSCOTUS",
+        "total_absolute_position": 1305,
+        "market_holdings": [
+          {
+            "market_id": "5636e659-b3e6-482b-8a00-a949eb99c4be",
+            "market_ticker": "KXTRUMPSCOTUS-25NOV05",
+            "signed_open_position": -1305,
+            "pnl": 1305000
+          }
+        ]
+      }
+    },
+    {
+      "id": "73803a68-5f09-41fe-b78a-6256bc2f024b-yes",
+      "side": "yes",
+      "users": [
+        "Billybutsky",
+        "animeladd"
+      ],
+      "marketHolding": {
+        "market_id": "73803a68-5f09-41fe-b78a-6256bc2f024b",
+        "market_ticker": "KXSB-26-CIN",
+        "signed_open_position": 1000,
+        "pnl": -300000
+      },
+      "eventHolding": {
+        "event_ticker": "KXSB-26",
+        "series_ticker": "KXSB",
+        "total_absolute_position": 1000,
+        "market_holdings": [
+          {
+            "market_id": "73803a68-5f09-41fe-b78a-6256bc2f024b",
+            "market_ticker": "KXSB-26-CIN",
+            "signed_open_position": 1000,
+            "pnl": -300000
+          }
+        ]
+      }
+    },
+    {
+      "id": "ffdba09b-6f14-4f47-a21f-44c36ba95880-yes",
+      "side": "yes",
+      "users": [
+        "FreddySupples",
+        "mitch"
+      ],
+      "marketHolding": {
+        "market_id": "ffdba09b-6f14-4f47-a21f-44c36ba95880",
+        "market_ticker": "KXMAYORNYCPARTY-25-EADA",
+        "signed_open_position": 1000,
+        "pnl": -2500000
+      },
+      "eventHolding": {
+        "event_ticker": "KXMAYORNYCPARTY-25",
+        "series_ticker": "KXMAYORNYCPARTY",
+        "total_absolute_position": 6000,
+        "market_holdings": [
+          {
+            "market_id": "d6001565-9ce7-4194-81a1-ab96e694491c",
+            "market_ticker": "KXMAYORNYCPARTY-25-D",
+            "signed_open_position": 5000,
+            "pnl": 1872000
+          },
+          {
+            "market_id": "ffdba09b-6f14-4f47-a21f-44c36ba95880",
+            "market_ticker": "KXMAYORNYCPARTY-25-EADA",
+            "signed_open_position": 1000,
+            "pnl": -2500000
+          }
+        ]
+      }
+    },
+    {
+      "id": "436324a1-cdef-440d-9728-fd68149e862b-yes",
+      "side": "yes",
+      "users": [
+        "FreddySupples",
+        "jacosta"
+      ],
+      "marketHolding": {
+        "market_id": "436324a1-cdef-440d-9728-fd68149e862b",
+        "market_ticker": "KXF1-25-LN",
+        "signed_open_position": 1212,
+        "pnl": 2009800
+      },
+      "eventHolding": {
+        "event_ticker": "KXF1-25",
+        "series_ticker": "KXF1",
+        "total_absolute_position": 2212,
+        "market_holdings": [
+          {
+            "market_id": "436324a1-cdef-440d-9728-fd68149e862b",
+            "market_ticker": "KXF1-25-LN",
+            "signed_open_position": 1212,
+            "pnl": 2009800
+          },
+          {
+            "market_id": "3e65d75e-bebc-4cc7-8258-f79b7adaa44d",
+            "market_ticker": "KXF1-25-LH",
+            "signed_open_position": 1000,
+            "pnl": -900000
+          }
+        ]
+      }
+    },
+    {
+      "id": "6c206979-d27d-4e6e-88f0-052d404966b7-no",
+      "side": "no",
+      "users": [
+        "FreddySupples",
+        "twistytristan66"
+      ],
+      "marketHolding": {
+        "market_id": "6c206979-d27d-4e6e-88f0-052d404966b7",
+        "market_ticker": "KXNFLSPREAD-25OCT30BALMIA-BAL7",
+        "signed_open_position": -1000,
+        "pnl": -2300000
+      },
+      "eventHolding": {
+        "event_ticker": "KXNFLSPREAD-25OCT30BALMIA",
+        "series_ticker": "KXNFLSPREAD",
+        "total_absolute_position": 2000,
+        "market_holdings": [
+          {
+            "market_id": "6c206979-d27d-4e6e-88f0-052d404966b7",
+            "market_ticker": "KXNFLSPREAD-25OCT30BALMIA-BAL7",
+            "signed_open_position": -1000,
+            "pnl": -2300000
+          },
+          {
+            "market_id": "3564f0eb-c4e9-4631-9baa-6660bdace637",
+            "market_ticker": "KXNFLSPREAD-25OCT30BALMIA-BAL9",
+            "signed_open_position": -1000,
+            "pnl": -1700000
+          }
+        ]
+      }
+    },
+    {
+      "id": "795e51b3-6703-4567-9d76-23a003390bcc-no",
+      "side": "no",
+      "users": [
+        "FreddySupples",
+        "ggggggggggggggggggggg"
+      ],
+      "marketHolding": {
+        "market_id": "795e51b3-6703-4567-9d76-23a003390bcc",
+        "market_ticker": "KXMLBALMVP-25-AJUD",
+        "signed_open_position": -1000,
+        "pnl": 200000
+      },
+      "eventHolding": {
+        "event_ticker": "KXMLBALMVP-25",
+        "series_ticker": "KXMLBALMVP",
+        "total_absolute_position": 1813,
+        "market_holdings": [
+          {
+            "market_id": "795e51b3-6703-4567-9d76-23a003390bcc",
+            "market_ticker": "KXMLBALMVP-25-AJUD",
+            "signed_open_position": -1000,
+            "pnl": 200000
+          },
+          {
+            "market_id": "daa767b7-dfa6-47b0-89cd-ef3e38051204",
+            "market_ticker": "KXMLBALMVP-25-CRAL",
+            "signed_open_position": -813,
+            "pnl": -81300
+          }
+        ]
+      }
+    },
+    {
+      "id": "5c4eda38-76a8-4fe2-8c9a-c6564ba7ee29-yes",
+      "side": "yes",
+      "users": [
+        "FreddySupples",
+        "mitch"
+      ],
+      "marketHolding": {
+        "market_id": "5c4eda38-76a8-4fe2-8c9a-c6564ba7ee29",
+        "market_ticker": "KXNEWPARTYMUSK-26",
+        "signed_open_position": 1000,
+        "pnl": -6294700
+      },
+      "eventHolding": {
+        "event_ticker": "KXNEWPARTYMUSK",
+        "series_ticker": "KXNEWPARTYMUSK",
+        "total_absolute_position": 1000,
+        "market_holdings": [
+          {
+            "market_id": "5c4eda38-76a8-4fe2-8c9a-c6564ba7ee29",
+            "market_ticker": "KXNEWPARTYMUSK-26",
+            "signed_open_position": 1000,
+            "pnl": -6294700
+          }
+        ]
+      }
+    },
+    {
+      "id": "dc683dee-d270-4128-a8f0-2cd20ac47469-yes",
+      "side": "yes",
+      "users": [
+        "TheGrandeTop10",
+        "YoDog"
+      ],
+      "marketHolding": {
+        "market_id": "dc683dee-d270-4128-a8f0-2cd20ac47469",
+        "market_ticker": "KXRTWICKEDFORGOOD-80",
+        "signed_open_position": 608,
+        "pnl": -64800
+      },
+      "eventHolding": {
+        "event_ticker": "KXRTWICKEDFORGOOD",
+        "series_ticker": "KXRTWICKEDFORGOOD",
+        "total_absolute_position": 903,
+        "market_holdings": [
+          {
+            "market_id": "dc683dee-d270-4128-a8f0-2cd20ac47469",
+            "market_ticker": "KXRTWICKEDFORGOOD-80",
+            "signed_open_position": 608,
+            "pnl": -64800
+          },
+          {
+            "market_id": "3d08b67f-dc4f-4e22-a7d6-0e4e6ea71250",
+            "market_ticker": "KXRTWICKEDFORGOOD-85",
+            "signed_open_position": 295,
+            "pnl": 27900
+          }
+        ]
+      }
+    },
+    {
+      "id": "7e8bfd7c-f51e-4a83-ac03-e84520c00587-yes",
+      "side": "yes",
+      "users": [
+        "foess",
+        "johnconnor777"
+      ],
+      "marketHolding": {
+        "market_id": "7e8bfd7c-f51e-4a83-ac03-e84520c00587",
+        "market_ticker": "KXNFLSPREAD-25OCT30BALMIA-BAL14",
+        "signed_open_position": 179,
+        "pnl": 322200
+      },
+      "eventHolding": {
+        "event_ticker": "KXNFLSPREAD-25OCT30BALMIA",
+        "series_ticker": "KXNFLSPREAD",
+        "total_absolute_position": 994,
+        "market_holdings": [
+          {
+            "market_id": "586ef4b7-21fb-467e-b960-21bc4490c61b",
+            "market_ticker": "KXNFLSPREAD-25OCT30BALMIA-BAL17",
+            "signed_open_position": 424,
+            "pnl": 593600
+          },
+          {
+            "market_id": "3564f0eb-c4e9-4631-9baa-6660bdace637",
+            "market_ticker": "KXNFLSPREAD-25OCT30BALMIA-BAL9",
+            "signed_open_position": 391,
+            "pnl": 821100
+          },
+          {
+            "market_id": "7e8bfd7c-f51e-4a83-ac03-e84520c00587",
+            "market_ticker": "KXNFLSPREAD-25OCT30BALMIA-BAL14",
+            "signed_open_position": 179,
+            "pnl": 322200
+          }
+        ]
+      }
+    },
+    {
+      "id": "795e51b3-6703-4567-9d76-23a003390bcc-yes",
+      "side": "yes",
+      "users": [
+        "foess",
+        "garlicbreadlord"
+      ],
+      "marketHolding": {
+        "market_id": "795e51b3-6703-4567-9d76-23a003390bcc",
+        "market_ticker": "KXMLBALMVP-25-AJUD",
+        "signed_open_position": 101,
+        "pnl": 313100
+      },
+      "eventHolding": {
+        "event_ticker": "KXMLBALMVP-25",
+        "series_ticker": "KXMLBALMVP",
+        "total_absolute_position": 101,
+        "market_holdings": [
+          {
+            "market_id": "795e51b3-6703-4567-9d76-23a003390bcc",
+            "market_ticker": "KXMLBALMVP-25-AJUD",
+            "signed_open_position": 101,
+            "pnl": 313100
+          }
+        ]
+      }
+    },
+    {
+      "id": "e7658635-1064-496d-8445-bbecf3619196-no",
+      "side": "no",
+      "users": [
+        "genghis",
+        "appatel4"
+      ],
+      "marketHolding": {
+        "market_id": "e7658635-1064-496d-8445-bbecf3619196",
+        "market_ticker": "GOVPARTYVA-25-R",
+        "signed_open_position": -30000,
+        "pnl": 8000000
+      },
+      "eventHolding": {
+        "event_ticker": "GOVPARTYVA-25",
+        "series_ticker": "GOVPARTYVA",
+        "total_absolute_position": 30000,
+        "market_holdings": [
+          {
+            "market_id": "e7658635-1064-496d-8445-bbecf3619196",
+            "market_ticker": "GOVPARTYVA-25-R",
+            "signed_open_position": -30000,
+            "pnl": 8000000
+          }
+        ]
+      }
+    },
+    {
+      "id": "3786cf83-73b1-471e-87f2-9702062e39bb-yes",
+      "side": "yes",
+      "users": [
+        "genghis",
+        "slots.addict"
+      ],
+      "marketHolding": {
+        "market_id": "3786cf83-73b1-471e-87f2-9702062e39bb",
+        "market_ticker": "KXDEMSWEEP-25NOV04",
+        "signed_open_position": 5000,
+        "pnl": 1000000
+      },
+      "eventHolding": {
+        "event_ticker": "KXDEMSWEEP-25NOV04",
+        "series_ticker": "KXDEMSWEEP",
+        "total_absolute_position": 5000,
+        "market_holdings": [
+          {
+            "market_id": "3786cf83-73b1-471e-87f2-9702062e39bb",
+            "market_ticker": "KXDEMSWEEP-25NOV04",
+            "signed_open_position": 5000,
+            "pnl": 1000000
+          }
+        ]
+      }
+    },
+    {
+      "id": "522ad8fe-6ab8-430b-8677-074b3787c83d-yes",
+      "side": "yes",
+      "users": [
+        "JDP44",
+        "cchen0921"
+      ],
+      "marketHolding": {
+        "market_id": "522ad8fe-6ab8-430b-8677-074b3787c83d",
+        "market_ticker": "KXNBAGAME-25OCT30WASOKC-OKC",
+        "signed_open_position": 1,
+        "pnl": 500
+      },
+      "eventHolding": {
+        "event_ticker": "KXNBAGAME-25OCT30WASOKC",
+        "series_ticker": "KXNBAGAME",
+        "total_absolute_position": 1,
+        "market_holdings": [
+          {
+            "market_id": "522ad8fe-6ab8-430b-8677-074b3787c83d",
+            "market_ticker": "KXNBAGAME-25OCT30WASOKC-OKC",
+            "signed_open_position": 1,
+            "pnl": 500
+          }
+        ]
+      }
+    },
+    {
+      "id": "d4e03498-7d99-44d5-a83a-5976abd680ff-yes",
+      "side": "yes",
+      "users": [
+        "int201",
+        ".trippe."
+      ],
+      "marketHolding": {
+        "market_id": "d4e03498-7d99-44d5-a83a-5976abd680ff",
+        "market_ticker": "KXCPI-25OCT-T0.2",
+        "signed_open_position": 315,
+        "pnl": -422600
+      },
+      "eventHolding": {
+        "event_ticker": "KXCPI-25OCT",
+        "series_ticker": "KXCPI",
+        "total_absolute_position": 315,
+        "market_holdings": [
+          {
+            "market_id": "d4e03498-7d99-44d5-a83a-5976abd680ff",
+            "market_ticker": "KXCPI-25OCT-T0.2",
+            "signed_open_position": 315,
+            "pnl": -422600
+          }
+        ]
+      }
+    },
+    {
+      "id": "600daf8e-ce5c-4a01-8369-c1692973c9cc-no",
+      "side": "no",
+      "users": [
+        "int201",
+        "spys"
+      ],
+      "marketHolding": {
+        "market_id": "600daf8e-ce5c-4a01-8369-c1692973c9cc",
+        "market_ticker": "KXLEAVEADMIN-26-DBON",
+        "signed_open_position": -275,
+        "pnl": 482500
+      },
+      "eventHolding": {
+        "event_ticker": "KXLEAVEADMIN-26",
+        "series_ticker": "KXLEAVEADMIN",
+        "total_absolute_position": 275,
+        "market_holdings": [
+          {
+            "market_id": "600daf8e-ce5c-4a01-8369-c1692973c9cc",
+            "market_ticker": "KXLEAVEADMIN-26-DBON",
+            "signed_open_position": -275,
+            "pnl": 482500
+          }
+        ]
+      }
+    },
+    {
+      "id": "1cfc21f9-fef8-46d0-997f-eccea20384fb-yes",
+      "side": "yes",
+      "users": [
+        "Hyphen",
+        "calera52"
+      ],
+      "marketHolding": {
+        "market_id": "1cfc21f9-fef8-46d0-997f-eccea20384fb",
+        "market_ticker": "KXGOVREOPEN2025-26JAN01",
+        "signed_open_position": 2851,
+        "pnl": -570200
+      },
+      "eventHolding": {
+        "event_ticker": "KXGOVREOPEN2025-26JAN01",
+        "series_ticker": "KXGOVREOPEN2025",
+        "total_absolute_position": 2851,
+        "market_holdings": [
+          {
+            "market_id": "1cfc21f9-fef8-46d0-997f-eccea20384fb",
+            "market_ticker": "KXGOVREOPEN2025-26JAN01",
+            "signed_open_position": 2851,
+            "pnl": -570200
+          }
+        ]
+      }
+    },
+    {
+      "id": "117a891e-a467-4de9-9526-11a7ef0c9622-no",
+      "side": "no",
+      "users": [
+        "Hyphen",
+        "DellLapTop"
+      ],
+      "marketHolding": {
+        "market_id": "117a891e-a467-4de9-9526-11a7ef0c9622",
+        "market_ticker": "KXTRUMPSAYMONTH-25NOV01-EPST",
+        "signed_open_position": -2697,
+        "pnl": -63100
+      },
+      "eventHolding": {
+        "event_ticker": "KXTRUMPSAYMONTH-25NOV01",
+        "series_ticker": "KXTRUMPSAYMONTH",
+        "total_absolute_position": 2697,
+        "market_holdings": [
+          {
+            "market_id": "117a891e-a467-4de9-9526-11a7ef0c9622",
+            "market_ticker": "KXTRUMPSAYMONTH-25NOV01-EPST",
+            "signed_open_position": -2697,
+            "pnl": -63100
+          }
+        ]
+      }
+    },
+    {
+      "id": "cdde650d-e6fc-430b-b9eb-c0d8ac9783de-yes",
+      "side": "yes",
+      "users": [
+        "Hyphen",
+        ".trippe."
+      ],
+      "marketHolding": {
+        "market_id": "cdde650d-e6fc-430b-b9eb-c0d8ac9783de",
+        "market_ticker": "KXCUOMODROPOUT-25-CSIL",
+        "signed_open_position": 1381,
+        "pnl": -3750300
+      },
+      "eventHolding": {
+        "event_ticker": "KXCUOMODROPOUT-25",
+        "series_ticker": "KXCUOMODROPOUT",
+        "total_absolute_position": 1381,
+        "market_holdings": [
+          {
+            "market_id": "cdde650d-e6fc-430b-b9eb-c0d8ac9783de",
+            "market_ticker": "KXCUOMODROPOUT-25-CSIL",
+            "signed_open_position": 1381,
+            "pnl": -3750300
+          }
+        ]
+      }
+    },
+    {
+      "id": "01972eaf-4117-443d-90db-9cf9ccd634d5-no",
+      "side": "no",
+      "users": [
+        "Hyphen",
+        "OracleBay"
+      ],
+      "marketHolding": {
+        "market_id": "01972eaf-4117-443d-90db-9cf9ccd634d5",
+        "market_ticker": "KXELONDJTCOMPANIES-25",
+        "signed_open_position": -1000,
+        "pnl": -400000
+      },
+      "eventHolding": {
+        "event_ticker": "KXELONDJTCOMPANIES-25",
+        "series_ticker": "KXELONDJTCOMPANIES",
+        "total_absolute_position": 1000,
+        "market_holdings": [
+          {
+            "market_id": "01972eaf-4117-443d-90db-9cf9ccd634d5",
+            "market_ticker": "KXELONDJTCOMPANIES-25",
+            "signed_open_position": -1000,
+            "pnl": -400000
+          }
+        ]
+      }
+    },
+    {
+      "id": "754675d4-3b5b-408d-bde0-bf2bad0ca1f9-yes",
+      "side": "yes",
+      "users": [
+        "Hyphen",
+        "zyxwvu164"
+      ],
+      "marketHolding": {
+        "market_id": "754675d4-3b5b-408d-bde0-bf2bad0ca1f9",
+        "market_ticker": "KXNBAGAME-25OCT30GSWMIL-MIL",
+        "signed_open_position": 1000,
+        "pnl": 200000
+      },
+      "eventHolding": {
+        "event_ticker": "KXNBAGAME-25OCT30GSWMIL",
+        "series_ticker": "KXNBAGAME",
+        "total_absolute_position": 1000,
+        "market_holdings": [
+          {
+            "market_id": "754675d4-3b5b-408d-bde0-bf2bad0ca1f9",
+            "market_ticker": "KXNBAGAME-25OCT30GSWMIL-MIL",
+            "signed_open_position": 1000,
+            "pnl": 200000
+          }
+        ]
+      }
+    },
+    {
+      "id": "cb2af2d3-f304-42aa-a7bd-00a02e5ec767-yes",
+      "side": "yes",
+      "users": [
+        "asellers07",
+        "ggggggggggggggggggggg"
+      ],
+      "marketHolding": {
+        "market_id": "cb2af2d3-f304-42aa-a7bd-00a02e5ec767",
+        "market_ticker": "KXTARIFFCOUNTRY-26JAN01-D",
+        "signed_open_position": 1122,
+        "pnl": 135600
+      },
+      "eventHolding": {
+        "event_ticker": "KXTARIFFCOUNTRY-26JAN01",
+        "series_ticker": "KXTARIFFCOUNTRY",
+        "total_absolute_position": 1122,
+        "market_holdings": [
+          {
+            "market_id": "cb2af2d3-f304-42aa-a7bd-00a02e5ec767",
+            "market_ticker": "KXTARIFFCOUNTRY-26JAN01-D",
+            "signed_open_position": 1122,
+            "pnl": 135600
+          }
+        ]
+      }
+    },
+    {
+      "id": "aa74e746-59f7-48c9-8075-02fb748230b6-no",
+      "side": "no",
+      "users": [
+        "Benj",
+        "YoDog"
+      ],
+      "marketHolding": {
+        "market_id": "aa74e746-59f7-48c9-8075-02fb748230b6",
+        "market_ticker": "KXBTCMAXM-25OCT31-129999.99",
+        "signed_open_position": -1566,
+        "pnl": 964600
+      },
+      "eventHolding": {
+        "event_ticker": "KXBTCMAXM-25OCT31",
+        "series_ticker": "KXBTCMAXM",
+        "total_absolute_position": 1566,
+        "market_holdings": [
+          {
+            "market_id": "aa74e746-59f7-48c9-8075-02fb748230b6",
+            "market_ticker": "KXBTCMAXM-25OCT31-129999.99",
+            "signed_open_position": -1566,
+            "pnl": 964600
+          }
+        ]
+      }
+    },
+    {
+      "id": "9b5353aa-1492-4dde-982a-4279d4c4899e-no",
+      "side": "no",
+      "users": [
+        "Benj",
+        "spys"
+      ],
+      "marketHolding": {
+        "market_id": "9b5353aa-1492-4dde-982a-4279d4c4899e",
+        "market_ticker": "KXBTCMAXY-25-DEC31-129999.99",
+        "signed_open_position": -318,
+        "pnl": -190800
+      },
+      "eventHolding": {
+        "event_ticker": "KXBTCMAXY-25",
+        "series_ticker": "KXBTCMAXY",
+        "total_absolute_position": 318,
+        "market_holdings": [
+          {
+            "market_id": "9b5353aa-1492-4dde-982a-4279d4c4899e",
+            "market_ticker": "KXBTCMAXY-25-DEC31-129999.99",
+            "signed_open_position": -318,
+            "pnl": -190800
+          }
+        ]
+      }
+    },
+    {
+      "id": "156a0dd8-dbdb-4327-9e3c-974a45d38b01-no",
+      "side": "no",
+      "users": [
+        "Benj",
+        "slots.addict"
+      ],
+      "marketHolding": {
+        "market_id": "156a0dd8-dbdb-4327-9e3c-974a45d38b01",
+        "market_ticker": "KXENDORSECUOMO-25NOV04-DTRU",
+        "signed_open_position": -111,
+        "pnl": 11100
+      },
+      "eventHolding": {
+        "event_ticker": "KXENDORSECUOMO-25NOV04",
+        "series_ticker": "KXENDORSECUOMO",
+        "total_absolute_position": 111,
+        "market_holdings": [
+          {
+            "market_id": "156a0dd8-dbdb-4327-9e3c-974a45d38b01",
+            "market_ticker": "KXENDORSECUOMO-25NOV04-DTRU",
+            "signed_open_position": -111,
+            "pnl": 11100
+          }
+        ]
+      }
+    },
+    {
+      "id": "522ad8fe-6ab8-430b-8677-074b3787c83d-no",
+      "side": "no",
+      "users": [
+        "Marv3lous718",
+        "BitcoinTradingChallenge"
+      ],
+      "marketHolding": {
+        "market_id": "522ad8fe-6ab8-430b-8677-074b3787c83d",
+        "market_ticker": "KXNBAGAME-25OCT30WASOKC-OKC",
+        "signed_open_position": -42,
+        "pnl": -25200
+      },
+      "eventHolding": {
+        "event_ticker": "KXNBAGAME-25OCT30WASOKC",
+        "series_ticker": "KXNBAGAME",
+        "total_absolute_position": 42,
+        "market_holdings": [
+          {
+            "market_id": "522ad8fe-6ab8-430b-8677-074b3787c83d",
+            "market_ticker": "KXNBAGAME-25OCT30WASOKC-OKC",
+            "signed_open_position": -42,
+            "pnl": -25200
+          }
+        ]
+      }
+    },
+    {
+      "id": "f28f868d-fb0d-4ef9-a223-012655c369ed-no",
+      "side": "no",
+      "users": [
+        "BitcoinTradingChallenge",
+        "flavus"
+      ],
+      "marketHolding": {
+        "market_id": "f28f868d-fb0d-4ef9-a223-012655c369ed",
+        "market_ticker": "KXTNFMENTION-25OCT31-PICK",
+        "signed_open_position": -100,
+        "pnl": -90000
+      },
+      "eventHolding": {
+        "event_ticker": "KXTNFMENTION-25OCT31",
+        "series_ticker": "KXTNFMENTION",
+        "total_absolute_position": 657,
+        "market_holdings": [
+          {
+            "market_id": "32f42a46-d12f-41a4-9af6-0c48376afe55",
+            "market_ticker": "KXTNFMENTION-25OCT31-STUF",
+            "signed_open_position": -411,
+            "pnl": -155100
+          },
+          {
+            "market_id": "f28f868d-fb0d-4ef9-a223-012655c369ed",
+            "market_ticker": "KXTNFMENTION-25OCT31-PICK",
+            "signed_open_position": -100,
+            "pnl": -90000
+          },
+          {
+            "market_id": "85ac8588-00cd-4468-b042-c957b302a70a",
+            "market_ticker": "KXTNFMENTION-25OCT31-ONE",
+            "signed_open_position": -50,
+            "pnl": 0
+          },
+          {
+            "market_id": "8f6077fb-a5fb-4403-bbf4-edd95ccd7574",
+            "market_ticker": "KXTNFMENTION-25OCT31-OVER",
+            "signed_open_position": 40,
+            "pnl": 87000
+          },
+          {
+            "market_id": "404258c0-0d45-4cc0-934d-1323d6da4f89",
+            "market_ticker": "KXTNFMENTION-25OCT31-SOUT",
+            "signed_open_position": -24,
+            "pnl": 85600
+          },
+          {
+            "market_id": "7accdd18-fa18-4b3b-b2f5-f7505248048d",
+            "market_ticker": "KXTNFMENTION-25OCT31-CONC",
+            "signed_open_position": -18,
+            "pnl": 23400
+          },
+          {
+            "market_id": "7f868e28-bfa2-4696-bbc1-2815933c8890",
+            "market_ticker": "KXTNFMENTION-25OCT31-INTE",
+            "signed_open_position": -14,
+            "pnl": 12600
+          }
+        ]
+      }
+    },
+    {
+      "id": "404258c0-0d45-4cc0-934d-1323d6da4f89-no",
+      "side": "no",
+      "users": [
+        "BitcoinTradingChallenge",
+        "flavus"
+      ],
+      "marketHolding": {
+        "market_id": "404258c0-0d45-4cc0-934d-1323d6da4f89",
+        "market_ticker": "KXTNFMENTION-25OCT31-SOUT",
+        "signed_open_position": -24,
+        "pnl": 85600
+      },
+      "eventHolding": {
+        "event_ticker": "KXTNFMENTION-25OCT31",
+        "series_ticker": "KXTNFMENTION",
+        "total_absolute_position": 657,
+        "market_holdings": [
+          {
+            "market_id": "32f42a46-d12f-41a4-9af6-0c48376afe55",
+            "market_ticker": "KXTNFMENTION-25OCT31-STUF",
+            "signed_open_position": -411,
+            "pnl": -155100
+          },
+          {
+            "market_id": "f28f868d-fb0d-4ef9-a223-012655c369ed",
+            "market_ticker": "KXTNFMENTION-25OCT31-PICK",
+            "signed_open_position": -100,
+            "pnl": -90000
+          },
+          {
+            "market_id": "85ac8588-00cd-4468-b042-c957b302a70a",
+            "market_ticker": "KXTNFMENTION-25OCT31-ONE",
+            "signed_open_position": -50,
+            "pnl": 0
+          },
+          {
+            "market_id": "8f6077fb-a5fb-4403-bbf4-edd95ccd7574",
+            "market_ticker": "KXTNFMENTION-25OCT31-OVER",
+            "signed_open_position": 40,
+            "pnl": 87000
+          },
+          {
+            "market_id": "404258c0-0d45-4cc0-934d-1323d6da4f89",
+            "market_ticker": "KXTNFMENTION-25OCT31-SOUT",
+            "signed_open_position": -24,
+            "pnl": 85600
+          },
+          {
+            "market_id": "7accdd18-fa18-4b3b-b2f5-f7505248048d",
+            "market_ticker": "KXTNFMENTION-25OCT31-CONC",
+            "signed_open_position": -18,
+            "pnl": 23400
+          },
+          {
+            "market_id": "7f868e28-bfa2-4696-bbc1-2815933c8890",
+            "market_ticker": "KXTNFMENTION-25OCT31-INTE",
+            "signed_open_position": -14,
+            "pnl": 12600
+          }
+        ]
+      }
+    },
+    {
+      "id": "812ac922-8e39-4295-929d-73b3f8dedfff-yes",
+      "side": "yes",
+      "users": [
+        "BitcoinTradingChallenge",
+        "Baka88"
+      ],
+      "marketHolding": {
+        "market_id": "812ac922-8e39-4295-929d-73b3f8dedfff",
+        "market_ticker": "KXNBAGAME-25OCT30WASOKC-WAS",
+        "signed_open_position": 100,
+        "pnl": -80000
+      },
+      "eventHolding": {
+        "event_ticker": "KXNBAGAME-25OCT30WASOKC",
+        "series_ticker": "KXNBAGAME",
+        "total_absolute_position": 200,
+        "market_holdings": [
+          {
+            "market_id": "522ad8fe-6ab8-430b-8677-074b3787c83d",
+            "market_ticker": "KXNBAGAME-25OCT30WASOKC-OKC",
+            "signed_open_position": -100,
+            "pnl": -100000
+          },
+          {
+            "market_id": "812ac922-8e39-4295-929d-73b3f8dedfff",
+            "market_ticker": "KXNBAGAME-25OCT30WASOKC-WAS",
+            "signed_open_position": 100,
+            "pnl": -80000
+          }
+        ]
+      }
+    },
+    {
+      "id": "4912e4f9-d870-4fe9-8d21-09be24be9d82-no",
+      "side": "no",
+      "users": [
+        "YoDog",
+        "OracleBay"
+      ],
+      "marketHolding": {
+        "market_id": "4912e4f9-d870-4fe9-8d21-09be24be9d82",
+        "market_ticker": "KXUFSD-25-DEC31",
+        "signed_open_position": -120,
+        "pnl": 451800
+      },
+      "eventHolding": {
+        "event_ticker": "KXUFSD-25",
+        "series_ticker": "KXUFSD",
+        "total_absolute_position": 120,
+        "market_holdings": [
+          {
+            "market_id": "4912e4f9-d870-4fe9-8d21-09be24be9d82",
+            "market_ticker": "KXUFSD-25-DEC31",
+            "signed_open_position": -120,
+            "pnl": 451800
+          }
+        ]
+      }
+    },
+    {
+      "id": "01f6cfbd-c8ac-4f32-9952-5cb880be35d8-no",
+      "side": "no",
+      "users": [
+        "juuustin",
+        "mitch"
+      ],
+      "marketHolding": {
+        "market_id": "01f6cfbd-c8ac-4f32-9952-5cb880be35d8",
+        "market_ticker": "KXTIMEPOTYWOMAN-25",
+        "signed_open_position": -200,
+        "pnl": 100000
+      },
+      "eventHolding": {
+        "event_ticker": "KXTIMEPOTYWOMAN-25",
+        "series_ticker": "KXTIMEPOTYWOMAN",
+        "total_absolute_position": 200,
+        "market_holdings": [
+          {
+            "market_id": "01f6cfbd-c8ac-4f32-9952-5cb880be35d8",
+            "market_ticker": "KXTIMEPOTYWOMAN-25",
+            "signed_open_position": -200,
+            "pnl": 100000
+          }
+        ]
+      }
+    },
+    {
+      "id": "7f915d0c-43cf-4c3a-bd29-5412c10eefba-no",
+      "side": "no",
+      "users": [
+        "eppixx",
+        "yaba"
+      ],
+      "marketHolding": {
+        "market_id": "7f915d0c-43cf-4c3a-bd29-5412c10eefba",
+        "market_ticker": "KXOCTSWEEP-25OCT31",
+        "signed_open_position": -1,
+        "pnl": 3500
+      },
+      "eventHolding": {
+        "event_ticker": "KXOCTSWEEP-25OCT31",
+        "series_ticker": "KXOCTSWEEP",
+        "total_absolute_position": 1,
+        "market_holdings": [
+          {
+            "market_id": "7f915d0c-43cf-4c3a-bd29-5412c10eefba",
+            "market_ticker": "KXOCTSWEEP-25OCT31",
+            "signed_open_position": -1,
+            "pnl": 3500
+          }
+        ]
+      }
+    },
+    {
+      "id": "54d9c05f-b099-481f-91c5-ae0ec41a3fbf-no",
+      "side": "no",
+      "users": [
+        "Bachelier",
+        "calera52"
+      ],
+      "marketHolding": {
+        "market_id": "54d9c05f-b099-481f-91c5-ae0ec41a3fbf",
+        "market_ticker": "KXLLMCHESS-26",
+        "signed_open_position": -20,
+        "pnl": 10000
+      },
+      "eventHolding": {
+        "event_ticker": "KXLLMCHESS-26",
+        "series_ticker": "KXLLMCHESS",
+        "total_absolute_position": 20,
+        "market_holdings": [
+          {
+            "market_id": "54d9c05f-b099-481f-91c5-ae0ec41a3fbf",
+            "market_ticker": "KXLLMCHESS-26",
+            "signed_open_position": -20,
+            "pnl": 10000
+          }
+        ]
+      }
+    },
+    {
+      "id": "d592acf8-f9d5-43e1-9fad-8337330d3415-yes",
+      "side": "yes",
+      "users": [
+        "roadrunner",
+        "spys"
+      ],
+      "marketHolding": {
+        "market_id": "d592acf8-f9d5-43e1-9fad-8337330d3415",
+        "market_ticker": "KXPRESNOMD-28-GN",
+        "signed_open_position": 355,
+        "pnl": 200200
+      },
+      "eventHolding": {
+        "event_ticker": "KXPRESNOMD-28",
+        "series_ticker": "KXPRESNOMD",
+        "total_absolute_position": 5054,
+        "market_holdings": [
+          {
+            "market_id": "282d15a7-4635-4690-9479-f74b74fb7c4b",
+            "market_ticker": "KXPRESNOMD-28-AOC",
+            "signed_open_position": 3299,
+            "pnl": -570100
+          },
+          {
+            "market_id": "517483b6-34ad-4183-89ad-b6794208bc62",
+            "market_ticker": "KXPRESNOMD-28-REMA",
+            "signed_open_position": 1100,
+            "pnl": -10000
+          },
+          {
+            "market_id": "d592acf8-f9d5-43e1-9fad-8337330d3415",
+            "market_ticker": "KXPRESNOMD-28-GN",
+            "signed_open_position": 355,
+            "pnl": 200200
+          },
+          {
+            "market_id": "3917d7ec-d423-4a5b-8c31-4c0822c3690c",
+            "market_ticker": "KXPRESNOMD-28-JBP",
+            "signed_open_position": 100,
+            "pnl": 0
+          },
+          {
+            "market_id": "7c46ab58-0b7d-4345-9281-182c2cc25613",
+            "market_ticker": "KXPRESNOMD-28-KH",
+            "signed_open_position": -100,
+            "pnl": 0
+          },
+          {
+            "market_id": "62cbb623-bee3-4885-8c87-438969188d2f",
+            "market_ticker": "KXPRESNOMD-28-WM",
+            "signed_open_position": 100,
+            "pnl": -10000
+          }
+        ]
+      }
+    },
+    {
+      "id": "e7adfe3b-e3af-4164-bd1b-696340f2dc8e-yes",
+      "side": "yes",
+      "users": [
+        "roadrunner",
+        "RobotClover"
+      ],
+      "marketHolding": {
+        "market_id": "e7adfe3b-e3af-4164-bd1b-696340f2dc8e",
+        "market_ticker": "KXDJTVOSTARIFFS",
+        "signed_open_position": 300,
+        "pnl": -147000
+      },
+      "eventHolding": {
+        "event_ticker": "KXDJTVOSTARIFFS",
+        "series_ticker": "KXDJTVOSTARIFFS",
+        "total_absolute_position": 300,
+        "market_holdings": [
+          {
+            "market_id": "e7adfe3b-e3af-4164-bd1b-696340f2dc8e",
+            "market_ticker": "KXDJTVOSTARIFFS",
+            "signed_open_position": 300,
+            "pnl": -147000
+          }
+        ]
+      }
+    },
+    {
+      "id": "12de9266-99b9-42b3-b50a-a94a2ceed833-yes",
+      "side": "yes",
+      "users": [
+        "chan252",
+        "oriki"
+      ],
+      "marketHolding": {
+        "market_id": "12de9266-99b9-42b3-b50a-a94a2ceed833",
+        "market_ticker": "KXNHLGAME-25OCT30CGYOTT-CGY",
+        "signed_open_position": 176,
+        "pnl": -211200
+      },
+      "eventHolding": {
+        "event_ticker": "KXNHLGAME-25OCT30CGYOTT",
+        "series_ticker": "KXNHLGAME",
+        "total_absolute_position": 176,
+        "market_holdings": [
+          {
+            "market_id": "12de9266-99b9-42b3-b50a-a94a2ceed833",
+            "market_ticker": "KXNHLGAME-25OCT30CGYOTT-CGY",
+            "signed_open_position": 176,
+            "pnl": -211200
+          }
+        ]
+      }
+    },
+    {
+      "id": "6c206979-d27d-4e6e-88f0-052d404966b7-yes",
+      "side": "yes",
+      "users": [
+        "Bernkastel",
+        "Bryant4822"
+      ],
+      "marketHolding": {
+        "market_id": "6c206979-d27d-4e6e-88f0-052d404966b7",
+        "market_ticker": "KXNFLSPREAD-25OCT30BALMIA-BAL7",
+        "signed_open_position": 186,
+        "pnl": 409200
+      },
+      "eventHolding": {
+        "event_ticker": "KXNFLSPREAD-25OCT30BALMIA",
+        "series_ticker": "KXNFLSPREAD",
+        "total_absolute_position": 186,
+        "market_holdings": [
+          {
+            "market_id": "6c206979-d27d-4e6e-88f0-052d404966b7",
+            "market_ticker": "KXNFLSPREAD-25OCT30BALMIA-BAL7",
+            "signed_open_position": 186,
+            "pnl": 409200
+          }
+        ]
+      }
+    },
+    {
+      "id": "ee25f3ed-2078-4760-b911-c88e25ef4f6e-yes",
+      "side": "yes",
+      "users": [
+        "DellLapTop",
+        "Baka88"
+      ],
+      "marketHolding": {
+        "market_id": "ee25f3ed-2078-4760-b911-c88e25ef4f6e",
+        "market_ticker": "KXNCAAFGAME-25OCT30TULNUTSA-UTSA",
+        "signed_open_position": 150,
+        "pnl": 0
+      },
+      "eventHolding": {
+        "event_ticker": "KXNCAAFGAME-25OCT30TULNUTSA",
+        "series_ticker": "KXNCAAFGAME",
+        "total_absolute_position": 150,
+        "market_holdings": [
+          {
+            "market_id": "ee25f3ed-2078-4760-b911-c88e25ef4f6e",
+            "market_ticker": "KXNCAAFGAME-25OCT30TULNUTSA-UTSA",
+            "signed_open_position": 150,
+            "pnl": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "6695894f-4219-404e-a326-7ca88acb620d-yes",
+      "side": "yes",
+      "users": [
+        "garlicbreadlord",
+        "spys"
+      ],
+      "marketHolding": {
+        "market_id": "6695894f-4219-404e-a326-7ca88acb620d",
+        "market_ticker": "KXLEAGUEWORLDS-25-T1",
+        "signed_open_position": 17,
+        "pnl": -23800
+      },
+      "eventHolding": {
+        "event_ticker": "KXLEAGUEWORLDS-25",
+        "series_ticker": "KXLEAGUEWORLDS",
+        "total_absolute_position": 17,
+        "market_holdings": [
+          {
+            "market_id": "6695894f-4219-404e-a326-7ca88acb620d",
+            "market_ticker": "KXLEAGUEWORLDS-25-T1",
+            "signed_open_position": 17,
+            "pnl": -23800
+          }
+        ]
+      }
+    },
+    {
+      "id": "e7658635-1064-496d-8445-bbecf3619196-yes",
+      "side": "yes",
+      "users": [
+        "ataway23",
+        "glowdaddy"
+      ],
+      "marketHolding": {
+        "market_id": "e7658635-1064-496d-8445-bbecf3619196",
+        "market_ticker": "GOVPARTYVA-25-R",
+        "signed_open_position": 479,
+        "pnl": -143700
+      },
+      "eventHolding": {
+        "event_ticker": "GOVPARTYVA-25",
+        "series_ticker": "GOVPARTYVA",
+        "total_absolute_position": 479,
+        "market_holdings": [
+          {
+            "market_id": "e7658635-1064-496d-8445-bbecf3619196",
+            "market_ticker": "GOVPARTYVA-25-R",
+            "signed_open_position": 479,
+            "pnl": -143700
+          }
+        ]
+      }
+    },
+    {
+      "id": "61e7985e-a1d4-4a91-9c25-4fd6ef302d8d-yes",
+      "side": "yes",
+      "users": [
+        "johnconnor777",
+        "CancelThat"
+      ],
+      "marketHolding": {
+        "market_id": "61e7985e-a1d4-4a91-9c25-4fd6ef302d8d",
+        "market_ticker": "KXNFLNFCCHAMP-25-GB",
+        "signed_open_position": 19,
+        "pnl": -1900
+      },
+      "eventHolding": {
+        "event_ticker": "KXNFLNFCCHAMP-25",
+        "series_ticker": "KXNFLNFCCHAMP",
+        "total_absolute_position": 84,
+        "market_holdings": [
+          {
+            "market_id": "32c283ca-3830-4b5f-bedd-b8f1cbd595c2",
+            "market_ticker": "KXNFLNFCCHAMP-25-PHI",
+            "signed_open_position": 40,
+            "pnl": -18000
+          },
+          {
+            "market_id": "f85928cd-0701-472e-bb6c-b29f8c5e8f8e",
+            "market_ticker": "KXNFLNFCCHAMP-25-LA",
+            "signed_open_position": 25,
+            "pnl": 15000
+          },
+          {
+            "market_id": "61e7985e-a1d4-4a91-9c25-4fd6ef302d8d",
+            "market_ticker": "KXNFLNFCCHAMP-25-GB",
+            "signed_open_position": 19,
+            "pnl": -1900
+          }
+        ]
+      }
+    },
+    {
+      "id": "9b5418c8-5e22-4ac7-836c-ce43f73b69ac-no",
+      "side": "no",
+      "users": [
+        "calera52",
+        "slots.addict"
+      ],
+      "marketHolding": {
+        "market_id": "9b5418c8-5e22-4ac7-836c-ce43f73b69ac",
+        "market_ticker": "KXNGUARDCITY-25-NYC",
+        "signed_open_position": -20,
+        "pnl": 0
+      },
+      "eventHolding": {
+        "event_ticker": "KXNGUARDCITY-25",
+        "series_ticker": "KXNGUARDCITY",
+        "total_absolute_position": 20,
+        "market_holdings": [
+          {
+            "market_id": "9b5418c8-5e22-4ac7-836c-ce43f73b69ac",
+            "market_ticker": "KXNGUARDCITY-25-NYC",
+            "signed_open_position": -20,
+            "pnl": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "dc8a231d-2237-4cff-b905-5718aa8a498e-no",
+      "side": "no",
+      "users": [
+        "slots.addict",
+        "OracleBay"
+      ],
+      "marketHolding": {
+        "market_id": "dc8a231d-2237-4cff-b905-5718aa8a498e",
+        "market_ticker": "KXINSULINCAP-26-JAN01",
+        "signed_open_position": -11,
+        "pnl": 2200
+      },
+      "eventHolding": {
+        "event_ticker": "KXINSULINCAP-26",
+        "series_ticker": "KXINSULINCAP",
+        "total_absolute_position": 11,
+        "market_holdings": [
+          {
+            "market_id": "dc8a231d-2237-4cff-b905-5718aa8a498e",
+            "market_ticker": "KXINSULINCAP-26-JAN01",
+            "signed_open_position": -11,
+            "pnl": 2200
           }
         ]
       }

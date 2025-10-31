@@ -10,6 +10,9 @@
   "type": "module",
   "dependencies": {
     "@danielxceron/youtube-transcript": "^1.2.3",
+    "ansis": "^4.2.0",
+    "await-to-js": "^3.0.0",
+    "axios": "^1.13.1",
     "express": "^5.1.0",
     "puppeteer-core": "^24.26.0"
   }

@@ -3,6 +3,8 @@ import { delay } from "../../helpers/delay.js";
 import { logger, getLogAsString } from "../../helpers/logger/index.js";
 import { order, getAccountBalance } from "../../helpers/kalshi-api/index.js";
 
+const orders = [];
+
 const userData = JSON.parse(fs.readFileSync("userMetrics.json", "utf-8"));
 
 console.log(
@@ -36,10 +38,15 @@ users.slice(0, 20).forEach((user, index) => {
 });
 
 async function main() {
-  const [balance, error] = await getAccountBalance();
-  console.log("Current Account Balance:", balance);
+  const [balanceData, error] = await getAccountBalance();
+  console.log("Current Account Balance:", balanceData.balance);
   if (error) {
     console.error("(!) Error fetching account balance:", error);
+    return;
+  }
+
+  if (balanceData.balance < 200) {
+    console.log("Insufficient balance to place orders. Exiting.");
     return;
   }
 
@@ -118,9 +125,9 @@ async function main() {
     )
   );
 
-  // filter markets to only those with at least 3 users holding positions
+  // filter markets to only those with at least 2 users holding positions
   const filteredMarkets = sortedMarkets.filter(
-    (market) => market.users.length >= 3
+    (market) => market.users.length >= 2
   );
   fs.writeFileSync(
     "filteredUserHoldingsAnalysis.json",
@@ -138,17 +145,14 @@ async function main() {
 
   for (const market of filteredMarkets) {
     console.log(
-      `Market ${
-        market.marketHolding.market_ticker
+      `Market ${market.marketHolding.market_ticker}:${
+        market.side
       } held by users: ${market.users.join(", ")}`
     );
 
-    if (
-      eventsLog.includes(market.id) &&
-      market.marketHolding.market_ticker !== "KXWTAMATCH-25OCT30BENWAN-BEN"
-    ) {
+    if (eventsLog.includes(market.id)) {
       console.log(
-        `└─ Already placed order for market ${market.marketHolding.market_ticker}, skipping.`
+        `└─ Already placed order, skipping. ${market.marketHolding.market_ticker}`
       );
       continue;
     }
@@ -170,16 +174,6 @@ async function main() {
       client_order_id: `bestie-${Date.now()}`,
     });
 
-    console.log({
-      ticker: market.marketHolding.market_ticker,
-      type: "market",
-      action: "buy",
-      side: market.side,
-      count: contractCount,
-      [`${market.side}_price`]: 90, // max price in cents
-      client_order_id: `bestie-${Date.now()}`,
-    });
-
     logger("orders", {
       id: market.id,
       ticker: market.marketHolding.market_ticker,
@@ -187,6 +181,16 @@ async function main() {
       contracts: contractCount,
       orderResult,
       orderError: orderError?.message,
+    });
+
+    orders.push({
+      id: market.id,
+      ticker: market.marketHolding.market_ticker,
+      side: market.side,
+      contracts: contractCount,
+      orderResult,
+      orderError: orderError?.message,
+      timestamp: new Date().toISOString(),
     });
 
     if (orderError) {
@@ -201,7 +205,34 @@ async function main() {
       );
     }
 
-    delay(500);
+    await delay(500);
   }
+
+  console.log("Bestie run complete. Placed Orders Summary:");
+  if (orders.length === 0) {
+    console.log("No orders placed.");
+  }
+  console.log(
+    orders
+      .map(
+        (o) =>
+          `${new Date(o.timestamp).toLocaleString("en-US", {
+            timeZone: "America/New_York",
+          })} EST - ${o.ticker}:${o.side} - ${
+            o.orderError ? "Failed" : "Success"
+          }`
+      )
+      .join("\n")
+  );
+  console.log(
+    "=====================================",
+    new Date().toLocaleString("en-US", {
+      timeZone: "America/New_York",
+    }) + " EST"
+  );
 }
+
 main();
+setInterval(() => {
+  main();
+}, 1000 * 60 * 5); // every 5 minutes
