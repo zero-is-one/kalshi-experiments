@@ -12,11 +12,6 @@ const maxBetsPerRun = 4;
 
 async function main(isInitialRun = true) {
   console.log("\n----------------------------------------\n");
-  console.log(
-    `Starting Bestie run at ${new Date().toLocaleString("en-US", {
-      timeZone: "America/New_York",
-    })}`
-  );
 
   let remainingBetsThisSession = maxBetsPerRun;
   const sessionOrders = [];
@@ -195,7 +190,11 @@ async function main(isInitialRun = true) {
     }
   }
 
-  console.log("Bestie run complete.");
+  console.log(
+    `Bestie run complete at ${new Date().toLocaleString("en-US", {
+      timeZone: "America/New_York",
+    })}`
+  );
 }
 
 main();
