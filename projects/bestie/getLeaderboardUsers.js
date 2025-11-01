@@ -27,17 +27,25 @@ const categories = [
   "Elections",
 ];
 const limit = 99;
-const apiUrl = "https://api.elections.kalshi.com/v1/social/leaderboard";
+const apiUrl = "https://api.elections.kalshi.com/v1";
 const fetchDelayMs = 100;
 
 async function main() {
+  const userDirectory = {};
+
+  // load existing users to avoid re-fetching
+  const file = JSON.parse(fs.readFileSync("leaderboardUsers.json", "utf-8"));
+  file.forEach((entry) => (userDirectory[entry.nickname] = entry));
+
+  console.log("Loaded existing users:", Object.keys(userDirectory).length);
+
   const leaderLinks = [];
 
   // Generate all combinations of urls
   for (const timeFrame of timeFrames) {
     for (const metricName of metricNames) {
       for (const category of categories) {
-        let url = `${apiUrl}?metric_name=${metricName}&limit=${limit}&since_day_before=${timeFrame}`;
+        let url = `${apiUrl}/social/leaderboard?metric_name=${metricName}&limit=${limit}&since_day_before=${timeFrame}`;
 
         if (category) {
           url += `&category=${category}`;
@@ -50,12 +58,6 @@ async function main() {
 
   console.log(`Generated ${leaderLinks.length} requests for leaderboard data.`);
 
-  const userDirectory = {};
-
-  // load existing users to avoid re-fetching
-  const file = JSON.parse(fs.readFileSync("leaderboardUsers.json", "utf-8"));
-  file.forEach((entry) => (userDirectory[entry.nickname] = entry));
-
   let uniqueUsersAddedCount = 0;
 
   for (const [index, url] of leaderLinks.entries()) {
@@ -66,25 +68,18 @@ async function main() {
       url.replace(apiUrl, "")
     );
 
-    const [
-      err,
-      {
-        data: { rank_list: rankedUsers },
-      },
-    ] = await to(axios.get(url));
+    await delay(fetchDelayMs);
+    const [err, response] = await to(axios.get(url));
 
     if (err) {
-      console.log(red`(!) Error fetching leaderboard data:`, err);
+      console.log(red`(!) Error fetching leaderboard data:`, err.message);
       continue;
     }
 
-    if (!rankedUsers) {
+    const rankedUsers = response?.data?.rank_list;
+
+    if (!rankedUsers || rankedUsers.length === 0) {
       console.log(red`(!) No users found in the response.`, url);
-      continue;
-    }
-
-    if (rankedUsers.length === 0) {
-      console.log(red`(!) Empty user list returned.`, url);
       continue;
     }
 
@@ -100,8 +95,6 @@ async function main() {
       }
       userDirectory[user.nickname] = user;
     }
-
-    await delay(fetchDelayMs);
   }
 
   const users = Object.values(userDirectory).sort((a, b) =>

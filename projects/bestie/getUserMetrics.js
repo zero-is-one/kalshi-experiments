@@ -2,66 +2,52 @@
 
 import fs from "fs";
 import { delay } from "../../helpers/delay.js";
+import axios from "axios";
+import { to } from "await-to-js";
+import { red, blue, yellow, green } from "ansis";
+
+const apiUrl = "https://api.elections.kalshi.com/v1";
+const fetchDelayMs = 200;
 
 async function main() {
-  const rawData = fs.readFileSync("users.json");
-  console.log("Reading users.json file...");
-  const parsedData = JSON.parse(rawData);
-  const users = parsedData.users;
-  console.log(`Total users to process: ${users.length}`);
+  const usersNicknames = JSON.parse(fs.readFileSync("usersWithHoldings.json"));
 
-  const userMetrics = [];
-  let counter = 0;
+  console.log(`Total users to process: ${usersNicknames.length}`);
+  const usersMetrics = [];
 
-  for (const user of users) {
-    const nickname = user.nickname;
-    const url = `https://api.elections.kalshi.com/v1/social/profile/metrics?nickname=${nickname}&since_day_before=0`;
+  for (const [index, nickname] of usersNicknames.entries()) {
+    // To avoid rate limiting
+    const url = `${apiUrl}/social/profile/metrics?nickname=${nickname}&since_day_before=0`;
     console.log(
-      `${counter++}: Fetching metrics for user: ${nickname} from URL: ${url}`
+      `* Fetching metrics ${nickname} (${index}/${
+        usersNicknames.length
+      }): ${url.replace("apiUrl", "")}`
     );
 
-    let metricsData;
-    try {
-      const response = await fetch(url);
-      metricsData = await response.json();
-    } catch (e) {
-      console.error(`(!) Error fetching data for user ${nickname}:`, e);
+    await delay(fetchDelayMs);
+    const [err, response] = await to(axios.get(url));
+
+    if (err) {
+      console.log(
+        red`(!) Error fetching data for user ${nickname}:`,
+        err.message
+      );
       continue;
     }
 
-    if (!metricsData?.metrics) {
-      console.log(`(!) No data found for user ${nickname}.`);
+    const metricsData = response?.data?.metrics;
+
+    if (!metricsData) {
+      console.log(
+        red`(!) No metrics data found for user ${nickname}. Skipping.`
+      );
       continue;
     }
 
-    let holdingsData;
-    try {
-      const holdingsUrl = `https://api.elections.kalshi.com/v1/social/profile/holdings?nickname=${nickname}&limit=20&closed_positions=false`;
-      const response = await fetch(holdingsUrl);
-      holdingsData = await response.json();
-    } catch (e) {
-      console.error(`(!) Error fetching holdings for user ${nickname}:`, e);
-    }
-
-    userMetrics.push({
-      nickname,
-      metrics: metricsData.metrics,
-      holdings: holdingsData.holdings,
-    });
-
-    await delay(100);
+    usersMetrics.push({ nickname, ...metricsData });
   }
 
-  fs.writeFileSync(
-    "userMetrics.json",
-    JSON.stringify(
-      { createdAt: new Date().toISOString(), users: userMetrics },
-      null,
-      2
-    )
-  );
-
-  console.log("User metrics data saved to userMetrics.json");
+  fs.writeFileSync("userMetrics.json", JSON.stringify(usersMetrics, null, 2));
 }
 
 main();
