@@ -11,7 +11,7 @@ const fetchDelayMs = 200;
 const maxBetsPerRun = 4;
 
 async function main(isInitialRun = true) {
-  const remainingBetsThisSession = maxBetsPerRun;
+  let remainingBetsThisSession = maxBetsPerRun;
   const users = JSON.parse(fs.readFileSync("userPerformanceScores.json"));
   console.log(`Total users to process: ${users.length}`);
 
@@ -169,7 +169,7 @@ main();
 
 setInterval(() => {
   main(false);
-}, 15 * 60 * 1000); // every 5 minutes
+}, 5 * 60 * 1000); // every 5 minutes
 
 function getBetScore(bettors) {
   if (!bettors || bettors.length === 0) return 0;
