@@ -11,7 +11,16 @@ const fetchDelayMs = 200;
 const maxBetsPerRun = 4;
 
 async function main(isInitialRun = true) {
+  console.log("\n----------------------------------------\n");
+  console.log(
+    `Starting Bestie run at ${new Date().toLocaleString("en-US", {
+      timeZone: "America/New_York",
+    })}`
+  );
+
   let remainingBetsThisSession = maxBetsPerRun;
+  const sessionOrders = [];
+
   const users = JSON.parse(fs.readFileSync("userPerformanceScores.json"));
   console.log(`Total users to process: ${users.length}`);
 
@@ -45,9 +54,7 @@ async function main(isInitialRun = true) {
 
     for (const holding of holdings) {
       if (ordersLog.includes(holding.event_ticker)) {
-        console.log(
-          yellow`(-) Already placed order for event ${holding.event_ticker}, skipping.`
-        );
+        process.stdout.write(yellow`${holding.event_ticker}, skipping. `);
         continue;
       }
 
@@ -76,6 +83,7 @@ async function main(isInitialRun = true) {
         });
       }
     }
+    console.log(""); // new line after user holdings
   }
 
   const marketHoldings = Object.values(marketHoldingsById)
@@ -94,10 +102,6 @@ async function main(isInitialRun = true) {
   fs.writeFileSync(
     "marketHoldings.json",
     JSON.stringify(marketHoldings, null, 2)
-  );
-
-  console.log(
-    `Saved market holdings data for ${marketHoldings.length} markets.`
   );
 
   for (const mh of marketHoldings) {
@@ -126,7 +130,7 @@ async function main(isInitialRun = true) {
       console.log(
         yellow`(!) Initial run - skipping order placement for market: ${mh.marketTicker}, event: ${mh.eventTicker}`
       );
-      delay(fetchDelayMs);
+      await delay(fetchDelayMs);
       continue;
     }
 
@@ -143,6 +147,16 @@ async function main(isInitialRun = true) {
         time_in_force: "FOK", // Fill or Kill
       })
     );
+
+    sessionOrders.push({
+      marketTicker: mh.marketTicker,
+      side: mh.side,
+      error,
+      orderResult: response?.data || null,
+      timestamp: new Date().toLocaleString("en-US", {
+        timeZone: "America/New_York",
+      }),
+    });
 
     if (error) {
       console.log(red`(!) Error placing order:`, error.message);
@@ -163,6 +177,25 @@ async function main(isInitialRun = true) {
       response.data
     );
   }
+
+  console.log("Session Orders Summary:");
+  if (sessionOrders.length === 0) {
+    console.log(
+      `No orders placed this session. ${
+        isInitialRun ? "Initial run, so no orders were placed." : ""
+      }`
+    );
+  } else {
+    for (const order of sessionOrders) {
+      console.log(
+        `- ${order.timestamp} Market: ${order.marketTicker}, Side: ${
+          order.side
+        }, Result: ${order.error ? red("Error") : green("Success")}`
+      );
+    }
+  }
+
+  console.log("Bestie run complete.");
 }
 
 main();
