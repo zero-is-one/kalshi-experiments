@@ -1,13 +1,13 @@
 // https://api.elections.kalshi.com/v1/social/profile/metrics?nickname=EJG7&since_day_before=0
 
 import fs from "fs";
-import { delay } from "../../helpers/delay.js";
+import { delay } from "../../helpers/funcs.js";
 import axios from "axios";
 import { to } from "await-to-js";
 import { red } from "ansis";
 
 const apiUrl = "https://api.elections.kalshi.com/v1";
-const fetchDelayMs = 200;
+const fetchDelayMs = 100;
 
 async function main() {
   const usersNicknames = JSON.parse(fs.readFileSync("usersWithHoldings.json"));

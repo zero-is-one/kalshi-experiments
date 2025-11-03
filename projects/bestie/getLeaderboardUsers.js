@@ -1,5 +1,5 @@
 import fs from "fs";
-import { delay } from "../../helpers/delay.js";
+import { delay } from "../../helpers/funcs.js";
 import axios from "axios";
 import { to } from "await-to-js";
 import ansis, { red, bold, fg, hex, rgb, yellow } from "ansis";
