@@ -7,7 +7,7 @@ import { order } from "../../helpers/kalshi-api/index.js";
 import { green } from "ansis";
 
 const ALLOW_ORDERS = true;
-const MAX_CONTRACTS = 5;
+const MAX_CONTRACTS = 3;
 
 const sessionLog = [];
 
@@ -102,7 +102,7 @@ const main = async (isInitialRun = true) => {
     // };
 
     await delay(200);
-    const [orderResult, orderError] = await order({
+    const orderConfig = {
       ticker: trade.ticker,
       type: "market",
       action: trade.taker_action,
@@ -111,12 +111,14 @@ const main = async (isInitialRun = true) => {
       [`${trade.taker_side}_price`]:
         trade.taker_action === "buy" ? 90 : trade.price - 5,
       client_order_id: `council-${Date.now()}`,
-    });
+    };
+    const [orderError, orderResult] = await to(order(orderConfig));
 
     logger("orders", {
       timestamp: getFormattedDateTime(),
       error: orderError?.message,
       orderResult,
+      orderConfig,
       trade,
     });
 

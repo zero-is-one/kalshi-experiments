@@ -3,17 +3,20 @@
 import fs from "fs";
 import axios from "axios";
 import { to } from "await-to-js";
-import { delay } from "../../helpers/delay.js";
+import { delay } from "../../helpers/funcs.js";
 import { red, blue, yellow, green } from "ansis";
 
 const apiUrl = "https://api.elections.kalshi.com/v1";
-const fetchDelayMs = 200;
+const fetchDelayMs = 150;
 
 async function main() {
   const usersWithHoldings = JSON.parse(
     fs.readFileSync("usersWithHoldings.json")
   );
   const users = JSON.parse(fs.readFileSync("leaderboardUsers.json"));
+  console.log(
+    "This script will check which users have active holdings from the leaderboard."
+  );
   console.log(`Total users to process: ${users.length}`);
 
   for (const [index, user] of users.entries()) {

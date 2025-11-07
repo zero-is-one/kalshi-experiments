@@ -2,9 +2,9 @@ import fs from "fs";
 import { getFormattedDateTime } from "../../helpers/funcs.js";
 
 // the minimum number of bets a user must have made to be included in the rankings
-const MIN_PREDICTIONS = 100;
-const MIN_DOLLAR_VOLUME = 10000;
-const MIN_DOLLAR_PROFIT = 500;
+const MIN_PREDICTIONS = 200;
+const MIN_DOLLAR_VOLUME = 50;
+const MIN_DOLLAR_PROFIT = 1000;
 
 const isWatchMode = process.argv.includes("--watch");
 
@@ -45,7 +45,7 @@ const watchFn = () => {
     .map((u) => {
       return {
         nickname: u.nickname,
-        skillScore: u.dollarProfit / Math.sqrt(u.dollarVolume),
+        skillScore: u.dollarProfit / u.predictionsCount,
       };
     })
     .sort((a, b) => b.skillScore - a.skillScore)

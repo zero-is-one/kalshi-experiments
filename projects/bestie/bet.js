@@ -1,44 +1,52 @@
 import fs from "fs";
 import axios from "axios";
 import { to } from "await-to-js";
-import { delay } from "../../helpers/funcs.js";
+import { delay, getFormattedDateTime } from "../../helpers/funcs.js";
 import { red, blue, yellow, green } from "ansis";
 import { logger, getLogAsString } from "../../helpers/logger/index.js";
 import { order } from "../../helpers/kalshi-api/index.js";
 import { getUserSkillScores } from "./getUserSkillScores.js";
 import { getUserActivePositions } from "./getUserPositions.js";
 
-const MIN_SKILL_SCORE_RANKING = 17; // top 18 users (0-indexed)
+const MIN_USERS_HOLDING_POSITION = 2;
+const CONTRACT_COUNT = 1;
+const RUN_EVERY_MINUTES = 5;
 
-async function main(isInitialRun = true) {
+const sessionOrdersLog = [];
+
+async function main(
+  config = {
+    isInitialRun: true,
+  }
+) {
+  const isInitialRun = config?.isInitialRun ?? true;
+
   console.log("\n----------------------------------------\n");
 
-  const userSkillScores = getUserSkillScores().slice(0, 30);
+  const userSkillScores = getUserSkillScores();
 
-  const betSkillThreshold = userSkillScores[MIN_SKILL_SCORE_RANKING].skillScore;
-  console.log(
-    `Betting for users with skill score above ${betSkillThreshold.toFixed(2)}`
-  );
-
+  console.log(`Loaded skill scores for ${userSkillScores.length} users.`);
+  console.log("Fetching user positions...");
   // make a store for position Id and the nicknames of the users holding them
-  const statsMap = {};
+  const positionsMap = {};
 
   for (const user of userSkillScores) {
     const nickname = user.nickname;
-    console.log(blue(`* Placing bet for user ${nickname}...`));
 
     const positions = await getUserActivePositions(nickname);
-    console.log(`  - User has ${positions.length} active positions.`);
 
     for (const position of positions) {
-      if (!statsMap[position.id]) {
-        statsMap[position.id] = { position, holders: [] };
+      if (!positionsMap[position.id]) {
+        positionsMap[position.id] = { position, holders: [] };
       }
-      statsMap[position.id].holders.push(nickname);
+      positionsMap[position.id].holders.push(nickname);
     }
-  }
 
-  const statsArr = Object.values(statsMap)
+    process.stdout.write(`${nickname} (${positions.length}), `);
+  }
+  console.log("DONE!");
+
+  const positions = Object.values(positionsMap)
     .map((entry) => ({
       ...entry,
       totalSkillScore: entry.holders.reduce((sum, nick) => {
@@ -46,15 +54,81 @@ async function main(isInitialRun = true) {
         return sum + (user ? user.skillScore : 0);
       }, 0),
     }))
-    .sort((a, b) => b.totalSkillScore - a.totalSkillScore)
-    .filter((entry) => entry.totalSkillScore >= betSkillThreshold);
-
-  // save to file for logging
-  fs.writeFileSync("bestieBetStats.json", JSON.stringify(statsArr, null, 2));
+    .sort((a, b) => b.holders.length - a.holders.length)
+    .filter((entry) => entry.holders.length >= MIN_USERS_HOLDING_POSITION);
 
   console.log(
-    green(`\nTop ${statsArr.length} positions to consider betting on:`)
+    green(
+      `Found ${positions.length} positions held by at least ${MIN_USERS_HOLDING_POSITION} users.`
+    )
   );
+
+  // save to file for logging
+  fs.writeFileSync("bestieBetStats.json", JSON.stringify(positions, null, 2));
+
+  const ordersLogString = getLogAsString("orders");
+  for (const entry of positions) {
+    const { position } = entry;
+
+    if (ordersLogString.includes(position.id)) {
+      console.log(
+        yellow(`Already placed order for position ${position.id}, skipping.`)
+      );
+      continue;
+    }
+
+    if (isInitialRun) {
+      console.log(
+        yellow(`Initial run - logging position without action: ${position.id}`)
+      );
+      logger("orders", { isInitialRun: true, position });
+      continue;
+    }
+
+    await delay(200);
+    const orderConfig = {
+      ticker: position.market_ticker,
+      type: "market",
+      action: "buy",
+      side: position.side,
+      count: CONTRACT_COUNT,
+      [`${position.side}_price`]: 95,
+      client_order_id: `bestie-rank-${Date.now()}`,
+    };
+    const [orderError, orderResult] = await to(order(orderConfig));
+
+    logger("orders", {
+      error: orderError?.message,
+      orderResult,
+      orderConfig,
+      position,
+    });
+
+    console.log("Bettering on position:", position.id);
+
+    const timestamp = getFormattedDateTime();
+
+    if (orderError) {
+      sessionOrdersLog.push(
+        `${timestamp} - (!) Error placing order for position ${position.id} - ${position.market_ticker}: ${orderError.message}`
+      );
+    } else {
+      sessionOrdersLog.push(
+        `${timestamp} - Order placed successfully for position ${position.id}  - ${position.market_ticker}`
+      );
+    }
+  }
+
+  if (sessionOrdersLog.length > 0) {
+    console.log("\nSession Orders Summary:");
+    sessionOrdersLog.forEach((log) => console.log(log));
+  } else {
+    console.log("No new orders placed in this run.");
+  }
+  console.log(`Bestie bet run complete. [${getFormattedDateTime()}]`);
 }
 
 main();
+setInterval(() => {
+  main({ isInitialRun: false });
+}, RUN_EVERY_MINUTES * 60 * 1000);
