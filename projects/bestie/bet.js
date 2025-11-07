@@ -1,5 +1,4 @@
 import fs from "fs";
-import axios from "axios";
 import { to } from "await-to-js";
 import { delay, getFormattedDateTime } from "../../helpers/funcs.js";
 import { red, blue, yellow, green } from "ansis";

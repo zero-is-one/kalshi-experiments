@@ -1,96 +1,6 @@
 [
   {
     "position": {
-      "market_id": "d6001565-9ce7-4194-81a1-ab96e694491c",
-      "market_ticker": "KXMAYORNYCPARTY-25-D",
-      "signed_open_position": 5000,
-      "pnl": 6000000,
-      "event_ticker": "KXMAYORNYCPARTY-25",
-      "series_ticker": "KXMAYORNYCPARTY",
-      "total_absolute_position": 10000,
-      "fetchedAt": "2025-11-06T23:57:21.197Z",
-      "side": "yes",
-      "id": "d6001565-9ce7-4194-81a1-ab96e694491c:yes"
-    },
-    "holders": [
-      "PredMTrader",
-      "TheGrandeTop10",
-      "FreddySupples",
-      "eppixx",
-      "JDP44",
-      "int201",
-      "Bachelier",
-      "YoDog"
-    ],
-    "totalSkillScore": 265.3775899288041
-  },
-  {
-    "position": {
-      "market_id": "006cc24d-fe87-44ee-9875-5a98655d38d1",
-      "market_ticker": "KXMAYORNYCPARTY-25-AC",
-      "signed_open_position": -677784,
-      "pnl": 765571100,
-      "event_ticker": "KXMAYORNYCPARTY-25",
-      "series_ticker": "KXMAYORNYCPARTY",
-      "total_absolute_position": 2422706,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
-      "side": "no",
-      "id": "006cc24d-fe87-44ee-9875-5a98655d38d1:no"
-    },
-    "holders": [
-      "nonsenseking",
-      "PredMTrader",
-      "genghis",
-      "juuustin",
-      "BitcoinTradingChallenge",
-      "YoDog"
-    ],
-    "totalSkillScore": 301.8262425998283
-  },
-  {
-    "position": {
-      "market_id": "37304114-f769-4a90-ad84-684f3f5b19b2",
-      "market_ticker": "KXMAYORNYCPARTY-25-R",
-      "signed_open_position": -487779,
-      "pnl": 64852600,
-      "event_ticker": "KXMAYORNYCPARTY-25",
-      "series_ticker": "KXMAYORNYCPARTY",
-      "total_absolute_position": 2422706,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
-      "side": "no",
-      "id": "37304114-f769-4a90-ad84-684f3f5b19b2:no"
-    },
-    "holders": [
-      "nonsenseking",
-      "Billybutsky",
-      "eppixx",
-      "backformore"
-    ],
-    "totalSkillScore": 215.8580713376328
-  },
-  {
-    "position": {
-      "market_id": "f6de9e18-4f99-4b95-bc16-9a172b8df2fb",
-      "market_ticker": "GOVPARTYNJ-25-R",
-      "signed_open_position": -35006,
-      "pnl": 73256900,
-      "event_ticker": "GOVPARTYNJ-25",
-      "series_ticker": "GOVPARTYNJ",
-      "total_absolute_position": 55299,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
-      "side": "no",
-      "id": "f6de9e18-4f99-4b95-bc16-9a172b8df2fb:no"
-    },
-    "holders": [
-      "nonsenseking",
-      "genghis",
-      "backformore",
-      "YoDog"
-    ],
-    "totalSkillScore": 194.0688153862317
-  },
-  {
-    "position": {
       "market_id": "3786cf83-73b1-471e-87f2-9702062e39bb",
       "market_ticker": "KXDEMSWEEP-25NOV04",
       "signed_open_position": 8138,
@@ -98,7 +8,7 @@
       "event_ticker": "KXDEMSWEEP-25NOV04",
       "series_ticker": "KXDEMSWEEP",
       "total_absolute_position": 8138,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
+      "fetchedAt": "2025-11-07T12:04:18.747Z",
       "side": "yes",
       "id": "3786cf83-73b1-471e-87f2-9702062e39bb:yes"
     },
@@ -112,35 +22,14 @@
   },
   {
     "position": {
-      "market_id": "006cc24d-fe87-44ee-9875-5a98655d38d1",
-      "market_ticker": "KXMAYORNYCPARTY-25-AC",
-      "signed_open_position": 20279,
-      "pnl": -12684800,
-      "event_ticker": "KXMAYORNYCPARTY-25",
-      "series_ticker": "KXMAYORNYCPARTY",
-      "total_absolute_position": 20279,
-      "fetchedAt": "2025-11-06T23:57:20.752Z",
-      "side": "yes",
-      "id": "006cc24d-fe87-44ee-9875-5a98655d38d1:yes"
-    },
-    "holders": [
-      "Blackdiamond",
-      "Dalmata777",
-      "mitch",
-      "ataway23"
-    ],
-    "totalSkillScore": 133.38602518532167
-  },
-  {
-    "position": {
       "market_id": "7a166501-ee85-4c95-bbf4-eea0f90c8604",
       "market_ticker": "KXELECTIONMOVZOHRAN-25-ZMAM-B10.5",
       "signed_open_position": 3000,
-      "pnl": 843500,
+      "pnl": -656500,
       "event_ticker": "KXELECTIONMOVZOHRAN-25",
       "series_ticker": "KXELECTIONMOVZOHRAN",
       "total_absolute_position": 6000,
-      "fetchedAt": "2025-11-06T23:57:21.197Z",
+      "fetchedAt": "2025-11-07T12:04:19.231Z",
       "side": "yes",
       "id": "7a166501-ee85-4c95-bbf4-eea0f90c8604:yes"
     },
@@ -157,11 +46,11 @@
       "market_id": "46365697-97b2-4288-a44e-159932822431",
       "market_ticker": "KXVOTEPERCENTMAMDANI-25NOV04-54",
       "signed_open_position": 8231,
-      "pnl": 8007700,
+      "pnl": 8830800,
       "event_ticker": "KXVOTEPERCENTMAMDANI-25NOV04",
       "series_ticker": "KXVOTEPERCENTMAMDANI",
       "total_absolute_position": 12126,
-      "fetchedAt": "2025-11-06T23:57:22.149Z",
+      "fetchedAt": "2025-11-07T12:04:19.727Z",
       "side": "yes",
       "id": "46365697-97b2-4288-a44e-159932822431:yes"
     },
@@ -182,7 +71,7 @@
       "event_ticker": "KXELECTIONMOVZOHRAN-25",
       "series_ticker": "KXELECTIONMOVZOHRAN",
       "total_absolute_position": 155203,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
+      "fetchedAt": "2025-11-07T12:04:18.747Z",
       "side": "no",
       "id": "e4f021eb-2043-4112-9413-5d6e09a9c084:no"
     },
@@ -195,6 +84,46 @@
   },
   {
     "position": {
+      "market_id": "a362c5fb-ee76-4ab4-a5e2-55599627a7ac",
+      "market_ticker": "KXGOVSHUTLENGTH-26JAN01-40D",
+      "signed_open_position": 1284,
+      "pnl": -15100000,
+      "event_ticker": "KXGOVSHUTLENGTH-26JAN01",
+      "series_ticker": "KXGOVSHUTLENGTH",
+      "total_absolute_position": 7822,
+      "fetchedAt": "2025-11-07T12:04:18.747Z",
+      "side": "yes",
+      "id": "a362c5fb-ee76-4ab4-a5e2-55599627a7ac:yes"
+    },
+    "holders": [
+      "nonsenseking",
+      "int201",
+      "YoDog"
+    ],
+    "totalSkillScore": 172.3654850301234
+  },
+  {
+    "position": {
+      "market_id": "1ff267f2-35a6-4b54-8a1d-4053f9e2f41f",
+      "market_ticker": "KXGOVSHUTLENGTH-26JAN01-50D",
+      "signed_open_position": -587,
+      "pnl": 1963400,
+      "event_ticker": "KXGOVSHUTLENGTH-26JAN01",
+      "series_ticker": "KXGOVSHUTLENGTH",
+      "total_absolute_position": 7822,
+      "fetchedAt": "2025-11-07T12:04:18.747Z",
+      "side": "no",
+      "id": "1ff267f2-35a6-4b54-8a1d-4053f9e2f41f:no"
+    },
+    "holders": [
+      "nonsenseking",
+      "FreddySupples",
+      "YoDog"
+    ],
+    "totalSkillScore": 190.98117918975953
+  },
+  {
+    "position": {
       "market_id": "539e1d79-5cae-48d0-a577-410befcb7316",
       "market_ticker": "KXSHERRILLOUTPERFORMRCP-25NOV04",
       "signed_open_position": 5327,
@@ -202,7 +131,7 @@
       "event_ticker": "KXSHERRILLOUTPERFORMRCP-25NOV04",
       "series_ticker": "KXSHERRILLOUTPERFORMRCP",
       "total_absolute_position": 5327,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
+      "fetchedAt": "2025-11-07T12:04:18.747Z",
       "side": "yes",
       "id": "539e1d79-5cae-48d0-a577-410befcb7316:yes"
     },
@@ -218,11 +147,11 @@
       "market_id": "59aa0cae-0d52-4598-8261-41868128ea31",
       "market_ticker": "KXCABLEAVE-25-26JAN",
       "signed_open_position": -3292,
-      "pnl": 14061000,
+      "pnl": 12085800,
       "event_ticker": "KXCABLEAVE-25",
       "series_ticker": "KXCABLEAVE",
       "total_absolute_position": 3292,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
+      "fetchedAt": "2025-11-07T12:04:18.747Z",
       "side": "no",
       "id": "59aa0cae-0d52-4598-8261-41868128ea31:no"
     },
@@ -235,34 +164,14 @@
   },
   {
     "position": {
-      "market_id": "71703370-0a9f-4ffa-afb5-3ba74645e2d5",
-      "market_ticker": "KXLTGOVVA-25-D",
-      "signed_open_position": 730,
-      "pnl": 1168000,
-      "event_ticker": "KXLTGOVVA-25",
-      "series_ticker": "KXLTGOVVA",
-      "total_absolute_position": 730,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
-      "side": "yes",
-      "id": "71703370-0a9f-4ffa-afb5-3ba74645e2d5:yes"
-    },
-    "holders": [
-      "nonsenseking",
-      "eppixx",
-      "backformore"
-    ],
-    "totalSkillScore": 182.91148914178711
-  },
-  {
-    "position": {
       "market_id": "aed61bab-d962-42fd-bcc8-a6360ab4fd0a",
       "market_ticker": "KXTRUMPPARDON-26JAN01-DID",
       "signed_open_position": -527,
-      "pnl": 737800,
+      "pnl": 895900,
       "event_ticker": "KXTRUMPPARDON-26JAN01",
       "series_ticker": "KXTRUMPPARDON",
       "total_absolute_position": 527,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
+      "fetchedAt": "2025-11-07T12:04:18.747Z",
       "side": "no",
       "id": "aed61bab-d962-42fd-bcc8-a6360ab4fd0a:no"
     },
@@ -282,7 +191,7 @@
       "event_ticker": "KXMAMDANIBOROUGHS-25",
       "series_ticker": "KXMAMDANIBOROUGHS",
       "total_absolute_position": 150,
-      "fetchedAt": "2025-11-06T23:57:24.607Z",
+      "fetchedAt": "2025-11-07T12:04:20.963Z",
       "side": "yes",
       "id": "05c6d7e2-ac0a-4c7d-98e8-fc1561ec365d:yes"
     },
@@ -295,26 +204,6 @@
   },
   {
     "position": {
-      "market_id": "f6de9e18-4f99-4b95-bc16-9a172b8df2fb",
-      "market_ticker": "GOVPARTYNJ-25-R",
-      "signed_open_position": 1064,
-      "pnl": -1509200,
-      "event_ticker": "GOVPARTYNJ-25",
-      "series_ticker": "GOVPARTYNJ",
-      "total_absolute_position": 1064,
-      "fetchedAt": "2025-11-06T23:57:30.794Z",
-      "side": "yes",
-      "id": "f6de9e18-4f99-4b95-bc16-9a172b8df2fb:yes"
-    },
-    "holders": [
-      "mitch",
-      "juuustin",
-      "ataway23"
-    ],
-    "totalSkillScore": 20.933814228557697
-  },
-  {
-    "position": {
       "market_id": "ffffed3f-97e0-478d-ac0c-57ab0fc3953f",
       "market_ticker": "KXMAYORMINN-26-JFRE",
       "signed_open_position": 111,
@@ -322,7 +211,7 @@
       "event_ticker": "KXMAYORMINN-26",
       "series_ticker": "KXMAYORMINN",
       "total_absolute_position": 222,
-      "fetchedAt": "2025-11-06T23:57:32.861Z",
+      "fetchedAt": "2025-11-07T12:04:25.705Z",
       "side": "yes",
       "id": "ffffed3f-97e0-478d-ac0c-57ab0fc3953f:yes"
     },
@@ -335,25 +224,6 @@
   },
   {
     "position": {
-      "market_id": "ffdba09b-6f14-4f47-a21f-44c36ba95880",
-      "market_ticker": "KXMAYORNYCPARTY-25-EADA",
-      "signed_open_position": -416777,
-      "pnl": 291389600,
-      "event_ticker": "KXMAYORNYCPARTY-25",
-      "series_ticker": "KXMAYORNYCPARTY",
-      "total_absolute_position": 2422706,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
-      "side": "no",
-      "id": "ffdba09b-6f14-4f47-a21f-44c36ba95880:no"
-    },
-    "holders": [
-      "nonsenseking",
-      "roadrunner"
-    ],
-    "totalSkillScore": 171.86172275982779
-  },
-  {
-    "position": {
       "market_id": "acebaa46-a43a-4255-a6f9-00e455910020",
       "market_ticker": "KXVOTEPERCENTMAMDANI-25NOV04-44",
       "signed_open_position": -52106,
@@ -361,7 +231,7 @@
       "event_ticker": "KXVOTEPERCENTMAMDANI-25NOV04",
       "series_ticker": "KXVOTEPERCENTMAMDANI",
       "total_absolute_position": 198812,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
+      "fetchedAt": "2025-11-07T12:04:18.747Z",
       "side": "no",
       "id": "acebaa46-a43a-4255-a6f9-00e455910020:no"
     },
@@ -380,7 +250,7 @@
       "event_ticker": "KXVOTEPERCENTMAMDANI-25NOV04",
       "series_ticker": "KXVOTEPERCENTMAMDANI",
       "total_absolute_position": 198812,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
+      "fetchedAt": "2025-11-07T12:04:18.747Z",
       "side": "no",
       "id": "116f4809-c770-4228-84ea-c624dd6533d1:no"
     },
@@ -399,7 +269,7 @@
       "event_ticker": "KXVOTEPERCENTMAMDANI-25NOV04",
       "series_ticker": "KXVOTEPERCENTMAMDANI",
       "total_absolute_position": 198812,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
+      "fetchedAt": "2025-11-07T12:04:18.747Z",
       "side": "no",
       "id": "621fbc88-65c2-4c8b-b42e-1419a602aec9:no"
     },
@@ -418,7 +288,7 @@
       "event_ticker": "KXELECTIONMOVZOHRAN-25",
       "series_ticker": "KXELECTIONMOVZOHRAN",
       "total_absolute_position": 155203,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
+      "fetchedAt": "2025-11-07T12:04:18.747Z",
       "side": "no",
       "id": "8c125c9a-9530-4b97-984f-1dbd5a75887e:no"
     },
@@ -430,33 +300,14 @@
   },
   {
     "position": {
-      "market_id": "6f7a9050-a8da-4cfe-8d29-c5c8b83c0327",
-      "market_ticker": "KXELECTIONMOVZOHRAN-25-ZMAM-B7.5",
-      "signed_open_position": -25836,
-      "pnl": -78059400,
-      "event_ticker": "KXELECTIONMOVZOHRAN-25",
-      "series_ticker": "KXELECTIONMOVZOHRAN",
-      "total_absolute_position": 155203,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
-      "side": "no",
-      "id": "6f7a9050-a8da-4cfe-8d29-c5c8b83c0327:no"
-    },
-    "holders": [
-      "nonsenseking",
-      "FreddySupples"
-    ],
-    "totalSkillScore": 190.6379751135997
-  },
-  {
-    "position": {
       "market_id": "7a166501-ee85-4c95-bbf4-eea0f90c8604",
       "market_ticker": "KXELECTIONMOVZOHRAN-25-ZMAM-B10.5",
       "signed_open_position": -25807,
-      "pnl": -51465200,
+      "pnl": -38561700,
       "event_ticker": "KXELECTIONMOVZOHRAN-25",
       "series_ticker": "KXELECTIONMOVZOHRAN",
       "total_absolute_position": 155203,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
+      "fetchedAt": "2025-11-07T12:04:18.747Z",
       "side": "no",
       "id": "7a166501-ee85-4c95-bbf4-eea0f90c8604:no"
     },
@@ -475,7 +326,7 @@
       "event_ticker": "KXELECTIONMOVZOHRAN-25",
       "series_ticker": "KXELECTIONMOVZOHRAN",
       "total_absolute_position": 155203,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
+      "fetchedAt": "2025-11-07T12:04:18.747Z",
       "side": "no",
       "id": "6afe33ef-36f0-4324-b2e1-c21e5d10dd9a:no"
     },
@@ -494,7 +345,7 @@
       "event_ticker": "KXGOLDCARDS-25",
       "series_ticker": "KXGOLDCARDS",
       "total_absolute_position": 93443,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
+      "fetchedAt": "2025-11-07T12:04:18.747Z",
       "side": "no",
       "id": "2071eaa9-a9ad-4f7a-99e3-1becac73553e:no"
     },
@@ -513,7 +364,7 @@
       "event_ticker": "KXEPSTEIN-26",
       "series_ticker": "KXEPSTEIN",
       "total_absolute_position": 30094,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
+      "fetchedAt": "2025-11-07T12:04:18.747Z",
       "side": "no",
       "id": "84c56f90-2086-4af9-b211-27a90a259900:no"
     },
@@ -532,7 +383,7 @@
       "event_ticker": "KXELECTIONMOVVAGOV-25NOV04",
       "series_ticker": "KXELECTIONMOVVAGOV",
       "total_absolute_position": 19652,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
+      "fetchedAt": "2025-11-07T12:04:18.747Z",
       "side": "no",
       "id": "2157e29d-c438-46ce-9fe1-0c546daa25ec:no"
     },
@@ -546,12 +397,12 @@
     "position": {
       "market_id": "cbdbde86-6e9f-4463-8080-9031bb3edb57",
       "market_ticker": "KXGOVSHUTLENGTH-26JAN01-42D",
-      "signed_open_position": 1000,
-      "pnl": 400000,
+      "signed_open_position": 2000,
+      "pnl": 1000000,
       "event_ticker": "KXGOVSHUTLENGTH-26JAN01",
       "series_ticker": "KXGOVSHUTLENGTH",
-      "total_absolute_position": 10736,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
+      "total_absolute_position": 7822,
+      "fetchedAt": "2025-11-07T12:04:18.747Z",
       "side": "yes",
       "id": "cbdbde86-6e9f-4463-8080-9031bb3edb57:yes"
     },
@@ -563,33 +414,14 @@
   },
   {
     "position": {
-      "market_id": "1ff267f2-35a6-4b54-8a1d-4053f9e2f41f",
-      "market_ticker": "KXGOVSHUTLENGTH-26JAN01-50D",
-      "signed_open_position": -587,
-      "pnl": 2902600,
-      "event_ticker": "KXGOVSHUTLENGTH-26JAN01",
-      "series_ticker": "KXGOVSHUTLENGTH",
-      "total_absolute_position": 10736,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
-      "side": "no",
-      "id": "1ff267f2-35a6-4b54-8a1d-4053f9e2f41f:no"
-    },
-    "holders": [
-      "nonsenseking",
-      "YoDog"
-    ],
-    "totalSkillScore": 162.54307338771176
-  },
-  {
-    "position": {
       "market_id": "1d0e1172-f826-4d1f-9728-22ef1b28738c",
       "market_ticker": "KXPRESNOMR-28-DJT",
       "signed_open_position": -1000,
-      "pnl": 500000,
+      "pnl": 400000,
       "event_ticker": "KXPRESNOMR-28",
       "series_ticker": "KXPRESNOMR",
       "total_absolute_position": 3000,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
+      "fetchedAt": "2025-11-07T12:04:18.747Z",
       "side": "no",
       "id": "1d0e1172-f826-4d1f-9728-22ef1b28738c:no"
     },
@@ -608,7 +440,7 @@
       "event_ticker": "KXPRESNOMR-28",
       "series_ticker": "KXPRESNOMR",
       "total_absolute_position": 3000,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
+      "fetchedAt": "2025-11-07T12:04:18.747Z",
       "side": "no",
       "id": "36139bff-5ab8-4395-b685-847fc6fa3264:no"
     },
@@ -627,7 +459,7 @@
       "event_ticker": "KXMOVVALTAG-25NOV04",
       "series_ticker": "KXMOVVALTAG",
       "total_absolute_position": 2493,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
+      "fetchedAt": "2025-11-07T12:04:18.747Z",
       "side": "no",
       "id": "a5c70b95-f6bd-4076-8e1c-9500cf520869:no"
     },
@@ -646,7 +478,7 @@
       "event_ticker": "KXSPANBERGEROUTPERFORMRCP-25NOV04",
       "series_ticker": "KXSPANBERGEROUTPERFORMRCP",
       "total_absolute_position": 1783,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
+      "fetchedAt": "2025-11-07T12:04:18.747Z",
       "side": "yes",
       "id": "0535ce2c-98e5-4451-b5a8-61a93d544046:yes"
     },
@@ -658,14 +490,33 @@
   },
   {
     "position": {
+      "market_id": "7c5675f3-41f8-498d-997d-0f90a4efc6f1",
+      "market_ticker": "KXEPSTEINLIST-26-BOBA",
+      "signed_open_position": -317,
+      "pnl": 570600,
+      "event_ticker": "KXEPSTEINLIST-26",
+      "series_ticker": "KXEPSTEINLIST",
+      "total_absolute_position": 1317,
+      "fetchedAt": "2025-11-07T12:04:18.747Z",
+      "side": "no",
+      "id": "7c5675f3-41f8-498d-997d-0f90a4efc6f1:no"
+    },
+    "holders": [
+      "nonsenseking",
+      "Billybutsky"
+    ],
+    "totalSkillScore": 195.14645150739764
+  },
+  {
+    "position": {
       "market_id": "ed85b698-6364-4c34-91fd-0bc720030f0b",
       "market_ticker": "KXLEAVEADMIN-26-PHEG",
       "signed_open_position": 1250,
-      "pnl": 25387800,
+      "pnl": 25012800,
       "event_ticker": "KXLEAVEADMIN-26",
       "series_ticker": "KXLEAVEADMIN",
       "total_absolute_position": 1250,
-      "fetchedAt": "2025-11-06T23:57:20.465Z",
+      "fetchedAt": "2025-11-07T12:04:18.747Z",
       "side": "yes",
       "id": "ed85b698-6364-4c34-91fd-0bc720030f0b:yes"
     },
@@ -677,6 +528,44 @@
   },
   {
     "position": {
+      "market_id": "617fdebc-9abc-4b21-9ae7-5064d08da25c",
+      "market_ticker": "KXTARIFFPHARMA-25-DEC31",
+      "signed_open_position": -213,
+      "pnl": 8663600,
+      "event_ticker": "KXTARIFFPHARMA-25",
+      "series_ticker": "KXTARIFFPHARMA",
+      "total_absolute_position": 213,
+      "fetchedAt": "2025-11-07T12:04:18.747Z",
+      "side": "no",
+      "id": "617fdebc-9abc-4b21-9ae7-5064d08da25c:no"
+    },
+    "holders": [
+      "nonsenseking",
+      "Billybutsky"
+    ],
+    "totalSkillScore": 195.14645150739764
+  },
+  {
+    "position": {
+      "market_id": "975e5e34-1c87-4677-ac03-7e1d2f148d32",
+      "market_ticker": "KXMAMDANINYC-25NOV04",
+      "signed_open_position": 197,
+      "pnl": 7832900,
+      "event_ticker": "KXMAMDANINYC-25NOV04",
+      "series_ticker": "KXMAMDANINYC",
+      "total_absolute_position": 197,
+      "fetchedAt": "2025-11-07T12:04:18.747Z",
+      "side": "yes",
+      "id": "975e5e34-1c87-4677-ac03-7e1d2f148d32:yes"
+    },
+    "holders": [
+      "nonsenseking",
+      "eppixx"
+    ],
+    "totalSkillScore": 177.2618304766005
+  },
+  {
+    "position": {
       "market_id": "aee54136-2728-41c7-8a22-4cfd0620864d",
       "market_ticker": "KXRTRENTALFAMILY-87",
       "signed_open_position": 25,
@@ -684,7 +573,7 @@
       "event_ticker": "KXRTRENTALFAMILY",
       "series_ticker": "KXRTRENTALFAMILY",
       "total_absolute_position": 25,
-      "fetchedAt": "2025-11-06T23:57:20.752Z",
+      "fetchedAt": "2025-11-07T12:04:18.991Z",
       "side": "yes",
       "id": "aee54136-2728-41c7-8a22-4cfd0620864d:yes"
     },
@@ -696,6 +585,63 @@
   },
   {
     "position": {
+      "market_id": "da9b72fe-615c-44b4-aecf-6224b1d9ab59",
+      "market_ticker": "KXTNFMENTION-25NOV07-LATE",
+      "signed_open_position": -1578,
+      "pnl": 2604700,
+      "event_ticker": "KXTNFMENTION-25NOV07",
+      "series_ticker": "KXTNFMENTION",
+      "total_absolute_position": 4561,
+      "fetchedAt": "2025-11-07T12:04:19.231Z",
+      "side": "no",
+      "id": "da9b72fe-615c-44b4-aecf-6224b1d9ab59:no"
+    },
+    "holders": [
+      "PredMTrader",
+      "eppixx"
+    ],
+    "totalSkillScore": 111.93957337626966
+  },
+  {
+    "position": {
+      "market_id": "5129b65d-a2fb-44f6-a600-6bbd8d4f2df6",
+      "market_ticker": "KXTNFMENTION-25NOV07-FACE",
+      "signed_open_position": -1154,
+      "pnl": -3969800,
+      "event_ticker": "KXTNFMENTION-25NOV07",
+      "series_ticker": "KXTNFMENTION",
+      "total_absolute_position": 4561,
+      "fetchedAt": "2025-11-07T12:04:19.231Z",
+      "side": "no",
+      "id": "5129b65d-a2fb-44f6-a600-6bbd8d4f2df6:no"
+    },
+    "holders": [
+      "PredMTrader",
+      "eppixx"
+    ],
+    "totalSkillScore": 111.93957337626966
+  },
+  {
+    "position": {
+      "market_id": "16a9554d-b390-4b6e-bb5b-44ef1c5889b8",
+      "market_ticker": "KXTNFMENTION-25NOV07-INTE",
+      "signed_open_position": -400,
+      "pnl": -3040000,
+      "event_ticker": "KXTNFMENTION-25NOV07",
+      "series_ticker": "KXTNFMENTION",
+      "total_absolute_position": 4561,
+      "fetchedAt": "2025-11-07T12:04:19.231Z",
+      "side": "no",
+      "id": "16a9554d-b390-4b6e-bb5b-44ef1c5889b8:no"
+    },
+    "holders": [
+      "PredMTrader",
+      "eppixx"
+    ],
+    "totalSkillScore": 111.93957337626966
+  },
+  {
+    "position": {
       "market_id": "f968fc49-116c-4d7f-8636-f03105f42878",
       "market_ticker": "KXNYCMAYOR2ND-25-CSLI",
       "signed_open_position": 2398,
@@ -703,7 +649,7 @@
       "event_ticker": "KXNYCMAYOR2ND-25",
       "series_ticker": "KXNYCMAYOR2ND",
       "total_absolute_position": 2398,
-      "fetchedAt": "2025-11-06T23:57:21.197Z",
+      "fetchedAt": "2025-11-07T12:04:19.231Z",
       "side": "yes",
       "id": "f968fc49-116c-4d7f-8636-f03105f42878:yes"
     },
@@ -715,33 +661,14 @@
   },
   {
     "position": {
-      "market_id": "c8c4c619-19ed-4edf-9942-249926328f82",
-      "market_ticker": "KXATTYGENVA-25-D",
-      "signed_open_position": 1000,
-      "pnl": 2600000,
-      "event_ticker": "KXATTYGENVA-25",
-      "series_ticker": "KXATTYGENVA",
-      "total_absolute_position": 1000,
-      "fetchedAt": "2025-11-06T23:57:21.197Z",
-      "side": "yes",
-      "id": "c8c4c619-19ed-4edf-9942-249926328f82:yes"
-    },
-    "holders": [
-      "PredMTrader",
-      "eppixx"
-    ],
-    "totalSkillScore": 111.93957337626966
-  },
-  {
-    "position": {
       "market_id": "f361fb4c-a020-4944-8675-44b905c2c6e3",
       "market_ticker": "KXTOPALBUMRECORDTLOASG-TLOASG-5",
       "signed_open_position": 1864,
       "pnl": 1067000,
       "event_ticker": "KXTOPALBUMRECORDTLOASG-TLOASG",
       "series_ticker": "KXTOPALBUMRECORDTLOASG",
-      "total_absolute_position": 1864,
-      "fetchedAt": "2025-11-06T23:57:21.865Z",
+      "total_absolute_position": 3116,
+      "fetchedAt": "2025-11-07T12:04:19.477Z",
       "side": "yes",
       "id": "f361fb4c-a020-4944-8675-44b905c2c6e3:yes"
     },
@@ -753,6 +680,25 @@
   },
   {
     "position": {
+      "market_id": "dc683dee-d270-4128-a8f0-2cd20ac47469",
+      "market_ticker": "KXRTWICKEDFORGOOD-80",
+      "signed_open_position": 608,
+      "pnl": 360800,
+      "event_ticker": "KXRTWICKEDFORGOOD",
+      "series_ticker": "KXRTWICKEDFORGOOD",
+      "total_absolute_position": 903,
+      "fetchedAt": "2025-11-07T12:04:19.477Z",
+      "side": "yes",
+      "id": "dc683dee-d270-4128-a8f0-2cd20ac47469:yes"
+    },
+    "holders": [
+      "TheGrandeTop10",
+      "YoDog"
+    ],
+    "totalSkillScore": 95.37892534755346
+  },
+  {
+    "position": {
       "market_id": "dc32564d-e407-4487-919d-aea70523f244",
       "market_ticker": "KXFEDCHAIRNOM-29-CWAL",
       "signed_open_position": 800,
@@ -760,7 +706,7 @@
       "event_ticker": "KXFEDCHAIRNOM-29",
       "series_ticker": "KXFEDCHAIRNOM",
       "total_absolute_position": 16468,
-      "fetchedAt": "2025-11-06T23:57:22.760Z",
+      "fetchedAt": "2025-11-07T12:04:19.975Z",
       "side": "yes",
       "id": "dc32564d-e407-4487-919d-aea70523f244:yes"
     },
@@ -775,11 +721,11 @@
       "market_id": "36884519-108e-43ca-8bfe-bb7c79f8d541",
       "market_ticker": "KXFEDCHAIRNOM-29-KH",
       "signed_open_position": 800,
-      "pnl": 1040000,
+      "pnl": 1120000,
       "event_ticker": "KXFEDCHAIRNOM-29",
       "series_ticker": "KXFEDCHAIRNOM",
       "total_absolute_position": 16468,
-      "fetchedAt": "2025-11-06T23:57:22.760Z",
+      "fetchedAt": "2025-11-07T12:04:19.975Z",
       "side": "yes",
       "id": "36884519-108e-43ca-8bfe-bb7c79f8d541:yes"
     },
@@ -798,7 +744,7 @@
       "event_ticker": "KXZELENSKYYPUTINMEET-26",
       "series_ticker": "KXZELENSKYYPUTINMEET",
       "total_absolute_position": 5000,
-      "fetchedAt": "2025-11-06T23:57:22.760Z",
+      "fetchedAt": "2025-11-07T12:04:19.976Z",
       "side": "yes",
       "id": "54f4fb81-5660-4a80-99f8-fc9c87c5d4fc:yes"
     },
@@ -817,7 +763,7 @@
       "event_ticker": "NPRDEFUND-25",
       "series_ticker": "KXNPRDEFUND",
       "total_absolute_position": 3000,
-      "fetchedAt": "2025-11-06T23:57:22.760Z",
+      "fetchedAt": "2025-11-07T12:04:19.976Z",
       "side": "no",
       "id": "642547b7-ef7f-4abc-9735-36e90e8cb0ef:no"
     },
@@ -836,7 +782,7 @@
       "event_ticker": "KXSURGEON-26",
       "series_ticker": "KXSURGEON",
       "total_absolute_position": 1312,
-      "fetchedAt": "2025-11-06T23:57:22.760Z",
+      "fetchedAt": "2025-11-07T12:04:19.976Z",
       "side": "no",
       "id": "f5b2603c-5707-4a25-9f12-ecf5b8a062f8:no"
     },
@@ -855,7 +801,7 @@
       "event_ticker": "KXAFDBANREQUEST-25",
       "series_ticker": "KXAFDBANREQUEST",
       "total_absolute_position": 1270,
-      "fetchedAt": "2025-11-06T23:57:22.760Z",
+      "fetchedAt": "2025-11-07T12:04:19.976Z",
       "side": "yes",
       "id": "64a380b1-1f58-4898-a38a-bfc4be6bae02:yes"
     },
@@ -870,11 +816,11 @@
       "market_id": "77250a36-56d1-4422-bdce-e8bd24571888",
       "market_ticker": "KXCPIYOY-25OCT-T3.1",
       "signed_open_position": 300,
-      "pnl": 405100,
+      "pnl": 285100,
       "event_ticker": "KXCPIYOY-25OCT",
       "series_ticker": "KXCPIYOY",
       "total_absolute_position": 300,
-      "fetchedAt": "2025-11-06T23:57:22.760Z",
+      "fetchedAt": "2025-11-07T12:04:19.976Z",
       "side": "yes",
       "id": "77250a36-56d1-4422-bdce-e8bd24571888:yes"
     },
@@ -886,6 +832,25 @@
   },
   {
     "position": {
+      "market_id": "2cecfc2f-6b29-4c83-af9f-cc8aa54caa7f",
+      "market_ticker": "KXTRUMPMEET-NOV25-BNET",
+      "signed_open_position": 93,
+      "pnl": 0,
+      "event_ticker": "KXTRUMPMEET-NOV25",
+      "series_ticker": "KXTRUMPMEET",
+      "total_absolute_position": 93,
+      "fetchedAt": "2025-11-07T12:04:19.976Z",
+      "side": "yes",
+      "id": "2cecfc2f-6b29-4c83-af9f-cc8aa54caa7f:yes"
+    },
+    "holders": [
+      "johng71",
+      "YoDog"
+    ],
+    "totalSkillScore": 51.557210564399895
+  },
+  {
+    "position": {
       "market_id": "68ff73b5-5eb0-49b1-829e-0a8dc4dfa235",
       "market_ticker": "KXPRESVISIT-26-RU",
       "signed_open_position": -5355,
@@ -893,7 +858,7 @@
       "event_ticker": "KXPRESVISIT-26",
       "series_ticker": "KXPRESVISIT",
       "total_absolute_position": 9563,
-      "fetchedAt": "2025-11-06T23:57:23.676Z",
+      "fetchedAt": "2025-11-07T12:04:20.470Z",
       "side": "no",
       "id": "68ff73b5-5eb0-49b1-829e-0a8dc4dfa235:no"
     },
@@ -907,12 +872,12 @@
     "position": {
       "market_id": "adc580e6-0e83-4cd8-a0cf-c8b87f657086",
       "market_ticker": "KXFEDMENTION-25DEC-NATI",
-      "signed_open_position": -769,
+      "signed_open_position": -776,
       "pnl": 0,
       "event_ticker": "KXFEDMENTION-25DEC",
       "series_ticker": "KXFEDMENTION",
-      "total_absolute_position": 4921,
-      "fetchedAt": "2025-11-06T23:57:23.676Z",
+      "total_absolute_position": 5303,
+      "fetchedAt": "2025-11-07T12:04:20.470Z",
       "side": "no",
       "id": "adc580e6-0e83-4cd8-a0cf-c8b87f657086:no"
     },
@@ -930,10 +895,29 @@
       "pnl": 15000,
       "event_ticker": "KXFEDMENTION-25DEC",
       "series_ticker": "KXFEDMENTION",
-      "total_absolute_position": 4921,
-      "fetchedAt": "2025-11-06T23:57:23.676Z",
+      "total_absolute_position": 5303,
+      "fetchedAt": "2025-11-07T12:04:20.470Z",
       "side": "no",
       "id": "2a70a485-d1b0-45ed-a806-592552e60c27:no"
+    },
+    "holders": [
+      "Billybutsky",
+      "YoDog"
+    ],
+    "totalSkillScore": 33.28978627200553
+  },
+  {
+    "position": {
+      "market_id": "efd2940a-91e6-487e-8232-92663bc4442d",
+      "market_ticker": "KXFEDMENTION-25DEC-TRUM",
+      "signed_open_position": -75,
+      "pnl": 15000,
+      "event_ticker": "KXFEDMENTION-25DEC",
+      "series_ticker": "KXFEDMENTION",
+      "total_absolute_position": 5303,
+      "fetchedAt": "2025-11-07T12:04:20.470Z",
+      "side": "no",
+      "id": "efd2940a-91e6-487e-8232-92663bc4442d:no"
     },
     "holders": [
       "Billybutsky",
@@ -950,7 +934,7 @@
       "event_ticker": "KXPRESNOMD-28",
       "series_ticker": "KXPRESNOMD",
       "total_absolute_position": 3000,
-      "fetchedAt": "2025-11-06T23:57:23.676Z",
+      "fetchedAt": "2025-11-07T12:04:20.470Z",
       "side": "no",
       "id": "7c46ab58-0b7d-4345-9281-182c2cc25613:no"
     },
@@ -969,7 +953,7 @@
       "event_ticker": "KXPRESNOMD-28",
       "series_ticker": "KXPRESNOMD",
       "total_absolute_position": 3000,
-      "fetchedAt": "2025-11-06T23:57:23.676Z",
+      "fetchedAt": "2025-11-07T12:04:20.470Z",
       "side": "no",
       "id": "770e0282-49b8-47b7-af2a-65c98318c07a:no"
     },
@@ -984,11 +968,11 @@
       "market_id": "aba8c845-59d2-432e-8bf9-673802d7f510",
       "market_ticker": "LEAVEPOWELL-25-DEC31",
       "signed_open_position": -2512,
-      "pnl": 22495600,
+      "pnl": 22244400,
       "event_ticker": "LEAVEPOWELL-25",
       "series_ticker": "KXLEAVEPOWELL",
       "total_absolute_position": 2512,
-      "fetchedAt": "2025-11-06T23:57:23.676Z",
+      "fetchedAt": "2025-11-07T12:04:20.470Z",
       "side": "no",
       "id": "aba8c845-59d2-432e-8bf9-673802d7f510:no"
     },
@@ -1003,11 +987,11 @@
       "market_id": "7ae8d145-7345-4dc4-accc-58b09bb66333",
       "market_ticker": "KXWLEADER-25-KJU",
       "signed_open_position": -2215,
-      "pnl": 5269800,
+      "pnl": 5491300,
       "event_ticker": "KXWLEADER-25",
       "series_ticker": "KXWLEADER",
       "total_absolute_position": 2215,
-      "fetchedAt": "2025-11-06T23:57:23.676Z",
+      "fetchedAt": "2025-11-07T12:04:20.470Z",
       "side": "no",
       "id": "7ae8d145-7345-4dc4-accc-58b09bb66333:no"
     },
@@ -1019,6 +1003,44 @@
   },
   {
     "position": {
+      "market_id": "86c3c58a-9a03-483e-b79f-16c189b0e096",
+      "market_ticker": "KXCOLBERTMENTION-25NOV07-TRUM",
+      "signed_open_position": -1388,
+      "pnl": 1629400,
+      "event_ticker": "KXCOLBERTMENTION-25NOV07",
+      "series_ticker": "KXCOLBERTMENTION",
+      "total_absolute_position": 1888,
+      "fetchedAt": "2025-11-07T12:04:20.470Z",
+      "side": "no",
+      "id": "86c3c58a-9a03-483e-b79f-16c189b0e096:no"
+    },
+    "holders": [
+      "Billybutsky",
+      "genghis"
+    ],
+    "totalSkillScore": 58.822665529179034
+  },
+  {
+    "position": {
+      "market_id": "d4ede81f-c496-49a6-b6b0-a173b9a89734",
+      "market_ticker": "KXCOLBERTMENTION-25NOV07-AMER",
+      "signed_open_position": -500,
+      "pnl": 750000,
+      "event_ticker": "KXCOLBERTMENTION-25NOV07",
+      "series_ticker": "KXCOLBERTMENTION",
+      "total_absolute_position": 1888,
+      "fetchedAt": "2025-11-07T12:04:20.470Z",
+      "side": "no",
+      "id": "d4ede81f-c496-49a6-b6b0-a173b9a89734:no"
+    },
+    "holders": [
+      "Billybutsky",
+      "genghis"
+    ],
+    "totalSkillScore": 58.822665529179034
+  },
+  {
+    "position": {
       "market_id": "c8b7bcfb-35cd-4cdc-9bdb-5c2db21c525c",
       "market_ticker": "KXWHVISIT-26JAN-SAS",
       "signed_open_position": -100,
@@ -1026,7 +1048,7 @@
       "event_ticker": "KXWHVISIT-26JAN",
       "series_ticker": "KXWHVISIT",
       "total_absolute_position": 1444,
-      "fetchedAt": "2025-11-06T23:57:23.676Z",
+      "fetchedAt": "2025-11-07T12:04:20.470Z",
       "side": "no",
       "id": "c8b7bcfb-35cd-4cdc-9bdb-5c2db21c525c:no"
     },
@@ -1041,11 +1063,11 @@
       "market_id": "fda4e125-04a9-4c63-aa04-fde2ebb26df7",
       "market_ticker": "KXUSAIRANAGREEMENT-26",
       "signed_open_position": -1071,
-      "pnl": 4172900,
+      "pnl": 4280000,
       "event_ticker": "KXUSAIRANAGREEMENT-26",
       "series_ticker": "KXUSAIRANAGREEMENT",
       "total_absolute_position": 1071,
-      "fetchedAt": "2025-11-06T23:57:23.676Z",
+      "fetchedAt": "2025-11-07T12:04:20.470Z",
       "side": "no",
       "id": "fda4e125-04a9-4c63-aa04-fde2ebb26df7:no"
     },
@@ -1060,11 +1082,11 @@
       "market_id": "a5298aca-4362-4c38-ac93-804976aa0a2f",
       "market_ticker": "KXTRUMPOUT-26-TRUMP",
       "signed_open_position": -1000,
-      "pnl": 820000,
+      "pnl": 860000,
       "event_ticker": "KXTRUMPOUT-26",
       "series_ticker": "KXTRUMPOUT",
       "total_absolute_position": 1000,
-      "fetchedAt": "2025-11-06T23:57:23.676Z",
+      "fetchedAt": "2025-11-07T12:04:20.470Z",
       "side": "no",
       "id": "a5298aca-4362-4c38-ac93-804976aa0a2f:no"
     },
@@ -1083,7 +1105,7 @@
       "event_ticker": "KXVACCINERECS-26",
       "series_ticker": "KXVACCINERECS",
       "total_absolute_position": 200,
-      "fetchedAt": "2025-11-06T23:57:23.676Z",
+      "fetchedAt": "2025-11-07T12:04:20.470Z",
       "side": "no",
       "id": "246d39b6-c8a9-4cf6-bc80-e45bd07532de:no"
     },
@@ -1095,22 +1117,22 @@
   },
   {
     "position": {
-      "market_id": "ffdba09b-6f14-4f47-a21f-44c36ba95880",
-      "market_ticker": "KXMAYORNYCPARTY-25-EADA",
-      "signed_open_position": 1000,
-      "pnl": -2500000,
-      "event_ticker": "KXMAYORNYCPARTY-25",
-      "series_ticker": "KXMAYORNYCPARTY",
-      "total_absolute_position": 6000,
-      "fetchedAt": "2025-11-06T23:57:24.607Z",
-      "side": "yes",
-      "id": "ffdba09b-6f14-4f47-a21f-44c36ba95880:yes"
+      "market_id": "149fd22d-8068-4016-a791-b618265ec0b3",
+      "market_ticker": "KXGOVSHUTLENGTH-26JAN01-70D",
+      "signed_open_position": -1000,
+      "pnl": 200000,
+      "event_ticker": "KXGOVSHUTLENGTH-26JAN01",
+      "series_ticker": "KXGOVSHUTLENGTH",
+      "total_absolute_position": 3000,
+      "fetchedAt": "2025-11-07T12:04:20.963Z",
+      "side": "no",
+      "id": "149fd22d-8068-4016-a791-b618265ec0b3:no"
     },
     "holders": [
       "FreddySupples",
-      "mitch"
+      "YoDog"
     ],
-    "totalSkillScore": 36.92830238324436
+    "totalSkillScore": 28.781309878207608
   },
   {
     "position": {
@@ -1121,7 +1143,7 @@
       "event_ticker": "KXMLBALMVP-25",
       "series_ticker": "KXMLBALMVP",
       "total_absolute_position": 1813,
-      "fetchedAt": "2025-11-06T23:57:24.607Z",
+      "fetchedAt": "2025-11-07T12:04:20.963Z",
       "side": "no",
       "id": "795e51b3-6703-4567-9d76-23a003390bcc:no"
     },
@@ -1140,7 +1162,7 @@
       "event_ticker": "KXVOTEPERCENTSLIWA-25NOV04",
       "series_ticker": "KXVOTEPERCENTSLIWA",
       "total_absolute_position": 1675,
-      "fetchedAt": "2025-11-06T23:57:24.607Z",
+      "fetchedAt": "2025-11-07T12:04:20.963Z",
       "side": "no",
       "id": "d7def731-7ec7-4579-bacf-6c98913b0b03:no"
     },
@@ -1155,11 +1177,11 @@
       "market_id": "5c4eda38-76a8-4fe2-8c9a-c6564ba7ee29",
       "market_ticker": "KXNEWPARTYMUSK-26",
       "signed_open_position": 1000,
-      "pnl": -6374700,
+      "pnl": -6524700,
       "event_ticker": "KXNEWPARTYMUSK",
       "series_ticker": "KXNEWPARTYMUSK",
       "total_absolute_position": 1000,
-      "fetchedAt": "2025-11-06T23:57:24.607Z",
+      "fetchedAt": "2025-11-07T12:04:20.963Z",
       "side": "yes",
       "id": "5c4eda38-76a8-4fe2-8c9a-c6564ba7ee29:yes"
     },
@@ -1174,11 +1196,11 @@
       "market_id": "c0afdc35-e8ca-4736-a79d-ff5d7a32e943",
       "market_ticker": "KXVOTEPERCENTCUOMO-25NOV04-37",
       "signed_open_position": 1000,
-      "pnl": -2900000,
+      "pnl": -3100000,
       "event_ticker": "KXVOTEPERCENTCUOMO-25NOV04",
       "series_ticker": "KXVOTEPERCENTCUOMO",
       "total_absolute_position": 1000,
-      "fetchedAt": "2025-11-06T23:57:24.607Z",
+      "fetchedAt": "2025-11-07T12:04:20.963Z",
       "side": "yes",
       "id": "c0afdc35-e8ca-4736-a79d-ff5d7a32e943:yes"
     },
@@ -1193,11 +1215,11 @@
       "market_id": "0ce1b3b8-e164-4a4f-927c-9cad596ef7ed",
       "market_ticker": "KXTRUMPFOOTBALL-26JAN01",
       "signed_open_position": 733,
-      "pnl": 1685900,
+      "pnl": 1319400,
       "event_ticker": "KXTRUMPFOOTBALL-26JAN01",
       "series_ticker": "KXTRUMPFOOTBALL",
       "total_absolute_position": 733,
-      "fetchedAt": "2025-11-06T23:57:24.607Z",
+      "fetchedAt": "2025-11-07T12:04:20.963Z",
       "side": "yes",
       "id": "0ce1b3b8-e164-4a4f-927c-9cad596ef7ed:yes"
     },
@@ -1209,33 +1231,14 @@
   },
   {
     "position": {
-      "market_id": "fda4e125-04a9-4c63-aa04-fde2ebb26df7",
-      "market_ticker": "KXUSAIRANAGREEMENT-26",
-      "signed_open_position": 442,
-      "pnl": -2021000,
-      "event_ticker": "KXUSAIRANAGREEMENT-26",
-      "series_ticker": "KXUSAIRANAGREEMENT",
-      "total_absolute_position": 442,
-      "fetchedAt": "2025-11-06T23:57:24.607Z",
-      "side": "yes",
-      "id": "fda4e125-04a9-4c63-aa04-fde2ebb26df7:yes"
-    },
-    "holders": [
-      "FreddySupples",
-      "roadrunner"
-    ],
-    "totalSkillScore": 38.09995925032364
-  },
-  {
-    "position": {
       "market_id": "daa767b7-dfa6-47b0-89cd-ef3e38051204",
       "market_ticker": "KXMLBALMVP-25-CRAL",
       "signed_open_position": 688,
-      "pnl": -719200,
+      "pnl": -512800,
       "event_ticker": "KXMLBALMVP-25",
       "series_ticker": "KXMLBALMVP",
       "total_absolute_position": 938,
-      "fetchedAt": "2025-11-06T23:57:25.786Z",
+      "fetchedAt": "2025-11-07T12:04:21.455Z",
       "side": "yes",
       "id": "daa767b7-dfa6-47b0-89cd-ef3e38051204:yes"
     },
@@ -1250,11 +1253,11 @@
       "market_id": "b92fa815-7da7-4725-b3eb-e66bc4554cf7",
       "market_ticker": "KXGOVSHUTLENGTH-26JAN01-60D",
       "signed_open_position": -200,
-      "pnl": 300000,
+      "pnl": 340000,
       "event_ticker": "KXGOVSHUTLENGTH-26JAN01",
       "series_ticker": "KXGOVSHUTLENGTH",
       "total_absolute_position": 200,
-      "fetchedAt": "2025-11-06T23:57:25.786Z",
+      "fetchedAt": "2025-11-07T12:04:21.455Z",
       "side": "no",
       "id": "b92fa815-7da7-4725-b3eb-e66bc4554cf7:no"
     },
@@ -1269,11 +1272,11 @@
       "market_id": "a036927a-203f-4d2e-8c7a-57180ff07662",
       "market_ticker": "KXGAMEAWARDS-2025-DS2",
       "signed_open_position": -736,
-      "pnl": 200000,
+      "pnl": 273600,
       "event_ticker": "KXGAMEAWARDS-2025",
       "series_ticker": "KXGAMEAWARDS",
       "total_absolute_position": 859,
-      "fetchedAt": "2025-11-06T23:57:26.618Z",
+      "fetchedAt": "2025-11-07T12:04:21.954Z",
       "side": "no",
       "id": "a036927a-203f-4d2e-8c7a-57180ff07662:no"
     },
@@ -1285,44 +1288,6 @@
   },
   {
     "position": {
-      "market_id": "095374b4-584c-48e1-a634-5e66787c39c5",
-      "market_ticker": "KXNFLGAME-25NOV06LVDEN-DEN",
-      "signed_open_position": 219,
-      "pnl": 0,
-      "event_ticker": "KXNFLGAME-25NOV06LVDEN",
-      "series_ticker": "KXNFLGAME",
-      "total_absolute_position": 219,
-      "fetchedAt": "2025-11-06T23:57:27.475Z",
-      "side": "yes",
-      "id": "095374b4-584c-48e1-a634-5e66787c39c5:yes"
-    },
-    "holders": [
-      "Bernkastel",
-      "chan252"
-    ],
-    "totalSkillScore": 24.867265172928317
-  },
-  {
-    "position": {
-      "market_id": "0b630f1c-e489-4a87-8f2b-f6ca80cfeac5",
-      "market_ticker": "GOVPARTYNJ-25-D",
-      "signed_open_position": 2400,
-      "pnl": 3420000,
-      "event_ticker": "GOVPARTYNJ-25",
-      "series_ticker": "GOVPARTYNJ",
-      "total_absolute_position": 2400,
-      "fetchedAt": "2025-11-06T23:57:28.205Z",
-      "side": "yes",
-      "id": "0b630f1c-e489-4a87-8f2b-f6ca80cfeac5:yes"
-    },
-    "holders": [
-      "eppixx",
-      "YoDog"
-    ],
-    "totalSkillScore": 15.405165241208373
-  },
-  {
-    "position": {
       "market_id": "c278cba8-473d-4e82-b4c1-38b3b9b341ee",
       "market_ticker": "KXNCAAF-26-TAM",
       "signed_open_position": 100,
@@ -1330,7 +1295,7 @@
       "event_ticker": "KXNCAAF-26",
       "series_ticker": "KXNCAAF",
       "total_absolute_position": 701,
-      "fetchedAt": "2025-11-06T23:57:28.205Z",
+      "fetchedAt": "2025-11-07T12:04:22.953Z",
       "side": "yes",
       "id": "c278cba8-473d-4e82-b4c1-38b3b9b341ee:yes"
     },
@@ -1342,33 +1307,14 @@
   },
   {
     "position": {
-      "market_id": "7983fac4-c042-4b00-914a-06e7c4961d0b",
-      "market_ticker": "GOVPARTYVA-25-D",
-      "signed_open_position": 100,
-      "pnl": 20000,
-      "event_ticker": "GOVPARTYVA-25",
-      "series_ticker": "GOVPARTYVA",
-      "total_absolute_position": 100,
-      "fetchedAt": "2025-11-06T23:57:28.205Z",
-      "side": "yes",
-      "id": "7983fac4-c042-4b00-914a-06e7c4961d0b:yes"
-    },
-    "holders": [
-      "eppixx",
-      "YoDog"
-    ],
-    "totalSkillScore": 15.405165241208373
-  },
-  {
-    "position": {
       "market_id": "6305535c-1786-44e4-879f-4e549bc289ec",
       "market_ticker": "KXRANKLISTGOOGLESEARCH-26JAN-POP",
-      "signed_open_position": 1,
+      "signed_open_position": 200,
       "pnl": 0,
       "event_ticker": "KXRANKLISTGOOGLESEARCH-26JAN",
       "series_ticker": "KXRANKLISTGOOGLESEARCH",
-      "total_absolute_position": 1,
-      "fetchedAt": "2025-11-06T23:57:28.205Z",
+      "total_absolute_position": 200,
+      "fetchedAt": "2025-11-07T12:04:22.953Z",
       "side": "yes",
       "id": "6305535c-1786-44e4-879f-4e549bc289ec:yes"
     },
@@ -1383,11 +1329,11 @@
       "market_id": "975e5e34-1c87-4677-ac03-7e1d2f148d32",
       "market_ticker": "KXMAMDANINYC-25NOV04",
       "signed_open_position": -1537,
-      "pnl": -2197500,
+      "pnl": -2043800,
       "event_ticker": "KXMAMDANINYC-25NOV04",
       "series_ticker": "KXMAMDANINYC",
       "total_absolute_position": 1537,
-      "fetchedAt": "2025-11-06T23:57:29.620Z",
+      "fetchedAt": "2025-11-07T12:04:23.958Z",
       "side": "no",
       "id": "975e5e34-1c87-4677-ac03-7e1d2f148d32:no"
     },
@@ -1401,12 +1347,12 @@
     "position": {
       "market_id": "3225c0a8-2987-4beb-8115-04f558365ca0",
       "market_ticker": "KXMAYORSEATTLE-25-KWIL",
-      "signed_open_position": -500,
-      "pnl": -75000,
+      "signed_open_position": -700,
+      "pnl": -904600,
       "event_ticker": "KXMAYORSEATTLE-25",
       "series_ticker": "KXMAYORSEATTLE",
-      "total_absolute_position": 500,
-      "fetchedAt": "2025-11-06T23:57:29.620Z",
+      "total_absolute_position": 700,
+      "fetchedAt": "2025-11-07T12:04:23.958Z",
       "side": "no",
       "id": "3225c0a8-2987-4beb-8115-04f558365ca0:no"
     },
@@ -1425,7 +1371,7 @@
       "event_ticker": "KXSHERRILLOUTPERFORMRCP-25NOV04",
       "series_ticker": "KXSHERRILLOUTPERFORMRCP",
       "total_absolute_position": 1,
-      "fetchedAt": "2025-11-06T23:57:29.621Z",
+      "fetchedAt": "2025-11-07T12:04:23.958Z",
       "side": "no",
       "id": "539e1d79-5cae-48d0-a577-410befcb7316:no"
     },
@@ -1444,7 +1390,7 @@
       "event_ticker": "KXNYCMAYOR2ND-25",
       "series_ticker": "KXNYCMAYOR2ND",
       "total_absolute_position": 1002,
-      "fetchedAt": "2025-11-06T23:57:30.267Z",
+      "fetchedAt": "2025-11-07T12:04:24.209Z",
       "side": "yes",
       "id": "7d084188-6e81-4357-927c-341a56f3f1b1:yes"
     },
@@ -1459,11 +1405,11 @@
       "market_id": "ebfdd684-db2f-4c72-8140-26e6395248e8",
       "market_ticker": "KXPRESNOMFEDCHAIR-25",
       "signed_open_position": -100,
-      "pnl": -256000,
+      "pnl": -216000,
       "event_ticker": "KXPRESNOMFEDCHAIR-25",
       "series_ticker": "KXPRESNOMFEDCHAIR",
       "total_absolute_position": 100,
-      "fetchedAt": "2025-11-06T23:57:30.267Z",
+      "fetchedAt": "2025-11-07T12:04:24.209Z",
       "side": "no",
       "id": "ebfdd684-db2f-4c72-8140-26e6395248e8:no"
     },
@@ -1478,11 +1424,11 @@
       "market_id": "4f9323b2-23d5-4f6e-aa15-a389724ff18c",
       "market_ticker": "CONTROLH-2026-D",
       "signed_open_position": 20,
-      "pnl": 0,
+      "pnl": 4000,
       "event_ticker": "CONTROLH-2026",
       "series_ticker": "CONTROLH",
       "total_absolute_position": 20,
-      "fetchedAt": "2025-11-06T23:57:30.267Z",
+      "fetchedAt": "2025-11-07T12:04:24.209Z",
       "side": "yes",
       "id": "4f9323b2-23d5-4f6e-aa15-a389724ff18c:yes"
     },
@@ -1497,11 +1443,11 @@
       "market_id": "011f0ab7-7a9a-48e0-bb7e-6ccfd640375a",
       "market_ticker": "KXFEDMEET-25-JAN01",
       "signed_open_position": 10,
-      "pnl": -5000,
+      "pnl": -4000,
       "event_ticker": "KXFEDMEET-25",
       "series_ticker": "KXFEDMEET",
       "total_absolute_position": 10,
-      "fetchedAt": "2025-11-06T23:57:30.267Z",
+      "fetchedAt": "2025-11-07T12:04:24.209Z",
       "side": "yes",
       "id": "011f0ab7-7a9a-48e0-bb7e-6ccfd640375a:yes"
     },
@@ -1516,11 +1462,11 @@
       "market_id": "01f6cfbd-c8ac-4f32-9952-5cb880be35d8",
       "market_ticker": "KXTIMEPOTYWOMAN-25",
       "signed_open_position": -324,
-      "pnl": 236900,
+      "pnl": 334100,
       "event_ticker": "KXTIMEPOTYWOMAN-25",
       "series_ticker": "KXTIMEPOTYWOMAN",
       "total_absolute_position": 324,
-      "fetchedAt": "2025-11-06T23:57:30.794Z",
+      "fetchedAt": "2025-11-07T12:04:24.455Z",
       "side": "no",
       "id": "01f6cfbd-c8ac-4f32-9952-5cb880be35d8:no"
     },
@@ -1535,11 +1481,11 @@
       "market_id": "e7adfe3b-e3af-4164-bd1b-696340f2dc8e",
       "market_ticker": "KXDJTVOSTARIFFS",
       "signed_open_position": -250,
-      "pnl": -50000,
+      "pnl": 75000,
       "event_ticker": "KXDJTVOSTARIFFS",
       "series_ticker": "KXDJTVOSTARIFFS",
       "total_absolute_position": 250,
-      "fetchedAt": "2025-11-06T23:57:31.194Z",
+      "fetchedAt": "2025-11-07T12:04:24.704Z",
       "side": "no",
       "id": "e7adfe3b-e3af-4164-bd1b-696340f2dc8e:no"
     },
@@ -1557,8 +1503,8 @@
       "pnl": 1500,
       "event_ticker": "KXSHERRILLCOUNTIES-25",
       "series_ticker": "KXSHERRILLCOUNTIES",
-      "total_absolute_position": 1324,
-      "fetchedAt": "2025-11-06T23:57:32.860Z",
+      "total_absolute_position": 1319,
+      "fetchedAt": "2025-11-07T12:04:25.705Z",
       "side": "no",
       "id": "e0e466c2-89a2-441f-919a-376419b1418d:no"
     },
@@ -1576,8 +1522,8 @@
       "pnl": -1000,
       "event_ticker": "KXSHERRILLCOUNTIES-25",
       "series_ticker": "KXSHERRILLCOUNTIES",
-      "total_absolute_position": 1324,
-      "fetchedAt": "2025-11-06T23:57:32.860Z",
+      "total_absolute_position": 1319,
+      "fetchedAt": "2025-11-07T12:04:25.705Z",
       "side": "no",
       "id": "87aa7122-df33-4300-ac8b-418d017e3e27:no"
     },
@@ -1589,25 +1535,6 @@
   },
   {
     "position": {
-      "market_id": "1dccfe6f-826c-4089-8ffa-0d33c0c137a7",
-      "market_ticker": "KXNCAAFGAME-25NOV06GASOAPP-APP",
-      "signed_open_position": 369,
-      "pnl": 0,
-      "event_ticker": "KXNCAAFGAME-25NOV06GASOAPP",
-      "series_ticker": "KXNCAAFGAME",
-      "total_absolute_position": 369,
-      "fetchedAt": "2025-11-06T23:57:33.132Z",
-      "side": "yes",
-      "id": "1dccfe6f-826c-4089-8ffa-0d33c0c137a7:yes"
-    },
-    "holders": [
-      "chan252",
-      "BDabble"
-    ],
-    "totalSkillScore": 9.799389320050032
-  },
-  {
-    "position": {
       "market_id": "39769366-c404-4020-aa2b-93af8dbe4d6e",
       "market_ticker": "KXNFLOPOTY-26-JSMI",
       "signed_open_position": 103,
@@ -1615,7 +1542,7 @@
       "event_ticker": "KXNFLOPOTY-26",
       "series_ticker": "KXNFLOPOTY",
       "total_absolute_position": 103,
-      "fetchedAt": "2025-11-06T23:57:35.567Z",
+      "fetchedAt": "2025-11-07T12:04:27.969Z",
       "side": "yes",
       "id": "39769366-c404-4020-aa2b-93af8dbe4d6e:yes"
     },

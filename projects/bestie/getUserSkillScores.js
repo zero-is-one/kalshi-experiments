@@ -9,13 +9,13 @@ const MIN_DOLLAR_PROFIT = 1000;
 const isWatchMode = process.argv.includes("--watch");
 
 export const getUserSkillScore = (nickname) => {
-  const users = JSON.parse(fs.readFileSync("userSkillScores.json"));
+  const users = JSON.parse(fs.readFileSync("./userSkillScores.json"));
   const user = users.find((u) => u.nickname === nickname);
   return user ? user.skillScore : 0;
 };
 
 export const getUserSkillScores = () => {
-  const users = JSON.parse(fs.readFileSync("userSkillScores.json"));
+  const users = JSON.parse(fs.readFileSync("./userSkillScores.json"));
   return users;
 };
 
