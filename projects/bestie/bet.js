@@ -20,7 +20,7 @@ async function main(
 ) {
   const isInitialRun = config?.isInitialRun ?? true;
 
-  console.log("\n----------------------------------------\n");
+  console.log("\n--V1--------------------------------------\n");
 
   const userSkillScores = getUserSkillScores();
 
