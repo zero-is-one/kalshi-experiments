@@ -65,7 +65,7 @@ async function main(
   // save to file for logging
   fs.writeFileSync("bestieBetStats.json", JSON.stringify(positions, null, 2));
 
-  const ordersLogString = getLogAsString("orders");
+  const ordersLogString = getLogAsString("orders") || "";
   for (const entry of positions) {
     const { position } = entry;
 
