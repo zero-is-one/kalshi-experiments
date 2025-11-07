@@ -102,6 +102,7 @@ async function main(
       orderResult,
       orderConfig,
       position,
+      entry,
     });
 
     console.log("Bettering on position:", position.id);
@@ -129,6 +130,10 @@ async function main(
 }
 
 main();
-setInterval(() => {
-  main({ isInitialRun: false });
+setInterval(async () => {
+  try {
+    await main({ isInitialRun: false });
+  } catch (error) {
+    console.error(`Error in main loop: ${error.message}`);
+  }
 }, RUN_EVERY_MINUTES * 60 * 1000);
