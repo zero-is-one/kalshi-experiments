@@ -4,7 +4,7 @@ import {
 } from "./getUserPositions.js";
 import { to } from "await-to-js";
 import { order } from "../../helpers/kalshi-api/index.js";
-import { delay } from "../../helpers/delay.js";
+import { delay } from "../../helpers/funcs.js";
 
 const MAX_BET = 5;
 const NICKNAME = "EJG7";
@@ -78,14 +78,15 @@ async function main() {
     if (buyError) {
       console.error(
         `(!) Error placing order for position ${positionNicename}:`,
-        buyError.message
+        buyError.message,
+        buyOrder
       );
       continue;
     }
 
     if (
-      buyResult.fill_count !== contractOrderCount ||
-      buyResult.status !== "executed"
+      buyResult.order.fill_count !== contractOrderCount ||
+      buyResult.order.status !== "executed"
     ) {
       console.error(
         `(!) Error, Odd filling for order for position ${positionNicename}:`,
@@ -94,10 +95,13 @@ async function main() {
       continue;
     }
 
-    const fillCostPerContract = buyResult.taker_fill_cost;
+    console.log(
+      `--> Successfully placed buy order for position ${positionNicename} for ${contractOrderCount} contracts.`
+    );
 
-    // Now place a sell limit order at 58 cents
-    const [sellError, sellResult] = await order({
+    const fillCostPerContract = buyResult.order.taker_fill_cost;
+
+    const sellOrder = {
       ticker: position.market_ticker,
       type: "limit",
       action: "sell",
@@ -107,25 +111,32 @@ async function main() {
       sell_position_capped: true,
       post_only: true,
       client_order_id: `con-ej-sell-${Date.now()}`,
-    });
+    };
+
+    const [sellError, sellResult] = await to(order(sellOrder));
 
     if (sellError) {
       console.error(
         `(!) Error placing sell order for position ${positionNicename}:`,
-        sellError.message
+        sellError.message,
+        sellOrder
       );
       continue;
     }
 
     console.log(
-      `--> Successfully placed buy and sell orders for position ${positionNicename}.`
+      `--> Successfully placed sell orders for position ${positionNicename}.`
     );
+
+    return;
   }
 }
 
 setInterval(async () => {
   await main();
-}, 2000);
+}, 5 * 60 * 1000); // run every 5 minutes
+
+main();
 
 // position example:
 //   {
