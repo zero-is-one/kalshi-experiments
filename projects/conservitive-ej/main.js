@@ -4,10 +4,12 @@ import {
 } from "./getUserPositions.js";
 import { to } from "await-to-js";
 import { order } from "../../helpers/kalshi-api/index.js";
-import { delay } from "../../helpers/funcs.js";
+import { delay, getFormattedDateTime } from "../../helpers/funcs.js";
+import { logger } from "../../helpers/logger/index.js";
 
 const MAX_BET = 5;
 const NICKNAME = "EJG7";
+const sessionLog = [];
 
 console.log("Starting ej-conservative bot...");
 
@@ -32,7 +34,7 @@ async function main() {
     console.error("Error fetching positions:", err.message);
     return;
   }
-
+  console.log(`-Consertive-ej----------------------------------------------`);
   console.log(`Processing Positions....`);
 
   for (const position of positions) {
@@ -75,12 +77,22 @@ async function main() {
     };
     const [buyError, buyResult] = await to(order(buyOrder));
 
+    logger("orders", {
+      type: "buy",
+      position: positionNicename,
+      buyOrder,
+      buyResult,
+      error: buyError?.message,
+    });
+
     if (buyError) {
       console.error(
         `(!) Error placing order for position ${positionNicename}:`,
         buyError.message,
         buyOrder
       );
+
+      sessionLog.push(`Error ${positionNicename}`, buyError.message);
       continue;
     }
 
@@ -92,6 +104,8 @@ async function main() {
         `(!) Error, Odd filling for order for position ${positionNicename}:`,
         buyResult
       );
+
+      sessionLog.push(`Error odd fill ${positionNicename}`, buyResult);
       continue;
     }
 
@@ -115,12 +129,22 @@ async function main() {
 
     const [sellError, sellResult] = await to(order(sellOrder));
 
+    logger("orders", {
+      type: "sell",
+      position: positionNicename,
+      sellOrder,
+      sellResult,
+      error: sellError?.message,
+    });
+
     if (sellError) {
       console.error(
         `(!) Error placing sell order for position ${positionNicename}:`,
         sellError.message,
         sellOrder
       );
+
+      sessionLog.push(`Error ${positionNicename}`, sellError.message);
       continue;
     }
 
@@ -128,12 +152,25 @@ async function main() {
       `--> Successfully placed sell orders for position ${positionNicename}.`
     );
 
-    return;
+    sessionLog.push(
+      `Successfully placed buy and sell orders for ${positionNicename}.`
+    );
   }
+  if (sessionLog.length > 0) {
+    console.log("\nSession Summary:");
+    sessionLog.forEach((log) => console.log(log));
+  } else {
+    console.log("No new orders placed in this run.");
+  }
+  console.log(`ej-conservative bot run complete. [${getFormattedDateTime()}]`);
 }
 
 setInterval(async () => {
-  await main();
+  try {
+    await main();
+  } catch (error) {
+    console.error("Error in main loop:", error.message);
+  }
 }, 5 * 60 * 1000); // run every 5 minutes
 
 main();
