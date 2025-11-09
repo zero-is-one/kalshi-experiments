@@ -16,16 +16,15 @@ console.log("Starting ej-conservative bot V3...");
 
 // Fetch positions so that initial positions state is logged,
 // we only want new positions to be processed
-const [err, initialPositions] = await to(getUserActivePositions(NICKNAME));
-
-if (err) {
-  console.error("Error initializing fetching positions:", err.message);
-  process.exit(1);
-}
+const initialPositions = getPastUserPositions(NICKNAME);
 
 const maxContractsPerOrder = initialPositions.reduce((max, pos) => {
   return Math.max(max, pos.total_absolute_position);
 }, 0);
+
+console.log(
+  `Initialized with ${initialPositions.length} existing positions. Max contracts per order: ${maxContractsPerOrder}`
+);
 
 async function main() {
   console.log(`========== New Run [${getFormattedDateTime()}] ==========`);

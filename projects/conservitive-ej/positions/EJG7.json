@@ -130,5 +130,29 @@
     "fetchedAt": "2025-11-08T16:33:22.889Z",
     "side": "yes",
     "id": "649222e2-0880-40b9-a2d5-dec90f25503b:yes"
+  },
+  {
+    "market_id": "50ab6f44-5b26-4068-96dc-881fe8fd9229",
+    "market_ticker": "KXNFLGAME-25NOV09NETB-TB",
+    "signed_open_position": 10000,
+    "pnl": -13000000,
+    "event_ticker": "KXNFLGAME-25NOV09NETB",
+    "series_ticker": "KXNFLGAME",
+    "total_absolute_position": 10000,
+    "fetchedAt": "2025-11-09T20:20:16.921Z",
+    "side": "yes",
+    "id": "50ab6f44-5b26-4068-96dc-881fe8fd9229:yes"
+  },
+  {
+    "market_id": "dd8869de-1927-43e9-97aa-921abbeb3320",
+    "market_ticker": "KXNFLGAME-25NOV09DETWAS-DET",
+    "signed_open_position": 10000,
+    "pnl": 0,
+    "event_ticker": "KXNFLGAME-25NOV09DETWAS",
+    "series_ticker": "KXNFLGAME",
+    "total_absolute_position": 10000,
+    "fetchedAt": "2025-11-09T21:26:20.563Z",
+    "side": "yes",
+    "id": "dd8869de-1927-43e9-97aa-921abbeb3320:yes"
   }
 ]
