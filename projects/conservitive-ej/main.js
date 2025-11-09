@@ -34,7 +34,7 @@ async function main() {
     console.error("Error fetching positions:", err.message);
     return;
   }
-  console.log(`-Consertive-ej----------------------------------------------`);
+  console.log(`-------------------Consertive-EJ-V2------------------`);
   console.log(`Processing Positions....`);
 
   for (const position of positions) {
@@ -113,44 +113,44 @@ async function main() {
       `--> Successfully placed buy order for position ${positionNicename} for ${contractOrderCount} contracts.`
     );
 
-    const fillCostPerContract = buyResult.order.taker_fill_cost;
+    // const fillCostPerContract = buyResult.order.taker_fill_cost;
 
-    const sellOrder = {
-      ticker: position.market_ticker,
-      type: "limit",
-      action: "sell",
-      side: position.side,
-      count: contractOrderCount,
-      [`${position.side}_price`]: Math.min(99, fillCostPerContract + 15), // sell at 15 cents profit, capped at 99
-      sell_position_capped: true,
-      post_only: true,
-      client_order_id: `con-ej-sell-${Date.now()}`,
-    };
+    // const sellOrder = {
+    //   ticker: position.market_ticker,
+    //   type: "limit",
+    //   action: "sell",
+    //   side: position.side,
+    //   count: contractOrderCount,
+    //   [`${position.side}_price`]: Math.min(99, fillCostPerContract + 15), // sell at 15 cents profit, capped at 99
+    //   sell_position_capped: true,
+    //   post_only: true,
+    //   client_order_id: `con-ej-sell-${Date.now()}`,
+    // };
 
-    const [sellError, sellResult] = await to(order(sellOrder));
+    // const [sellError, sellResult] = await to(order(sellOrder));
 
-    logger("orders", {
-      type: "sell",
-      position: positionNicename,
-      sellOrder,
-      sellResult,
-      error: sellError?.message,
-    });
+    // logger("orders", {
+    //   type: "sell",
+    //   position: positionNicename,
+    //   sellOrder,
+    //   sellResult,
+    //   error: sellError?.message,
+    // });
 
-    if (sellError) {
-      console.error(
-        `(!) Error placing sell order for position ${positionNicename}:`,
-        sellError.message,
-        sellOrder
-      );
+    // if (sellError) {
+    //   console.error(
+    //     `(!) Error placing sell order for position ${positionNicename}:`,
+    //     sellError.message,
+    //     sellOrder
+    //   );
 
-      sessionLog.push(`Error ${positionNicename}`, sellError.message);
-      continue;
-    }
+    //   sessionLog.push(`Error ${positionNicename}`, sellError.message);
+    //   continue;
+    // }
 
-    console.log(
-      `--> Successfully placed sell orders for position ${positionNicename}.`
-    );
+    // console.log(
+    //   `--> Successfully placed sell orders for position ${positionNicename}.`
+    // );
 
     sessionLog.push(
       `Successfully placed buy and sell orders for ${positionNicename}.`
