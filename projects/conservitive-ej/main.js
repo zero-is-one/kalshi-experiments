@@ -10,51 +10,50 @@ import { logger } from "../../helpers/logger/index.js";
 const MAX_BET = 5;
 const NICKNAME = "EJG7";
 const sessionLog = [];
+const invoices = [];
 
-console.log("Starting ej-conservative bot...");
+console.log("Starting ej-conservative bot V3...");
 
 // Fetch positions so that initial positions state is logged,
 // we only want new positions to be processed
-const [err] = await to(getUserActivePositions(NICKNAME));
+const [err, initialPositions] = await to(getUserActivePositions(NICKNAME));
+
 if (err) {
   console.error("Error initializing fetching positions:", err.message);
   process.exit(1);
 }
 
+const maxContractsPerOrder = initialPositions.reduce((max, pos) => {
+  return Math.max(max, pos.total_absolute_position);
+}, 0);
+
 async function main() {
-  const pastPositions = getPastUserPositions(NICKNAME);
-
-  const userMaxContractsPerBet = pastPositions.reduce((max, pos) => {
-    return Math.max(max, pos.total_absolute_position);
-  }, 0);
-
+  console.log(`========== New Run [${getFormattedDateTime()}] ==========`);
   const [err, positions] = await to(getUserActivePositions(NICKNAME));
 
   if (err) {
-    console.error("Error fetching positions:", err.message);
+    console.error("(!) Error fetching positions:", err.message);
+    sessionLog.push(`Error fetching positions ${err.message}`);
     return;
   }
-  console.log(`-------------------Consertive-EJ-V2------------------`);
-  console.log(`Processing Positions....`);
+
+  console.log(`Found ${positions.length} active positions...`);
 
   for (const position of positions) {
-    const hasBet = pastPositions.some((p) => p.id === position.id);
-
     const positionNicename = `${position.event_ticker} (${position.side})`;
-
     console.log(
       `Evaluating position: ${positionNicename} with ${position.total_absolute_position} contracts.`
     );
 
-    if (hasBet) {
+    if (initialPositions.some((p) => p.id === position.id)) {
       console.log(
-        `--> Already have a bet on position ${positionNicename}, skipping...`
+        `--> Position ${positionNicename} existed at start, skipping...`
       );
       continue;
     }
 
-    const contractOrderCount = Math.round(
-      (position.total_absolute_position / userMaxContractsPerBet) * MAX_BET
+    let contractOrderCount = Math.round(
+      (position.total_absolute_position / maxContractsPerOrder) * MAX_BET
     );
 
     if (contractOrderCount < 1) {
@@ -62,6 +61,35 @@ async function main() {
         `--> Calculated contract order amount ${contractOrderCount} is less than 1 for position ${position.id}, skipping...`
       );
       continue;
+    }
+
+    const previousInvoice = invoices.find(
+      (inv) => inv.position.id === position.id
+    );
+
+    if (previousInvoice) {
+      console.log(
+        `--> Already have an invoice for position ${positionNicename}`
+      );
+
+      const contractOrderDiff =
+        contractOrderCount - previousInvoice.contractOrderCount;
+
+      if (contractOrderDiff > 0) {
+        contractOrderCount = contractOrderDiff;
+        previousInvoice.contractOrderCount += contractOrderDiff;
+        console.log(
+          `--> Increasing contract order count by ${contractOrderDiff} to ${contractOrderCount} for position ${positionNicename}`
+        );
+        sessionLog.push(
+          `Increasing order for ${positionNicename} by ${contractOrderDiff} to ${contractOrderCount} contracts.`
+        );
+      } else {
+        console.log(
+          `--> No difference in contract order count for position ${positionNicename}, skipping...`
+        );
+        continue;
+      }
     }
 
     await delay(200);
@@ -92,7 +120,7 @@ async function main() {
         buyOrder
       );
 
-      sessionLog.push(`Error ${positionNicename}`, buyError.message);
+      sessionLog.push(`Error ${positionNicename}: ${buyError.message}`);
       continue;
     }
 
@@ -109,53 +137,18 @@ async function main() {
       continue;
     }
 
-    console.log(
-      `--> Successfully placed buy order for position ${positionNicename} for ${contractOrderCount} contracts.`
-    );
-
-    // const fillCostPerContract = buyResult.order.taker_fill_cost;
-
-    // const sellOrder = {
-    //   ticker: position.market_ticker,
-    //   type: "limit",
-    //   action: "sell",
-    //   side: position.side,
-    //   count: contractOrderCount,
-    //   [`${position.side}_price`]: Math.min(99, fillCostPerContract + 15), // sell at 15 cents profit, capped at 99
-    //   sell_position_capped: true,
-    //   post_only: true,
-    //   client_order_id: `con-ej-sell-${Date.now()}`,
-    // };
-
-    // const [sellError, sellResult] = await to(order(sellOrder));
-
-    // logger("orders", {
-    //   type: "sell",
-    //   position: positionNicename,
-    //   sellOrder,
-    //   sellResult,
-    //   error: sellError?.message,
-    // });
-
-    // if (sellError) {
-    //   console.error(
-    //     `(!) Error placing sell order for position ${positionNicename}:`,
-    //     sellError.message,
-    //     sellOrder
-    //   );
-
-    //   sessionLog.push(`Error ${positionNicename}`, sellError.message);
-    //   continue;
-    // }
-
-    // console.log(
-    //   `--> Successfully placed sell orders for position ${positionNicename}.`
-    // );
-
     sessionLog.push(
-      `Successfully placed buy and sell orders for ${positionNicename}.`
+      `Successfully placed buy order for ${positionNicename} for ${contractOrderCount} contracts.`
     );
+
+    if (!previousInvoice) {
+      invoices.push({
+        position: { id: position.id, ...position },
+        contractOrderCount,
+      });
+    }
   }
+
   if (sessionLog.length > 0) {
     console.log("\nSession Summary:");
     sessionLog.forEach((log) => console.log(log));
@@ -171,7 +164,7 @@ setInterval(async () => {
   } catch (error) {
     console.error("Error in main loop:", error.message);
   }
-}, 5 * 60 * 1000); // run every 5 minutes
+}, 2 * 60 * 1000); // run every 2 minutes
 
 main();
 
