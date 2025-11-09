@@ -12,7 +12,7 @@ const NICKNAME = "EJG7";
 const sessionLog = [];
 const invoices = [];
 
-console.log("Starting ej-conservative bot V3...");
+console.log("Starting ej-conservative bot V4...");
 
 // Fetch positions so that initial positions state is logged,
 // we only want new positions to be processed
