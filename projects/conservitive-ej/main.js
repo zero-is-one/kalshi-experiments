@@ -12,7 +12,7 @@ const NICKNAME = "EJG7";
 const sessionLog = [];
 const invoices = [];
 
-console.log("Starting ej-conservative bot V4...");
+console.log("Starting ej-conservative bot V5...");
 
 // Fetch positions so that initial positions state is logged,
 // we only want new positions to be processed
@@ -41,7 +41,9 @@ async function main() {
   for (const position of positions) {
     const positionNicename = `${position.event_ticker} (${position.side})`;
     console.log(
-      `Evaluating position: ${positionNicename} with ${position.total_absolute_position} contracts.`
+      `[${getFormattedDateTime()}] Evaluating position: ${positionNicename} with ${
+        position.total_absolute_position
+      } contracts.`
     );
 
     if (initialPositions.some((p) => p.id === position.id)) {

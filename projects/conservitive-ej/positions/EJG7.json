@@ -154,5 +154,65 @@
     "fetchedAt": "2025-11-09T21:26:20.563Z",
     "side": "yes",
     "id": "dd8869de-1927-43e9-97aa-921abbeb3320:yes"
+  },
+  {
+    "market_id": "5d93262e-4f0f-4f94-8e22-ab75cb49d54e",
+    "market_ticker": "KXATPMATCH-25NOV10MUSFRI-FRI",
+    "signed_open_position": 3697,
+    "pnl": 369700,
+    "event_ticker": "KXATPMATCH-25NOV10MUSFRI",
+    "series_ticker": "KXATPMATCH",
+    "total_absolute_position": 3697,
+    "fetchedAt": "2025-11-09T22:44:30.938Z",
+    "side": "yes",
+    "id": "5d93262e-4f0f-4f94-8e22-ab75cb49d54e:yes"
+  },
+  {
+    "market_id": "2dc7da5e-929b-4047-a575-980bb5c06c9f",
+    "market_ticker": "KXNCAAMBGAME-25NOV09FAULIB-LIB",
+    "signed_open_position": 1700,
+    "pnl": 170000,
+    "event_ticker": "KXNCAAMBGAME-25NOV09FAULIB",
+    "series_ticker": "KXNCAAMBGAME",
+    "total_absolute_position": 1700,
+    "fetchedAt": "2025-11-09T23:20:32.745Z",
+    "side": "yes",
+    "id": "2dc7da5e-929b-4047-a575-980bb5c06c9f:yes"
+  },
+  {
+    "market_id": "de0ecd92-8399-4f70-a506-f5380fb9c104",
+    "market_ticker": "KXNCAAMBGAME-25NOV09USMSCAR-SCAR",
+    "signed_open_position": 5,
+    "pnl": 0,
+    "event_ticker": "KXNCAAMBGAME-25NOV09USMSCAR",
+    "series_ticker": "KXNCAAMBGAME",
+    "total_absolute_position": 5,
+    "fetchedAt": "2025-11-10T01:38:39.658Z",
+    "side": "yes",
+    "id": "de0ecd92-8399-4f70-a506-f5380fb9c104:yes"
+  },
+  {
+    "market_id": "0c7bddc3-2a78-4b4d-a21f-2b1f9e67e466",
+    "market_ticker": "KXNFLGAME-25NOV09PITLAC-LAC",
+    "signed_open_position": 1650,
+    "pnl": 165000,
+    "event_ticker": "KXNFLGAME-25NOV09PITLAC",
+    "series_ticker": "KXNFLGAME",
+    "total_absolute_position": 1650,
+    "fetchedAt": "2025-11-10T02:32:42.424Z",
+    "side": "yes",
+    "id": "0c7bddc3-2a78-4b4d-a21f-2b1f9e67e466:yes"
+  },
+  {
+    "market_id": "0a1e29c4-8c7c-494f-b38f-796dc1bf9494",
+    "market_ticker": "KXNHLGAME-25NOV09COLVAN-COL",
+    "signed_open_position": 1759,
+    "pnl": 50000,
+    "event_ticker": "KXNHLGAME-25NOV09COLVAN",
+    "series_ticker": "KXNHLGAME",
+    "total_absolute_position": 1759,
+    "fetchedAt": "2025-11-10T03:26:45.041Z",
+    "side": "yes",
+    "id": "0a1e29c4-8c7c-494f-b38f-796dc1bf9494:yes"
   }
 ]
