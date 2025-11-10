@@ -32,7 +32,9 @@ async function main() {
 
   if (err) {
     console.error("(!) Error fetching positions:", err.message);
-    sessionLog.push(`Error fetching positions ${err.message}`);
+    sessionLog.push(
+      `[${getFormattedDateTime()}] Error fetching positions ${err.message}`
+    );
     return;
   }
 
@@ -83,7 +85,7 @@ async function main() {
           `--> Increasing contract order count by ${contractOrderDiff} to ${contractOrderCount} for position ${positionNicename}`
         );
         sessionLog.push(
-          `Increasing order for ${positionNicename} by ${contractOrderDiff} to ${contractOrderCount} contracts.`
+          `[${getFormattedDateTime()}] Increasing order for ${positionNicename} by ${contractOrderDiff} to ${contractOrderCount} contracts.`
         );
       } else {
         console.log(
@@ -121,7 +123,11 @@ async function main() {
         buyOrder
       );
 
-      sessionLog.push(`Error ${positionNicename}: ${buyError.message}`);
+      sessionLog.push(
+        `[${getFormattedDateTime()}]  Error ${positionNicename}: ${
+          buyError.message
+        }`
+      );
       continue;
     }
 
@@ -134,12 +140,15 @@ async function main() {
         buyResult
       );
 
-      sessionLog.push(`Error odd fill ${positionNicename}`, buyResult);
+      sessionLog.push(
+        `[${getFormattedDateTime()}]  Error odd fill ${positionNicename}`,
+        buyResult
+      );
       continue;
     }
 
     sessionLog.push(
-      `Successfully placed buy order for ${positionNicename} for ${contractOrderCount} contracts.`
+      `[${getFormattedDateTime()}] Successfully placed buy order for ${positionNicename} for ${contractOrderCount} contracts.`
     );
 
     if (!previousInvoice) {
